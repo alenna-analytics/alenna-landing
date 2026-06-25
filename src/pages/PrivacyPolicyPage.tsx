@@ -2,6 +2,7 @@ import { LegalListItem, LegalText } from '@/components/LegalText'
 import { SiteFooter } from '@/components/SiteFooter'
 import { SiteHeader } from '@/components/SiteHeader'
 import { PRIVACY_PATH, privacyContent } from '@/lib/i18n/privacy-strings'
+import { sitePath } from '@/lib/utils'
 import { useLanguage } from '@/providers/language-provider'
 import { useEffect } from 'react'
 
@@ -18,7 +19,7 @@ export function PrivacyPolicyPage() {
       <SiteHeader />
       <main className="legal-page">
         <div className="container legal-page__inner">
-          <a href="/" className="legal-page__back">
+          <a href={sitePath('/')} className="legal-page__back">
             ← {lang === 'es' ? 'Volver al inicio' : 'Back to home'}
           </a>
           <p className="legal-page__brand">{content.brandLabel}</p>
