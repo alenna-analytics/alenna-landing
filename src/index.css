@@ -10,6 +10,7 @@
   --sage-mid: #547467;
   --sage-light: #869991;
   --accent-yellow: #ECEA5D;
+  --radius-md: 6px;
   --text-dark: #2C2C2C;
   --text-mid: #4D4D4C;
   --font-sans: 'Figtree', sans-serif;
@@ -134,18 +135,16 @@ h3,
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 12px 22px;
-  border-radius: 50px;
+  min-height: 30px;
+  padding: 0 16px;
+  border: 1px solid transparent;
+  border-radius: var(--radius-md);
   font-family: var(--font-sans);
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1;
-  transition: opacity 0.2s ease, border-color 0.2s ease;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
   white-space: nowrap;
-}
-
-.btn:hover {
-  opacity: 0.85;
 }
 
 .btn--primary {
@@ -153,15 +152,19 @@ h3,
   color: #000;
 }
 
+.btn--primary:hover {
+  background: color-mix(in srgb, var(--accent-yellow) 86%, #000 14%);
+}
+
 .btn--secondary {
-  border: 1px solid var(--line);
+  border-color: var(--line);
   color: var(--teal-darkest);
   background: #fff;
 }
 
 .btn--secondary:hover {
-  opacity: 1;
-  border-color: rgba(11, 37, 40, 0.25);
+  background: var(--cream-mid);
+  border-color: rgba(11, 37, 40, 0.22);
 }
 
 .btn--dark {
@@ -169,10 +172,25 @@ h3,
   color: #fff;
 }
 
+.btn--dark:hover {
+  background: var(--teal-dark);
+}
+
 .btn--outline {
-  border: 1px solid var(--line);
+  border-color: var(--line);
   color: var(--teal-darkest);
   background: transparent;
+}
+
+.btn--outline:hover {
+  background: var(--cream-mid);
+  border-color: rgba(11, 37, 40, 0.22);
+}
+
+.hero__actions .btn,
+.final-cta .btn {
+  min-height: 40px;
+  padding: 0 20px;
 }
 
 .fade-in {
@@ -278,8 +296,9 @@ h3,
 
 .nav__cta {
   display: none;
-  padding: 8px 18px;
-  font-size: 13px;
+  min-height: 30px;
+  padding: 0 16px;
+  font-size: 14px;
 }
 
 .nav__menu-btn {
@@ -349,22 +368,31 @@ h3,
 }
 
 .hero__content {
-  max-width: 780px;
+  max-width: 960px;
   margin-inline: auto;
 }
 
 .hero__title {
-  font-size: clamp(44px, 7.5vw, 76px);
+  font-size: clamp(36px, 6.5vw, 68px);
   font-weight: 700;
-  line-height: 1.02;
+  line-height: 1.05;
   letter-spacing: -0.04em;
   color: var(--teal-darkest);
   margin-bottom: 24px;
 }
 
-.hero__title-accent {
+.hero__title-line {
   display: block;
+}
+
+.hero__title-accent {
   color: var(--sage-dark);
+}
+
+@media (min-width: 640px) {
+  .hero__title-line:first-child {
+    white-space: nowrap;
+  }
 }
 
 .hero__subtext {
@@ -409,18 +437,18 @@ h3,
   text-align: center;
 }
 
-/* How it works — full yellow band */
+/* How it works — sage band */
 .how-it-works {
-  background: var(--accent-yellow);
+  background: var(--sage-mid);
   border-top: 1px solid rgba(11, 37, 40, 0.08);
 }
 
 .how-it-works .section-eyebrow {
-  color: rgba(11, 37, 40, 0.55);
+  color: rgba(251, 251, 244, 0.72);
 }
 
 .how-it-works .section-title {
-  color: var(--teal-darkest);
+  color: var(--cream-white);
 }
 
 .social-proof__logos {
@@ -491,9 +519,9 @@ h3,
 
 .step {
   padding: 32px 28px;
-  border: 1px solid var(--line);
+  border: 1px solid rgba(255, 255, 255, 0.35);
   border-radius: 8px;
-  background: var(--cream-white);
+  background: #fff;
 }
 
 .step__number {

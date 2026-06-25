@@ -12,8 +12,8 @@ export function HeroSection() {
       <div className="container">
         <FadeIn className="hero__content">
           <h1 className="hero__title">
-            <span>{landingT(lang, 'heroHeadlineLine1')}</span>
-            <span className="hero__title-accent">{landingT(lang, 'heroHeadlineLine2')}</span>
+            <span className="hero__title-line">{landingT(lang, 'heroHeadlineLine1')}</span>
+            <span className="hero__title-line hero__title-accent">{landingT(lang, 'heroHeadlineLine2')}</span>
           </h1>
           <p className="hero__subtext">{landingT(lang, 'heroSupporting')}</p>
           <div className="hero__actions">
