@@ -4,12 +4,12 @@ import type { LandingStringKey } from '@/lib/i18n/landing-strings'
 import { landingT } from '@/lib/i18n/landing-strings'
 import { useLanguage } from '@/providers/language-provider'
 
-import channelsIcon from '@alenna-icons/channels.svg'
-import growthIcon from '@alenna-icons/growth.svg'
-import homeIcon from '@alenna-icons/home.svg'
-import notificationsIcon from '@alenna-icons/notifications.svg'
-import productsIcon from '@alenna-icons/products.svg'
-import reportsIcon from '@alenna-icons/reports.svg'
+import channelsIcon from '@/assets/icons/channels.svg'
+import growthIcon from '@/assets/icons/growth.svg'
+import homeIcon from '@/assets/icons/home.svg'
+import notificationsIcon from '@/assets/icons/notifications.svg'
+import productsIcon from '@/assets/icons/products.svg'
+import reportsIcon from '@/assets/icons/reports.svg'
 
 const FEATURES: Array<{
   titleKey: LandingStringKey

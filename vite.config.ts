@@ -7,8 +7,6 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
-      '@alenna-icons': path.resolve(__dirname, '../alenna-dashboard/src/assets/icons'),
-      '@alenna-assets': path.resolve(__dirname, '../alenna-dashboard/src/assets'),
     },
   },
 })

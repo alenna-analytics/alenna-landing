@@ -23,9 +23,7 @@
 
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"],
-      "@alenna-icons/*": ["../alenna-dashboard/src/assets/icons/*"],
-      "@alenna-assets/*": ["../alenna-dashboard/src/assets/*"]
+      "@/*": ["./src/*"]
     }
   },
   "include": ["src"]
