@@ -294,6 +294,13 @@ h3,
   color: #fff;
 }
 
+.nav__login {
+  display: none;
+  min-height: 30px;
+  padding: 0 16px;
+  font-size: 14px;
+}
+
 .nav__cta {
   display: none;
   min-height: 30px;
@@ -871,6 +878,10 @@ h3,
 
   .nav__actions {
     justify-self: end;
+  }
+
+  .nav__login {
+    display: inline-flex;
   }
 
   .nav__cta {

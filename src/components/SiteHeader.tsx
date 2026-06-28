@@ -2,7 +2,7 @@ import { LangToggle } from '@/components/LangToggle'
 import { Button } from '@/components/ui/Button'
 import { useScrollNav } from '@/hooks/useScrollNav'
 import { landingT } from '@/lib/i18n/landing-strings'
-import { publicAsset, sitePath } from '@/lib/utils'
+import { appUrl, publicAsset, sitePath } from '@/lib/utils'
 import { useLanguage } from '@/providers/language-provider'
 import { useState } from 'react'
 
@@ -10,6 +10,7 @@ export function SiteHeader() {
   const { lang } = useLanguage()
   const scrolled = useScrollNav()
   const [mobileOpen, setMobileOpen] = useState(false)
+  const loginUrl = appUrl()
 
   const closeMobile = () => setMobileOpen(false)
 
@@ -32,6 +33,9 @@ export function SiteHeader() {
 
         <div className="nav__actions">
           <LangToggle />
+          <Button href={loginUrl} variant="secondary" className="nav__login">
+            {landingT(lang, 'navLogin')}
+          </Button>
           <Button href={sitePath('/#pricing')} variant="primary" className="nav__cta">
             {landingT(lang, 'navCta')}
           </Button>
@@ -59,6 +63,9 @@ export function SiteHeader() {
         <a href={sitePath('/#pricing')} onClick={closeMobile}>
           {landingT(lang, 'navPlans')}
         </a>
+        <Button href={loginUrl} variant="secondary" onClick={closeMobile}>
+          {landingT(lang, 'navLogin')}
+        </Button>
         <Button href={sitePath('/#pricing')} variant="primary" onClick={closeMobile}>
           {landingT(lang, 'navCta')}
         </Button>
