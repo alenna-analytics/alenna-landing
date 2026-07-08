@@ -23,265 +23,281 @@ const PRIVACY_ES: PrivacyContent = {
   metaTitle: 'Política de Privacidad — Alenna Analytics',
   brandLabel: 'Alenna Analytics',
   title: 'Política de Privacidad',
-  updated: 'Última actualización: 25 de junio de 2026',
+  updated: 'Última actualización: 8 de julio de 2026',
   intro:
-    'Alenna Analytics ("Alenna", "nosotros", "nuestro") opera la plataforma de inteligencia comercial para ecommerce disponible en alenna.io. Esta Política de Privacidad describe qué datos personales y comerciales recopilamos, cómo los tratamos, con quién los compartimos y cuáles son tus derechos. Al crear una cuenta o usar nuestros servicios, aceptas las prácticas descritas en este documento.',
+    'Alenna Analytics ("Alenna", "nosotros") es una plataforma de inteligencia comercial para ecommerce, disponible en alenna.io y operada por Sergio Garnica González. Esta Política de Privacidad describe qué datos recopilamos, cuáles no almacenamos, cómo los tratamos, con quién los compartimos y cuáles son tus derechos. Al crear una cuenta o usar nuestros servicios, aceptas las prácticas descritas en este documento.',
   sections: [
     {
       title: '1. Responsable del tratamiento',
       blocks: [
-        { kind: 'p', text: 'El responsable del tratamiento de datos personales es:' },
+        { kind: 'p', text: 'El responsable del tratamiento de tus datos personales es:' },
         {
           kind: 'ul',
           items: [
-            'Nombre: Alenna Analytics, S.A. de C.V.',
-            'Domicilio: México',
+            'Nombre: Sergio Garnica González',
+            'Nombre comercial: Alenna Analytics',
+            'RFC: GAGS010219FW2',
+            'Domicilio: Querétaro, México',
             'Correo de privacidad: privacidad@alenna.io',
             'Contacto general: contacto@alenna.io',
           ],
-        },
-        {
-          kind: 'p',
-          text: 'Alenna actúa como encargada del tratamiento de los datos de tus clientes finales (datos de pedidos, compradores, etc.) que son incorporados a la plataforma a través de las integraciones que tú autorizas. Tú, como titular de la tienda, eres el responsable de dichos datos frente a tus propios usuarios.',
         },
       ],
     },
     {
       title: '2. Datos que recopilamos',
       blocks: [
-        { kind: 'h3', text: '2.1 Datos de cuenta' },
-        { kind: 'p', text: 'Al registrarte en Alenna recopilamos:' },
+        { kind: 'h3', text: '2.1 Datos de tu cuenta en Alenna' },
+        { kind: 'p', text: 'Cuando te registras y usas Alenna, tratamos:' },
         {
           kind: 'ul',
           items: [
-            'Nombre completo y nombre de empresa',
-            'Correo electrónico y contraseña (almacenada con hash)',
-            'País o región',
-            'Información de facturación y método de pago (procesada por nuestros proveedores de pago certificados PCI-DSS; no almacenamos datos de tarjeta)',
+            'Nombre y correo electrónico (gestionados a través de Clerk, nuestro proveedor de autenticación).',
+            'Nombre de tu empresa o espacio de trabajo, si lo proporcionas.',
+            'Rol y membresía en el espacio de trabajo (tenant).',
+            'Preferencias de la cuenta (por ejemplo, moneda de visualización).',
+            'Si contratas un plan de pago: identificadores de facturación y estado de suscripción a través de nuestro proveedor de pagos. No almacenamos números de tarjeta.',
           ],
+        },
+        {
+          kind: 'p',
+          text: 'Las contraseñas y el inicio de sesión los gestiona Clerk. Alenna no almacena contraseñas en texto plano ni hashes de contraseña en sus propios servidores.',
         },
         { kind: 'h3', text: '2.2 Datos comerciales de tus canales conectados' },
         {
           kind: 'p',
-          text: 'Al conectar tus canales de venta, Alenna accede a los datos que cada plataforma pone a disposición a través de su API, conforme a los permisos que tú otorgas:',
+          text: 'Al conectar Shopify o Mercado Libre, sincronizamos únicamente datos comerciales y de catálogo necesarios para reportes, métricas e inventario, conforme a los permisos que tú autorizas:',
         },
         {
           kind: 'ul',
           items: [
-            'Plataformas de ecommerce (Shopify, Amazon, Mercado Libre): pedidos, productos, inventario, precios, reseñas, datos de envío, métricas de tienda y configuraciones de integración.',
-            'Plataformas de publicidad (Google Ads, Meta Ads y similares): campañas, grupos de anuncios, métricas de gasto, impresiones, clics, conversiones y segmentos de audiencia agregados.',
-            'Datos de clientes finales: nombre, correo electrónico, dirección de envío y datos de transacción que forman parte de los pedidos sincronizados. Estos datos se tratan exclusivamente para generar reportes y métricas dentro de tu cuenta; no son utilizados para fines propios de Alenna.',
+            'Pedidos: identificadores, fechas, estados, montos, comisiones, impuestos, descuentos, envío (como monto), líneas de producto (SKU, cantidad, precios).',
+            'Productos y catálogo: títulos, SKUs, variantes, precios, imágenes de producto, existencias.',
+            'Métricas y agregados derivados (por ejemplo, ventas por día, margen, alertas de inventario).',
+            'Metadatos de integración: dominio de tienda, identificadores de cuenta en la plataforma, estado de sincronización y tokens de acceso cifrados.',
           ],
         },
-        { kind: 'h3', text: '2.3 Datos técnicos y de uso' },
-        { kind: 'p', text: 'Para operar y mejorar la plataforma recopilamos:' },
+        { kind: 'h3', text: '2.3 Datos técnicos y de operación' },
+        { kind: 'p', text: 'Para operar el servicio de forma segura recopilamos de forma limitada:' },
         {
           kind: 'ul',
           items: [
-            'Dirección IP y geolocalización aproximada',
-            'Tipo de navegador, sistema operativo y dispositivo',
-            'Páginas visitadas, funcionalidades utilizadas y tiempos de sesión',
-            'Registros de actividad (logs) y trazas de error',
-            'Cookies y tecnologías similares (ver Sección 8)',
-          ],
-        },
-      ],
-    },
-    {
-      title: '3. Finalidades del tratamiento',
-      blocks: [
-        { kind: 'p', text: 'Utilizamos los datos para las siguientes finalidades:' },
-        {
-          kind: 'ul',
-          items: [
-            'Prestación del servicio: sincronizar, procesar y unificar datos de tus canales; generar reportes, dashboards y métricas; ejecutar alertas y automatizaciones configuradas por ti.',
-            'Gestión de cuenta y soporte: autenticación, facturación, atención de solicitudes y resolución de incidencias.',
-            'Mejora de la plataforma: análisis de uso agregado y anonimizado para desarrollar nuevas funcionalidades, corregir errores y optimizar el rendimiento.',
-            'Comunicaciones de servicio: notificaciones transaccionales, alertas de integración, cambios en términos y avisos de seguridad.',
-            'Comunicaciones de marketing: novedades, actualizaciones de producto y contenido educativo, únicamente si nos otorgas tu consentimiento explícito o si existe una relación comercial previa que lo permita bajo la ley aplicable. Puedes darte de baja en cualquier momento.',
-            'Cumplimiento legal: atender requerimientos de autoridades competentes, prevenir fraude y cumplir obligaciones fiscales y regulatorias.',
-          ],
-        },
-        {
-          kind: 'p',
-          text: 'No vendemos, alquilamos ni comercializamos tus datos personales ni los datos de tu negocio a terceros.',
-        },
-      ],
-    },
-    {
-      title: '4. Base legal del tratamiento',
-      blocks: [
-        { kind: 'p', text: 'Tratamos tus datos con base en alguno de los siguientes fundamentos legales:' },
-        {
-          kind: 'ul',
-          items: [
-            'Ejecución del contrato: el tratamiento es necesario para prestarte el servicio conforme a los Términos y Condiciones que aceptaste.',
-            'Consentimiento: para comunicaciones de marketing y cualquier tratamiento opcional que no sea estrictamente necesario para el servicio. Puedes revocar tu consentimiento en cualquier momento sin que ello afecte la legalidad del tratamiento previo.',
-            'Interés legítimo: para mejorar la plataforma, garantizar la seguridad, prevenir el fraude y mantener la integridad del servicio, siempre que dichos intereses no prevalezcan sobre tus derechos fundamentales.',
-            'Obligación legal: cuando la ley aplicable nos exige conservar o divulgar ciertos datos.',
-          ],
-        },
-        {
-          kind: 'p',
-          text: 'Alenna opera principalmente bajo la legislación mexicana (Ley Federal de Protección de Datos Personales en Posesión de los Particulares, LFPDPPP) y, en la medida en que trates datos de usuarios en otras jurisdicciones, cumplimos con los marcos aplicables incluyendo el GDPR de la Unión Europea y la CCPA de California.',
-        },
-      ],
-    },
-    {
-      title: '5. Compartición de datos con terceros',
-      blocks: [
-        { kind: 'p', text: 'Alenna no vende datos. Podemos compartir información en los siguientes supuestos:' },
-        { kind: 'h3', text: '5.1 Proveedores de servicios (encargados de tratamiento)' },
-        {
-          kind: 'p',
-          text: 'Contratamos proveedores que nos ayudan a operar la plataforma bajo acuerdos de procesamiento de datos y obligaciones de confidencialidad. Categorías principales:',
-        },
-        {
-          kind: 'ul',
-          items: [
-            'Infraestructura cloud y almacenamiento (AWS)',
-            'Autenticación e identidad',
-            'Procesamiento de pagos (certificados PCI-DSS)',
-            'Herramientas de soporte y comunicación (email transaccional, chat de soporte)',
-            'Analítica de producto (datos agregados y/o anonimizados)',
-            'Monitoreo de errores e infraestructura',
-          ],
-        },
-        { kind: 'h3', text: '5.2 Plataformas que tú autorizas (integraciones)' },
-        {
-          kind: 'p',
-          text: 'Cuando conectas una integración (Shopify, Amazon, Mercado Libre, Google Ads, Meta Ads u otras), Alenna actúa como intermediario para leer y escribir datos conforme a los permisos que tú otorgas en cada plataforma. Tú controlas qué integraciones activar y desactivar desde tu panel de configuración.',
-        },
-        { kind: 'h3', text: '5.3 Requerimientos legales y protección de derechos' },
-        {
-          kind: 'p',
-          text: 'Podemos divulgar datos cuando sea requerido por ley, orden judicial o autoridad competente; para proteger los derechos, propiedad o seguridad de Alenna, sus usuarios o el público; o para prevenir actividades ilegales o fraude.',
-        },
-        { kind: 'h3', text: '5.4 Reorganización corporativa' },
-        {
-          kind: 'p',
-          text: 'En caso de fusión, adquisición, escisión o venta de activos, los datos podrán ser transferidos al adquirente, quien estará sujeto a compromisos de privacidad al menos equivalentes a los de esta política. Te notificaremos previamente.',
-        },
-      ],
-    },
-    {
-      title: '6. Transferencias internacionales de datos',
-      blocks: [
-        {
-          kind: 'p',
-          text: 'Algunos de nuestros proveedores (en particular infraestructura cloud y herramientas SaaS) procesan datos fuera de México. Cuando esto ocurre, aplicamos salvaguardas adecuadas, incluyendo cláusulas contractuales estándar, certificaciones equivalentes o el consentimiento expreso del titular, según lo exija la legislación aplicable. Los datos de usuarios en la Unión Europea se transfieren únicamente a países con nivel de protección adecuado o bajo cláusulas tipo aprobadas por la Comisión Europea.',
-        },
-      ],
-    },
-    {
-      title: '7. Plazos de conservación',
-      blocks: [
-        { kind: 'p', text: 'Conservamos los datos únicamente durante el tiempo necesario para las finalidades descritas:' },
-        {
-          kind: 'ul',
-          items: [
-            'Datos de cuenta activa: durante toda la vida de tu suscripción.',
-            'Datos comerciales sincronizados: según la ventana histórica configurada en tu plan (por defecto hasta 24 meses de historial).',
-            'Tras cancelar la cuenta: conservamos los datos durante 90 días para permitir la recuperación en caso de cancelación accidental. Transcurrido ese plazo procedemos a la eliminación o anonimización, salvo que la ley exija conservación por más tiempo (p. ej. registros fiscales: 5 años en México).',
-            'Logs de seguridad: hasta 12 meses.',
-            'Copias de respaldo (backups): eliminadas dentro de los 30 días siguientes a la eliminación de los datos originales.',
+            'Registros técnicos (logs) de la API y trabajos de sincronización, sin incluir tokens ni cuerpos completos de respuestas de marketplace.',
+            'Datos de sesión y cookies estrictamente necesarias para autenticación (ver Sección 9).',
+            'Información técnica que tu navegador envía de forma habitual (tipo de agente, dirección IP) en las solicitudes a nuestros servicios.',
           ],
         },
       ],
     },
     {
-      title: '8. Cookies y tecnologías similares',
-      blocks: [
-        { kind: 'p', text: 'Alenna utiliza cookies propias y de terceros para:' },
-        {
-          kind: 'ul',
-          items: [
-            'Cookies estrictamente necesarias: autenticación y seguridad de sesión. No requieren consentimiento.',
-            'Cookies de preferencias: idioma, zona horaria y configuración de la interfaz.',
-            'Cookies analíticas: medición de uso de la plataforma con fines de mejora (datos agregados). Requieren tu consentimiento.',
-          ],
-        },
-        {
-          kind: 'p',
-          text: 'Puedes gestionar tus preferencias de cookies desde el banner al ingresar a la plataforma o en cualquier momento desde Configuración > Privacidad. El rechazo de cookies no esenciales no afecta la funcionalidad principal del servicio.',
-        },
-      ],
-    },
-    {
-      title: '9. Medidas de seguridad',
+      title: '3. Datos que no almacenamos',
       blocks: [
         {
           kind: 'p',
-          text: 'Aplicamos medidas técnicas y organizativas adecuadas para proteger los datos contra acceso no autorizado, pérdida, alteración o divulgación:',
+          text: 'Alenna adopta un enfoque de minimización de datos (metrics-only). No persistimos en base de datos, copias de seguridad ni logs los siguientes datos de compradores o clientes finales de tus tiendas:',
         },
         {
           kind: 'ul',
           items: [
-            'Cifrado en tránsito mediante TLS 1.2+ para todas las comunicaciones',
-            'Cifrado en reposo de datos sensibles almacenados',
-            'Control de acceso basado en roles (RBAC) con principio de mínimo privilegio',
-            'Autenticación de dos factores (2FA) disponible para todas las cuentas',
-            'Auditorías de seguridad y pruebas de penetración periódicas',
-            'Monitoreo continuo de accesos y alertas ante comportamientos anómalos',
-            'Plan de respuesta a incidentes con procedimiento de notificación a usuarios y autoridades',
+            'Nombres, correos electrónicos, teléfonos o direcciones de compradores.',
+            'Perfiles de buyer/customer, documentos de identidad o datos de pago de terceros.',
+            'Direcciones de envío o facturación de clientes finales.',
+            'Blobs completos de respuestas de API que contengan información personal identificable.',
           ],
         },
         {
           kind: 'p',
-          text: 'En caso de brecha de seguridad que afecte tus datos, te notificaremos dentro de las 72 horas siguientes a su detección (o el plazo exigido por la ley aplicable), describiendo la naturaleza del incidente, las categorías de datos afectados y las medidas adoptadas.',
+          text: 'Durante una sincronización, las APIs de Shopify o Mercado Libre pueden devolver temporalmente información adicional en memoria. Esa información se descarta antes de guardar datos en nuestra base de datos; solo persistimos los campos comerciales descritos en la Sección 2.2.',
         },
       ],
     },
     {
-      title: '10. Tus derechos',
+      title: '4. Finalidades del tratamiento',
       blocks: [
-        { kind: 'p', text: 'Dependiendo de tu jurisdicción, puedes ejercer los siguientes derechos:' },
+        { kind: 'p', text: 'Utilizamos los datos para:' },
         {
           kind: 'ul',
           items: [
-            'Acceso: conocer qué datos personales tratamos sobre ti.',
-            'Rectificación: corregir datos inexactos o incompletos.',
-            'Cancelación / Supresión (derecho al olvido): solicitar la eliminación de tus datos cuando ya no sean necesarios o hayas retirado el consentimiento.',
-            'Oposición: oponerte al tratamiento de tus datos para determinadas finalidades (incluyendo marketing directo).',
-            'Portabilidad: recibir tus datos en formato estructurado, de uso común y lectura mecánica, y transmitirlos a otro responsable.',
-            'Limitación del tratamiento: solicitar que suspendamos el tratamiento de tus datos en ciertos supuestos.',
-            'Revocación del consentimiento: retirar el consentimiento otorgado sin que ello afecte la licitud del tratamiento previo.',
+            'Prestar el servicio: sincronizar, procesar y mostrar métricas, reportes, dashboards y alertas de tu operación.',
+            'Gestionar tu cuenta: autenticación, soporte, facturación de planes de pago y comunicaciones del servicio.',
+            'Mantener la seguridad: detectar errores, abusos y proteger credenciales de integración.',
+            'Cumplir obligaciones legales aplicables.',
           ],
         },
         {
           kind: 'p',
-          text: 'Cómo ejercer tus derechos: envía tu solicitud a privacidad@alenna.io indicando tu nombre, correo registrado y el derecho que deseas ejercer. Responderemos dentro de los plazos legales aplicables (20 días hábiles bajo la LFPDPPP; 30 días bajo el GDPR). Es posible que solicitemos verificación de identidad antes de procesar tu solicitud.',
-        },
-        {
-          kind: 'p',
-          text: 'Si consideras que el tratamiento de tus datos no se ajusta a la normativa, tienes derecho a presentar una queja ante el INAI (Instituto Nacional de Transparencia, Acceso a la Información y Protección de Datos Personales) en México, o ante la autoridad de protección de datos competente en tu país.',
+          text: 'No vendemos, alquilamos ni comercializamos tus datos personales ni los datos comerciales de tu negocio a terceros.',
         },
       ],
     },
     {
-      title: '11. Datos de menores de edad',
+      title: '5. Base legal del tratamiento',
       blocks: [
-        {
-          kind: 'p',
-          text: 'Alenna es un servicio dirigido exclusivamente a personas mayores de 18 años que actúan en calidad de comerciantes o profesionales. No recopilamos conscientemente datos personales de menores de edad. Si detectamos que hemos obtenido datos de un menor sin el consentimiento de su tutor legal, los eliminaremos de manera inmediata. Si tienes conocimiento de tal situación, contáctanos en privacidad@alenna.io.',
-        },
-      ],
-    },
-    {
-      title: '12. Datos de los clientes de tu tienda (sub-encargo)',
-      blocks: [
-        { kind: 'p', text: 'Al sincronizar pedidos y datos de compradores desde tus canales de venta, Alenna accede a información personal de los clientes de tu tienda (nombres, correos, direcciones). En este contexto:' },
+        { kind: 'p', text: 'Tratamos tus datos con base en:' },
         {
           kind: 'ul',
           items: [
-            'Alenna actúa como encargada del tratamiento, siguiendo tus instrucciones como responsable.',
-            'Estos datos se procesan únicamente para prestarte el servicio de analítica; no los usamos para fines publicitarios propios ni los cedemos a terceros con fines comerciales.',
-            'Eres responsable de informar a tus clientes que sus datos pueden ser procesados por herramientas de análisis como Alenna, y de obtener las bases legales necesarias para dicho tratamiento en tu jurisdicción.',
+            'Ejecución del contrato: para prestarte el servicio conforme a los Términos y Condiciones.',
+            'Interés legítimo: seguridad, prevención de fraude y mejora operativa del servicio.',
+            'Consentimiento: cuando la ley lo exija para comunicaciones opcionales.',
+            'Obligación legal: cuando debamos conservar o divulgar información por mandato legal.',
           ],
         },
         {
           kind: 'p',
-          text: 'Suscribimos un Acuerdo de Procesamiento de Datos (DPA) con cualquier usuario que lo requiera por obligaciones regulatorias (p. ej. GDPR). Solicítalo en privacidad@alenna.io.',
+          text: 'Alenna opera bajo la legislación mexicana (LFPDPPP). Si procesas datos sujetos a otras jurisdicciones (por ejemplo, GDPR o CCPA), aplican los derechos reconocidos en la Sección 11.',
+        },
+      ],
+    },
+    {
+      title: '6. Compartición con terceros',
+      blocks: [
+        { kind: 'p', text: 'No vendemos datos. Compartimos información solo en estos casos:' },
+        { kind: 'h3', text: '6.1 Proveedores de servicios (encargados)' },
+        {
+          kind: 'p',
+          text: 'Contratamos proveedores que nos ayudan a operar la plataforma, bajo obligaciones de confidencialidad:',
+        },
+        {
+          kind: 'ul',
+          items: [
+            'Clerk — autenticación e identidad de usuarios.',
+            'Supabase — base de datos (PostgreSQL).',
+            'Fly.io — alojamiento de la API y trabajos de sincronización.',
+            'Vercel — alojamiento del sitio web y panel de usuario.',
+            'Proveedor de pagos — facturación de suscripciones, cuando contrates un plan de pago.',
+          ],
+        },
+        { kind: 'h3', text: '6.2 Plataformas que tú conectas' },
+        {
+          kind: 'p',
+          text: 'Cuando conectas Shopify o Mercado Libre, Alenna lee datos conforme a los permisos OAuth que otorgas. Puedes desconectar la integración en cualquier momento desde tu panel; al hacerlo, eliminamos los tokens de acceso almacenados.',
+        },
+        { kind: 'h3', text: '6.3 Requerimientos legales' },
+        {
+          kind: 'p',
+          text: 'Podemos divulgar datos cuando una ley, autoridad competente u orden judicial lo exija, o para proteger derechos y seguridad de Alenna y sus usuarios.',
+        },
+      ],
+    },
+    {
+      title: '7. Transferencias internacionales',
+      blocks: [
+        {
+          kind: 'p',
+          text: 'Algunos proveedores (Clerk, Supabase, Fly.io, Vercel) pueden procesar datos en Estados Unidos u otros países. Cuando esto ocurre, nos apoyamos en las salvaguardas contractuales y de seguridad que ofrecen dichos proveedores, y en las bases legales aplicables bajo la LFPDPPP.',
+        },
+      ],
+    },
+    {
+      title: '8. Plazos de conservación',
+      blocks: [
+        {
+          kind: 'p',
+          text: 'Conservamos cada categoría de datos solo el tiempo necesario para las finalidades descritas:',
+        },
+        {
+          kind: 'ul',
+          items: [
+            'Datos de cuenta (perfil, email, configuración del espacio de trabajo): mientras tu cuenta esté activa.',
+            'Datos comerciales sincronizados (pedidos, catálogo, métricas): mientras tu cuenta esté activa, para que puedas consultar el historial completo de tu operación en la plataforma. Solo se eliminan si cancelas tu cuenta o nos lo solicitas expresamente.',
+            'Tokens de integración (OAuth): mientras la conexión esté activa; se eliminan al desconectar la integración.',
+            'Registros técnicos y de seguridad: hasta 12 meses, o el plazo que imponga el proveedor de infraestructura.',
+            'Datos de facturación: el plazo que exija la legislación fiscal aplicable (hasta 5 años en México, cuando corresponda).',
+          ],
+        },
+        {
+          kind: 'h3',
+          text: 'Eliminación de cuenta',
+        },
+        {
+          kind: 'p',
+          text: 'Si solicitas la eliminación de tu cuenta en privacidad@alenna.io, marcaremos tu cuenta para baja. Transcurridos 90 días desde la solicitud verificada, eliminaremos o anonimizaremos de forma definitiva tus datos personales y los datos comerciales asociados a tu espacio de trabajo. Este plazo permite recuperar la cuenta en caso de cancelación accidental. Si prefieres una eliminación antes de esos 90 días, indícalo expresamente en tu solicitud y la procesaremos en un plazo máximo de 30 días hábiles tras verificar tu identidad.',
+        },
+        {
+          kind: 'p',
+          text: 'Las copias en respaldo se purgarán en un plazo adicional de hasta 30 días después de la eliminación definitiva. Los datos que debamos conservar por obligación legal (por ejemplo, registros fiscales) se mantendrán bloqueados únicamente para ese fin.',
+        },
+        {
+          kind: 'p',
+          text: 'Desconectar una integración (Shopify o Mercado Libre) no elimina por sí sola el historial de pedidos ya importado; elimina los tokens de acceso. Puedes solicitar la eliminación de datos históricos en el mismo correo de privacidad.',
+        },
+      ],
+    },
+    {
+      title: '9. Cookies y tecnologías similares',
+      blocks: [
+        {
+          kind: 'p',
+          text: 'Utilizamos cookies y almacenamiento local estrictamente necesarios para:',
+        },
+        {
+          kind: 'ul',
+          items: [
+            'Mantener tu sesión autenticada (Clerk).',
+            'Recordar preferencias básicas como idioma.',
+          ],
+        },
+        {
+          kind: 'p',
+          text: 'No utilizamos cookies de publicidad ni de seguimiento de terceros en el panel. Si en el futuro incorporamos analítica opcional, actualizaremos esta política y solicitaremos tu consentimiento cuando la ley lo requiera.',
+        },
+      ],
+    },
+    {
+      title: '10. Medidas de seguridad',
+      blocks: [
+        {
+          kind: 'p',
+          text: 'Aplicamos medidas técnicas y organizativas razonables, incluyendo:',
+        },
+        {
+          kind: 'ul',
+          items: [
+            'Cifrado en tránsito (HTTPS/TLS) en todas las comunicaciones.',
+            'Cifrado de tokens de integración almacenados (Fernet).',
+            'Aislamiento de datos por espacio de trabajo (tenant) en la base de datos.',
+            'Acceso restringido a infraestructura y secretos de producción.',
+            'Autenticación de dos factores (2FA): estará disponible para las cuentas de usuario; te notificaremos cuando se active en la plataforma.',
+          ],
+        },
+        {
+          kind: 'p',
+          text: 'Si detectamos una violación de seguridad que afecte tus datos personales, te notificaremos en un plazo razonable y, cuando la ley lo exija, a las autoridades competentes.',
+        },
+      ],
+    },
+    {
+      title: '11. Tus derechos',
+      blocks: [
+        { kind: 'p', text: 'Puedes ejercer los siguientes derechos respecto a tus datos personales:' },
+        {
+          kind: 'ul',
+          items: [
+            'Acceso: conocer qué datos tratamos sobre ti.',
+            'Rectificación: corregir datos inexactos.',
+            'Cancelación / supresión: solicitar la eliminación cuando ya no sean necesarios.',
+            'Oposición: oponerte a ciertos tratamientos.',
+            'Portabilidad: recibir tus datos en formato estructurado, cuando aplique.',
+            'Revocación del consentimiento: cuando el tratamiento se base en consentimiento.',
+          ],
+        },
+        {
+          kind: 'p',
+          text: 'Envía tu solicitud a privacidad@alenna.io indicando tu nombre, correo registrado y el derecho que deseas ejercer. Responderemos en un plazo máximo de 20 días hábiles (LFPDPPP). Podemos pedir verificación de identidad.',
+        },
+        {
+          kind: 'p',
+          text: 'Si consideras que el tratamiento no cumple la normativa, puedes acudir al INAI (México) o a la autoridad de protección de datos de tu país.',
+        },
+      ],
+    },
+    {
+      title: '12. Menores de edad',
+      blocks: [
+        {
+          kind: 'p',
+          text: 'Alenna está dirigido a personas mayores de 18 años que actúan como comerciantes o profesionales. No recopilamos conscientemente datos de menores.',
         },
       ],
     },
@@ -290,28 +306,21 @@ const PRIVACY_ES: PrivacyContent = {
       blocks: [
         {
           kind: 'p',
-          text: 'Podemos actualizar esta Política de Privacidad para reflejar cambios en nuestras prácticas, en la ley aplicable o en la plataforma. Cuando los cambios sean materiales, te notificaremos por correo electrónico y/o mediante un aviso destacado en la plataforma con al menos 15 días de anticipación. La versión vigente siempre estará disponible en alenna.io/privacidad con la fecha de última actualización.',
+          text: 'Podemos actualizar esta política para reflejar cambios en el servicio o en la ley. Si los cambios son materiales, te notificaremos por correo o mediante un aviso en la plataforma con al menos 15 días de anticipación. La versión vigente estará siempre en alenna.io/privacidad.',
         },
       ],
     },
     {
       title: '14. Contacto',
       blocks: [
-        {
-          kind: 'p',
-          text: 'Para cualquier consulta, solicitud de derechos o reporte de incidente relacionado con privacidad:',
-        },
+        { kind: 'p', text: 'Para consultas, solicitudes de derechos o reportes de privacidad:' },
         {
           kind: 'ul',
           items: [
-            'Correo de privacidad: privacidad@alenna.io',
-            'Correo general: contacto@alenna.io',
+            'Privacidad: privacidad@alenna.io',
+            'General: contacto@alenna.io',
             'Sitio web: alenna.io',
           ],
-        },
-        {
-          kind: 'p',
-          text: 'Nos comprometemos a atender tu solicitud con prontitud y transparencia.',
         },
       ],
     },
@@ -322,83 +331,105 @@ const PRIVACY_EN: PrivacyContent = {
   metaTitle: 'Privacy Policy — Alenna Analytics',
   brandLabel: 'Alenna Analytics',
   title: 'Privacy Policy',
-  updated: 'Last updated: June 25, 2026',
+  updated: 'Last updated: July 8, 2026',
   intro:
-    'Alenna Analytics ("Alenna", "we", "our") operates the commerce intelligence platform for ecommerce available at alenna.io. This Privacy Policy describes what personal and commercial data we collect, how we process it, who we share it with, and your rights. By creating an account or using our services, you accept the practices described in this document.',
+    'Alenna Analytics ("Alenna", "we") is a commerce intelligence platform for ecommerce, available at alenna.io and operated by Sergio Garnica González. This Privacy Policy describes what data we collect, what we do not store, how we process it, who we share it with, and your rights. By creating an account or using our services, you accept the practices described in this document.',
   sections: [
     {
       title: '1. Data controller',
       blocks: [
-        { kind: 'p', text: 'The data controller for personal data is:' },
+        { kind: 'p', text: 'The data controller for your personal data is:' },
         {
           kind: 'ul',
           items: [
-            'Name: Alenna Analytics, S.A. de C.V.',
-            'Address: Mexico',
+            'Name: Sergio Garnica González',
+            'Trade name: Alenna Analytics',
+            'Tax ID (RFC): GAGS010219FW2',
+            'Address: Querétaro, Mexico',
             'Privacy email: privacidad@alenna.io',
             'General contact: contacto@alenna.io',
           ],
-        },
-        {
-          kind: 'p',
-          text: 'Alenna acts as a data processor for your end customers\' data (order data, buyers, etc.) that is incorporated into the platform through the integrations you authorize. You, as the store owner, are the controller of that data vis-à-vis your own users.',
         },
       ],
     },
     {
       title: '2. Data we collect',
       blocks: [
-        { kind: 'h3', text: '2.1 Account data' },
-        { kind: 'p', text: 'When you register with Alenna we collect:' },
+        { kind: 'h3', text: '2.1 Your Alenna account data' },
+        { kind: 'p', text: 'When you register and use Alenna, we process:' },
         {
           kind: 'ul',
           items: [
-            'Full name and company name',
-            'Email address and password (stored as a hash)',
-            'Country or region',
-            'Billing information and payment method (processed by our PCI-DSS certified payment providers; we do not store card data)',
+            'Name and email address (managed through Clerk, our authentication provider).',
+            'Company or workspace name, if you provide it.',
+            'Role and workspace (tenant) membership.',
+            'Account preferences (e.g. display currency).',
+            'If you subscribe to a paid plan: billing identifiers and subscription status through our payment provider. We do not store card numbers.',
           ],
+        },
+        {
+          kind: 'p',
+          text: 'Passwords and sign-in are managed by Clerk. Alenna does not store plaintext passwords or password hashes on its own servers.',
         },
         { kind: 'h3', text: '2.2 Commercial data from your connected channels' },
         {
           kind: 'p',
-          text: 'When you connect your sales channels, Alenna accesses data each platform makes available through its API, according to the permissions you grant:',
+          text: 'When you connect Shopify or Mercado Libre, we sync only commercial and catalog data needed for reports, metrics, and inventory, according to the permissions you authorize:',
         },
         {
           kind: 'ul',
           items: [
-            'Ecommerce platforms (Shopify, Amazon, Mercado Libre): orders, products, inventory, prices, reviews, shipping data, store metrics, and integration settings.',
-            'Advertising platforms (Google Ads, Meta Ads, and similar): campaigns, ad groups, spend metrics, impressions, clicks, conversions, and aggregated audience segments.',
-            'End customer data: name, email, shipping address, and transaction data that forms part of synchronized orders. This data is processed exclusively to generate reports and metrics within your account; it is not used for Alenna\'s own purposes.',
+            'Orders: identifiers, dates, statuses, amounts, fees, taxes, discounts, shipping (as an amount), line items (SKU, quantity, prices).',
+            'Products and catalog: titles, SKUs, variants, prices, product images, stock levels.',
+            'Derived metrics and aggregates (e.g. daily sales, margin, inventory alerts).',
+            'Integration metadata: shop domain, platform account identifiers, sync status, and encrypted access tokens.',
           ],
         },
-        { kind: 'h3', text: '2.3 Technical and usage data' },
-        { kind: 'p', text: 'To operate and improve the platform we collect:' },
+        { kind: 'h3', text: '2.3 Technical and operational data' },
+        { kind: 'p', text: 'To operate the service securely we collect on a limited basis:' },
         {
           kind: 'ul',
           items: [
-            'IP address and approximate geolocation',
-            'Browser type, operating system, and device',
-            'Pages visited, features used, and session duration',
-            'Activity logs and error traces',
-            'Cookies and similar technologies (see Section 8)',
+            'Technical logs from the API and sync jobs, without tokens or full marketplace API response bodies.',
+            'Session data and strictly necessary cookies for authentication (see Section 9).',
+            'Technical information your browser routinely sends (user agent, IP address) in requests to our services.',
           ],
         },
       ],
     },
     {
-      title: '3. Purposes of processing',
+      title: '3. Data we do not store',
       blocks: [
-        { kind: 'p', text: 'We use data for the following purposes:' },
+        {
+          kind: 'p',
+          text: 'Alenna follows a data-minimization approach (metrics-only). We do not persist in our database, backups, or logs the following data about your store\'s buyers or end customers:',
+        },
         {
           kind: 'ul',
           items: [
-            'Service delivery: sync, process, and unify data from your channels; generate reports, dashboards, and metrics; run alerts and automations you configure.',
-            'Account management and support: authentication, billing, handling requests, and resolving incidents.',
-            'Platform improvement: aggregated and anonymized usage analysis to develop new features, fix errors, and optimize performance.',
-            'Service communications: transactional notifications, integration alerts, terms changes, and security notices.',
-            'Marketing communications: product news, updates, and educational content, only if you give explicit consent or where applicable law allows based on a prior commercial relationship. You may unsubscribe at any time.',
-            'Legal compliance: respond to competent authorities, prevent fraud, and meet tax and regulatory obligations.',
+            'Buyer names, email addresses, phone numbers, or addresses.',
+            'Buyer/customer profiles, identity documents, or third-party payment data.',
+            'End-customer shipping or billing addresses.',
+            'Full API response blobs containing personally identifiable information.',
+          ],
+        },
+        {
+          kind: 'p',
+          text: 'During a sync, Shopify or Mercado Libre APIs may temporarily return additional information in memory. That information is discarded before saving to our database; we only persist the commercial fields described in Section 2.2.',
+        },
+      ],
+    },
+    {
+      title: '4. Purposes of processing',
+      blocks: [
+        { kind: 'p', text: 'We use data to:' },
+        {
+          kind: 'ul',
+          items: [
+            'Provide the service: sync, process, and display metrics, reports, dashboards, and alerts for your operation.',
+            'Manage your account: authentication, support, paid-plan billing, and service communications.',
+            'Maintain security: detect errors, abuse, and protect integration credentials.',
+            'Comply with applicable legal obligations.',
           ],
         },
         {
@@ -408,179 +439,173 @@ const PRIVACY_EN: PrivacyContent = {
       ],
     },
     {
-      title: '4. Legal basis for processing',
+      title: '5. Legal basis for processing',
       blocks: [
-        { kind: 'p', text: 'We process your data based on one or more of the following legal grounds:' },
+        { kind: 'p', text: 'We process your data based on:' },
         {
           kind: 'ul',
           items: [
-            'Contract performance: processing is necessary to provide the service under the Terms and Conditions you accepted.',
-            'Consent: for marketing communications and any optional processing not strictly necessary for the service. You may withdraw consent at any time without affecting the lawfulness of prior processing.',
-            'Legitimate interest: to improve the platform, ensure security, prevent fraud, and maintain service integrity, provided such interests do not override your fundamental rights.',
-            'Legal obligation: when applicable law requires us to retain or disclose certain data.',
+            'Contract performance: to provide the service under the Terms and Conditions.',
+            'Legitimate interest: security, fraud prevention, and operational improvement.',
+            'Consent: when required by law for optional communications.',
+            'Legal obligation: when we must retain or disclose information by law.',
           ],
         },
         {
           kind: 'p',
-          text: 'Alenna primarily operates under Mexican law (Federal Law on Protection of Personal Data Held by Private Parties, LFPDPPP) and, to the extent you process data of users in other jurisdictions, we comply with applicable frameworks including the EU GDPR and California CCPA.',
+          text: 'Alenna operates under Mexican law (LFPDPPP). If you process data subject to other jurisdictions (e.g. GDPR or CCPA), the rights in Section 11 apply.',
         },
       ],
     },
     {
-      title: '5. Sharing data with third parties',
+      title: '6. Sharing with third parties',
       blocks: [
-        { kind: 'p', text: 'Alenna does not sell data. We may share information in the following cases:' },
-        { kind: 'h3', text: '5.1 Service providers (processors)' },
+        { kind: 'p', text: 'We do not sell data. We share information only in these cases:' },
+        { kind: 'h3', text: '6.1 Service providers (processors)' },
         {
           kind: 'p',
-          text: 'We engage providers that help us operate the platform under data processing agreements and confidentiality obligations. Main categories:',
+          text: 'We use providers that help us operate the platform, under confidentiality obligations:',
         },
         {
           kind: 'ul',
           items: [
-            'Cloud infrastructure and storage (AWS)',
-            'Authentication and identity',
-            'Payment processing (PCI-DSS certified)',
-            'Support and communication tools (transactional email, support chat)',
-            'Product analytics (aggregated and/or anonymized data)',
-            'Error and infrastructure monitoring',
+            'Clerk — user authentication and identity.',
+            'Supabase — database (PostgreSQL).',
+            'Fly.io — API hosting and sync workers.',
+            'Vercel — website and dashboard hosting.',
+            'Payment provider — subscription billing when you subscribe to a paid plan.',
           ],
         },
-        { kind: 'h3', text: '5.2 Platforms you authorize (integrations)' },
+        { kind: 'h3', text: '6.2 Platforms you connect' },
         {
           kind: 'p',
-          text: 'When you connect an integration (Shopify, Amazon, Mercado Libre, Google Ads, Meta Ads, or others), Alenna acts as an intermediary to read and write data according to the permissions you grant on each platform. You control which integrations to enable or disable from your settings panel.',
+          text: 'When you connect Shopify or Mercado Libre, Alenna reads data according to the OAuth permissions you grant. You can disconnect at any time from your dashboard; we then delete stored access tokens.',
         },
-        { kind: 'h3', text: '5.3 Legal requirements and protection of rights' },
+        { kind: 'h3', text: '6.3 Legal requirements' },
         {
           kind: 'p',
-          text: 'We may disclose data when required by law, court order, or competent authority; to protect the rights, property, or safety of Alenna, its users, or the public; or to prevent illegal activity or fraud.',
-        },
-        { kind: 'h3', text: '5.4 Corporate reorganization' },
-        {
-          kind: 'p',
-          text: 'In the event of a merger, acquisition, spin-off, or asset sale, data may be transferred to the acquirer, who will be bound by privacy commitments at least equivalent to this policy. We will notify you in advance.',
+          text: 'We may disclose data when required by law, competent authority, or court order, or to protect the rights and safety of Alenna and its users.',
         },
       ],
     },
     {
-      title: '6. International data transfers',
+      title: '7. International transfers',
       blocks: [
         {
           kind: 'p',
-          text: 'Some of our providers (particularly cloud infrastructure and SaaS tools) process data outside Mexico. When this occurs, we apply appropriate safeguards, including standard contractual clauses, equivalent certifications, or the data subject\'s express consent, as required by applicable law. Data of users in the European Union is transferred only to countries with an adequate level of protection or under standard clauses approved by the European Commission.',
+          text: 'Some providers (Clerk, Supabase, Fly.io, Vercel) may process data in the United States or other countries. When this occurs, we rely on contractual and security safeguards offered by those providers and applicable legal bases under LFPDPPP.',
         },
       ],
     },
     {
-      title: '7. Retention periods',
-      blocks: [
-        { kind: 'p', text: 'We retain data only as long as necessary for the purposes described:' },
-        {
-          kind: 'ul',
-          items: [
-            'Active account data: for the entire duration of your subscription.',
-            'Synchronized commercial data: according to the historical window configured in your plan (by default up to 24 months of history).',
-            'After account cancellation: we retain data for 90 days to allow recovery in case of accidental cancellation. After that period we delete or anonymize it, unless the law requires longer retention (e.g. tax records: 5 years in Mexico).',
-            'Security logs: up to 12 months.',
-            'Backup copies: deleted within 30 days of deletion of the original data.',
-          ],
-        },
-      ],
-    },
-    {
-      title: '8. Cookies and similar technologies',
-      blocks: [
-        { kind: 'p', text: 'Alenna uses first-party and third-party cookies for:' },
-        {
-          kind: 'ul',
-          items: [
-            'Strictly necessary cookies: authentication and session security. No consent required.',
-            'Preference cookies: language, time zone, and interface settings.',
-            'Analytics cookies: platform usage measurement for improvement (aggregated data). Require your consent.',
-          ],
-        },
-        {
-          kind: 'p',
-          text: 'You can manage cookie preferences from the banner when entering the platform or at any time from Settings > Privacy. Rejecting non-essential cookies does not affect core service functionality.',
-        },
-      ],
-    },
-    {
-      title: '9. Security measures',
+      title: '8. Retention periods',
       blocks: [
         {
           kind: 'p',
-          text: 'We apply appropriate technical and organizational measures to protect data against unauthorized access, loss, alteration, or disclosure:',
+          text: 'We retain each category of data only as long as necessary for the purposes described:',
         },
         {
           kind: 'ul',
           items: [
-            'Encryption in transit via TLS 1.2+ for all communications',
-            'Encryption at rest for stored sensitive data',
-            'Role-based access control (RBAC) with least privilege',
-            'Two-factor authentication (2FA) available for all accounts',
-            'Periodic security audits and penetration testing',
-            'Continuous access monitoring and alerts for anomalous behavior',
-            'Incident response plan with notification procedures for users and authorities',
+            'Account data (profile, email, workspace settings): while your account is active.',
+            'Synchronized commercial data (orders, catalog, metrics): while your account is active, so you can access your full operational history on the platform. Deleted only if you close your account or explicitly request deletion.',
+            'Integration tokens (OAuth): while the connection is active; deleted when you disconnect.',
+            'Technical and security logs: up to 12 months, or as required by the infrastructure provider.',
+            'Billing data: as required by applicable tax law (up to 5 years in Mexico, when applicable).',
           ],
         },
         {
+          kind: 'h3',
+          text: 'Account deletion',
+        },
+        {
           kind: 'p',
-          text: 'In the event of a security breach affecting your data, we will notify you within 72 hours of detection (or the period required by applicable law), describing the nature of the incident, categories of data affected, and measures taken.',
+          text: 'If you request account deletion at privacidad@alenna.io, we will mark your account for closure. After 90 days from your verified request, we will permanently delete or anonymize your personal data and commercial data associated with your workspace. This period allows account recovery in case of accidental cancellation. If you prefer deletion before those 90 days, state so explicitly in your request and we will process it within 30 business days after verifying your identity.',
+        },
+        {
+          kind: 'p',
+          text: 'Backup copies are purged within an additional 30 days after permanent deletion. Data we must retain by law (e.g. tax records) is kept blocked solely for that purpose.',
+        },
+        {
+          kind: 'p',
+          text: 'Disconnecting an integration (Shopify or Mercado Libre) does not by itself delete previously imported order history; it deletes access tokens. You can request deletion of historical data at the same privacy email.',
         },
       ],
     },
     {
-      title: '10. Your rights',
+      title: '9. Cookies and similar technologies',
       blocks: [
-        { kind: 'p', text: 'Depending on your jurisdiction, you may exercise the following rights:' },
+        {
+          kind: 'p',
+          text: 'We use cookies and local storage strictly necessary for:',
+        },
         {
           kind: 'ul',
           items: [
-            'Access: know what personal data we process about you.',
-            'Rectification: correct inaccurate or incomplete data.',
-            'Erasure (right to be forgotten): request deletion when data is no longer necessary or you have withdrawn consent.',
-            'Objection: object to processing for certain purposes (including direct marketing).',
-            'Portability: receive your data in a structured, commonly used, machine-readable format and transmit it to another controller.',
-            'Restriction of processing: request suspension of processing in certain cases.',
-            'Withdrawal of consent: withdraw consent without affecting the lawfulness of prior processing.',
+            'Keeping you signed in (Clerk).',
+            'Remembering basic preferences such as language.',
           ],
         },
         {
           kind: 'p',
-          text: 'How to exercise your rights: send your request to privacidad@alenna.io with your name, registered email, and the right you wish to exercise. We will respond within applicable legal timeframes (20 business days under LFPDPPP; 30 days under GDPR). We may request identity verification before processing your request.',
-        },
-        {
-          kind: 'p',
-          text: 'If you believe processing does not comply with regulations, you have the right to file a complaint with INAI (Mexico) or the competent data protection authority in your country.',
+          text: 'We do not use third-party advertising or tracking cookies in the dashboard. If we add optional analytics in the future, we will update this policy and request consent when required by law.',
         },
       ],
     },
     {
-      title: '11. Minors\' data',
+      title: '10. Security measures',
       blocks: [
         {
           kind: 'p',
-          text: 'Alenna is a service intended exclusively for persons over 18 acting as merchants or professionals. We do not knowingly collect personal data from minors. If we detect that we have obtained a minor\'s data without legal guardian consent, we will delete it immediately. If you are aware of such a situation, contact us at privacidad@alenna.io.',
+          text: 'We apply reasonable technical and organizational measures, including:',
         },
-      ],
-    },
-    {
-      title: '12. Your store customers\' data (sub-processing)',
-      blocks: [
-        { kind: 'p', text: 'When synchronizing orders and buyer data from your sales channels, Alenna accesses personal information of your store customers (names, emails, addresses). In this context:' },
         {
           kind: 'ul',
           items: [
-            'Alenna acts as a processor, following your instructions as controller.',
-            'This data is processed solely to provide analytics services; we do not use it for our own advertising purposes nor transfer it to third parties for commercial purposes.',
-            'You are responsible for informing your customers that their data may be processed by analytics tools such as Alenna, and for obtaining the necessary legal bases for such processing in your jurisdiction.',
+            'Encryption in transit (HTTPS/TLS) for all communications.',
+            'Encryption of stored integration tokens (Fernet).',
+            'Data isolation per workspace (tenant) in the database.',
+            'Restricted access to production infrastructure and secrets.',
+            'Two-factor authentication (2FA): will be available for user accounts; we will notify you when it is enabled on the platform.',
           ],
         },
         {
           kind: 'p',
-          text: 'We enter into a Data Processing Agreement (DPA) with any user who requires it for regulatory obligations (e.g. GDPR). Request it at privacidad@alenna.io.',
+          text: 'If we detect a security breach affecting your personal data, we will notify you within a reasonable time and, when required by law, the competent authorities.',
+        },
+      ],
+    },
+    {
+      title: '11. Your rights',
+      blocks: [
+        { kind: 'p', text: 'You may exercise the following rights regarding your personal data:' },
+        {
+          kind: 'ul',
+          items: [
+            'Access: know what data we process about you.',
+            'Rectification: correct inaccurate data.',
+            'Erasure: request deletion when data is no longer necessary.',
+            'Objection: object to certain processing.',
+            'Portability: receive your data in a structured format, where applicable.',
+            'Withdrawal of consent: when processing is based on consent.',
+          ],
+        },
+        {
+          kind: 'p',
+          text: 'Send your request to privacidad@alenna.io with your name, registered email, and the right you wish to exercise. We will respond within 20 business days (LFPDPPP). We may request identity verification.',
+        },
+        {
+          kind: 'p',
+          text: 'If you believe processing does not comply with regulations, you may contact INAI (Mexico) or the data protection authority in your country.',
+        },
+      ],
+    },
+    {
+      title: '12. Minors',
+      blocks: [
+        {
+          kind: 'p',
+          text: 'Alenna is intended for persons over 18 acting as merchants or professionals. We do not knowingly collect data from minors.',
         },
       ],
     },
@@ -589,28 +614,21 @@ const PRIVACY_EN: PrivacyContent = {
       blocks: [
         {
           kind: 'p',
-          text: 'We may update this Privacy Policy to reflect changes in our practices, applicable law, or the platform. When changes are material, we will notify you by email and/or through a prominent notice on the platform at least 15 days in advance. The current version will always be available at alenna.io/privacidad with the last updated date.',
+          text: 'We may update this policy to reflect changes in the service or the law. If changes are material, we will notify you by email or through a notice on the platform at least 15 days in advance. The current version will always be at alenna.io/privacidad.',
         },
       ],
     },
     {
       title: '14. Contact',
       blocks: [
-        {
-          kind: 'p',
-          text: 'For any inquiry, rights request, or privacy-related incident report:',
-        },
+        { kind: 'p', text: 'For inquiries, rights requests, or privacy reports:' },
         {
           kind: 'ul',
           items: [
-            'Privacy email: privacidad@alenna.io',
-            'General email: contacto@alenna.io',
+            'Privacy: privacidad@alenna.io',
+            'General: contacto@alenna.io',
             'Website: alenna.io',
           ],
-        },
-        {
-          kind: 'p',
-          text: 'We are committed to handling your request promptly and transparently.',
         },
       ],
     },
