@@ -433,15 +433,77 @@ h3,
   vertical-align: top;
 }
 
-/* Social proof — centered logo wall */
-.social-proof {
+/* Integrations — text-only platform list */
+.integrations {
   padding-block: 40px 48px;
   border-top: 1px solid var(--line);
   background: var(--cream-white);
 }
 
-.social-proof__inner {
+.integrations__inner {
   text-align: center;
+}
+
+.integrations__eyebrow {
+  margin: 0 0 18px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--sage-light);
+}
+
+.integrations__groups {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.integrations__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.integrations__pill {
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.integrations__pill--available {
+  color: var(--ink);
+  background: rgba(11, 37, 40, 0.06);
+  border: 1px solid rgba(11, 37, 40, 0.1);
+}
+
+.integrations__pill--soon {
+  color: var(--sage-light);
+  background: transparent;
+  border: 1px dashed rgba(11, 37, 40, 0.18);
+}
+
+.integrations__pill--soon::after {
+  content: ' · próximamente';
+  font-weight: 400;
+}
+
+html[lang='en'] .integrations__pill--soon::after {
+  content: ' · coming soon';
+}
+
+.integrations__caption {
+  font-size: 13px;
+  color: var(--sage-light);
 }
 
 /* How it works — sage band */
@@ -456,28 +518,6 @@ h3,
 
 .how-it-works .section-title {
   color: var(--cream-white);
-}
-
-.social-proof__logos {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 40px 56px;
-  margin-bottom: 14px;
-}
-
-.social-proof__logos img {
-  height: 36px;
-  width: auto;
-  max-width: 160px;
-  object-fit: contain;
-  opacity: 0.72;
-}
-
-.social-proof__caption {
-  font-size: 13px;
-  color: var(--sage-light);
 }
 
 /* Features — bordered cards on light */
@@ -787,6 +827,11 @@ h3,
   line-height: 1.65;
   color: var(--text);
   margin: 0 0 40px;
+}
+
+.legal-page__intro--placeholder {
+  font-style: italic;
+  color: var(--text-muted);
 }
 
 .legal-page__section {

@@ -2,10 +2,10 @@ import { FeaturesSection } from '@/components/FeaturesSection'
 import { FinalCtaSection } from '@/components/FinalCtaSection'
 import { HeroSection } from '@/components/HeroSection'
 import { HowItWorksSection } from '@/components/HowItWorksSection'
+import { IntegrationsSection } from '@/components/IntegrationsSection'
 import { PricingSection } from '@/components/PricingSection'
 import { SiteFooter } from '@/components/SiteFooter'
 import { SiteHeader } from '@/components/SiteHeader'
-import { SocialProofSection } from '@/components/SocialProofSection'
 
 export function LandingPage() {
   return (
@@ -13,7 +13,7 @@ export function LandingPage() {
       <SiteHeader />
       <main>
         <HeroSection />
-        <SocialProofSection />
+        <IntegrationsSection />
         <FeaturesSection />
         <HowItWorksSection />
         <PricingSection />

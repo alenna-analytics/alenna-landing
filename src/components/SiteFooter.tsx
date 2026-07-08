@@ -1,5 +1,6 @@
 import { LangToggle } from '@/components/LangToggle'
 import { PRIVACY_PATH } from '@/lib/i18n/privacy-strings'
+import { TERMS_PATH } from '@/lib/i18n/terms-strings'
 import { landingT } from '@/lib/i18n/landing-strings'
 import { publicAsset, sitePath } from '@/lib/utils'
 import { useLanguage } from '@/providers/language-provider'
@@ -29,10 +30,11 @@ export function SiteFooter() {
             <a href={`mailto:${CONTACT_EMAIL}`} className="footer__email">
               {CONTACT_EMAIL}
             </a>
-            <a href={sitePath(PRIVACY_PATH)}>{landingT(lang, 'footerPrivacy')}</a>
           </div>
           <div className="footer__col">
-            <a href="#">{landingT(lang, 'footerTerms')}</a>
+            <p className="footer__col-label">{landingT(lang, 'footerLegal')}</p>
+            <a href={sitePath(PRIVACY_PATH)}>{landingT(lang, 'footerPrivacy')}</a>
+            <a href={sitePath(TERMS_PATH)}>{landingT(lang, 'footerTerms')}</a>
           </div>
         </div>
 
