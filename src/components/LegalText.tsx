@@ -4,10 +4,12 @@ const LINK_TOKENS = new Set([
   'privacidad@alenna.io',
   'contacto@alenna.io',
   'alenna.io/privacidad',
+  'alenna.io/terminos',
   'alenna.io',
 ])
 
-const LINK_PATTERN = /(privacidad@alenna\.io|contacto@alenna\.io|alenna\.io\/privacidad|alenna\.io)/g
+const LINK_PATTERN =
+  /(privacidad@alenna\.io|contacto@alenna\.io|alenna\.io\/privacidad|alenna\.io\/terminos|alenna\.io)/g
 
 function linkForToken(token: string): { href: string; label: string } {
   if (token.includes('@')) {
@@ -15,6 +17,9 @@ function linkForToken(token: string): { href: string; label: string } {
   }
   if (token === 'alenna.io/privacidad') {
     return { href: 'https://alenna.io/privacidad', label: token }
+  }
+  if (token === 'alenna.io/terminos') {
+    return { href: 'https://alenna.io/terminos', label: token }
   }
   return { href: 'https://alenna.io', label: token }
 }
