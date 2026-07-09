@@ -780,9 +780,28 @@ html[lang='en'] .integrations__pill--soon::after {
   border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
+.footer__legal {
+  font-size: 13px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.55);
+  margin: 0 0 8px;
+}
+
+.footer__legal-email {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 0.2s ease;
+}
+
+.footer__legal-email:hover {
+  color: #fff;
+}
+
 .footer__copyright {
   font-size: 12px;
   color: rgba(255, 255, 255, 0.35);
+  margin: 0;
 }
 
 /* Legal pages */

@@ -1,9 +1,10 @@
 import { LangToggle } from '@/components/LangToggle'
+import { INTEGRATIONS_PATH } from '@/lib/i18n/integrations-strings'
 import { PRIVACY_PATH } from '@/lib/i18n/privacy-strings'
 import { TERMS_PATH } from '@/lib/i18n/terms-strings'
 import { landingT } from '@/lib/i18n/landing-strings'
 import { publicAsset, sitePath } from '@/lib/utils'
-import { useLanguage } from '@/providers/language-provider'
+import { useLanguage, type Language } from '@/providers/language-provider'
 
 const CONTACT_EMAIL = 'contacto@alenna.io'
 
@@ -33,6 +34,7 @@ export function SiteFooter() {
           </div>
           <div className="footer__col">
             <p className="footer__col-label">{landingT(lang, 'footerLegal')}</p>
+            <a href={sitePath(INTEGRATIONS_PATH)}>{landingT(lang, 'footerIntegrations')}</a>
             <a href={sitePath(PRIVACY_PATH)}>{landingT(lang, 'footerPrivacy')}</a>
             <a href={sitePath(TERMS_PATH)}>{landingT(lang, 'footerTerms')}</a>
           </div>
@@ -48,8 +50,34 @@ export function SiteFooter() {
       </div>
 
       <div className="container footer__bar">
+        <p className="footer__legal">
+          <LegalFooterLine lang={lang} />
+        </p>
         <p className="footer__copyright">{landingT(lang, 'footerCopyright', { year })}</p>
       </div>
     </footer>
   )
+}
+
+function LegalFooterLine({ lang }: { lang: Language }) {
+  const line = landingT(lang, 'footerLegalLine')
+  const [beforeEmail, afterEmail] = splitAtEmail(line, CONTACT_EMAIL)
+
+  return (
+    <>
+      {beforeEmail}
+      <a href={`mailto:${CONTACT_EMAIL}`} className="footer__legal-email">
+        {CONTACT_EMAIL}
+      </a>
+      {afterEmail}
+    </>
+  )
+}
+
+function splitAtEmail(line: string, email: string): [string, string] {
+  const index = line.indexOf(email)
+  if (index === -1) {
+    return [line, '']
+  }
+  return [line.slice(0, index), line.slice(index + email.length)]
 }

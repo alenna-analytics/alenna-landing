@@ -82,6 +82,9 @@ const LANDING_STRINGS = {
     footerContact: 'Contacto',
     footerPrivacy: 'Privacidad',
     footerTerms: 'Términos de uso',
+    footerIntegrations: 'Integraciones',
+    footerLegalLine:
+      'Alenna Analytics · Operado por Sergio Garnica González · Querétaro, México · contacto@alenna.io',
     footerCopyright: '© {year} Alenna Analytics. Todos los derechos reservados.',
   },
   en: {
@@ -159,6 +162,9 @@ const LANDING_STRINGS = {
     footerContact: 'Contact',
     footerPrivacy: 'Privacy',
     footerTerms: 'Terms of use',
+    footerIntegrations: 'Integrations',
+    footerLegalLine:
+      'Alenna Analytics · Operated by Sergio Garnica González · Querétaro, Mexico · contacto@alenna.io',
     footerCopyright: '© {year} Alenna Analytics. All rights reserved.',
   },
 } as const
