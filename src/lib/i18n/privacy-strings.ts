@@ -212,7 +212,7 @@ const PRIVACY_ES: PrivacyContent = {
         },
         {
           kind: 'p',
-          text: 'Si solicitas la eliminación de tu cuenta en privacidad@alenna.io, marcaremos tu cuenta para baja. Transcurridos 90 días desde la solicitud verificada, eliminaremos o anonimizaremos de forma definitiva tus datos personales y los datos comerciales asociados a tu espacio de trabajo. Este plazo permite recuperar la cuenta en caso de cancelación accidental. Si prefieres una eliminación antes de esos 90 días, indícalo expresamente en tu solicitud y la procesaremos en un plazo máximo de 30 días hábiles tras verificar tu identidad.',
+          text: 'Puedes solicitar la eliminación de tu espacio de trabajo desde el panel, en Configuración → General (administradores y titulares del workspace). También puedes escribir a privacidad@alenna.io. En ambos casos marcaremos la cuenta para baja. Transcurridos 90 días desde la solicitud, eliminaremos o anonimizaremos de forma definitiva tus datos personales y los datos comerciales asociados a tu espacio de trabajo. Durante ese periodo puedes cancelar la solicitud desde el panel. Si prefieres una eliminación antes de esos 90 días, indícalo expresamente en tu solicitud por correo y la procesaremos en un plazo máximo de 30 días hábiles tras verificar tu identidad.',
         },
         {
           kind: 'p',
@@ -520,7 +520,7 @@ const PRIVACY_EN: PrivacyContent = {
         },
         {
           kind: 'p',
-          text: 'If you request account deletion at privacidad@alenna.io, we will mark your account for closure. After 90 days from your verified request, we will permanently delete or anonymize your personal data and commercial data associated with your workspace. This period allows account recovery in case of accidental cancellation. If you prefer deletion before those 90 days, state so explicitly in your request and we will process it within 30 business days after verifying your identity.',
+          text: 'You may request deletion of your workspace from the dashboard under Settings → General (workspace admins and owners). You may also email privacidad@alenna.io. In either case we will mark the account for closure. After 90 days from the request, we will permanently delete or anonymize your personal data and commercial data associated with your workspace. During that period you may cancel the request from the dashboard. If you prefer deletion before those 90 days, state so explicitly in your email request and we will process it within 30 business days after verifying your identity.',
         },
         {
           kind: 'p',

@@ -7,37 +7,13 @@ import { landingT } from '@/lib/i18n/landing-strings'
 import { appUrl } from '@/lib/utils'
 import { useLanguage } from '@/providers/language-provider'
 
-type PlanConfig = {
-  highlight?: boolean
-  badgeKey: LandingStringKey
-  nameKey: LandingStringKey
-  priceKey: LandingStringKey
-  periodKey: LandingStringKey
-  featureKeys: LandingStringKey[]
-  ctaKey: LandingStringKey
-  variant: 'outline' | 'primary'
-}
-
-const PLANS: PlanConfig[] = [
-  {
-    badgeKey: 'starterBadge',
-    nameKey: 'starterName',
-    priceKey: 'starterPrice',
-    periodKey: 'starterPeriod',
-    featureKeys: ['starterFeature1', 'starterFeature2', 'starterFeature3', 'starterFeature4'],
-    ctaKey: 'starterCta',
-    variant: 'outline',
-  },
-  {
-    highlight: true,
-    badgeKey: 'proBadge',
-    nameKey: 'proName',
-    priceKey: 'proPrice',
-    periodKey: 'proPeriod',
-    featureKeys: ['proFeature1', 'proFeature2', 'proFeature3', 'proFeature4'],
-    ctaKey: 'proCta',
-    variant: 'primary',
-  },
+const PLAN_FEATURES: LandingStringKey[] = [
+  'planFeature1',
+  'planFeature2',
+  'planFeature3',
+  'planFeature4',
+  'planFeature5',
+  'planFeature6',
 ]
 
 export function PricingSection() {
@@ -56,31 +32,23 @@ export function PricingSection() {
           />
         </FadeIn>
         <div className="pricing__grid">
-          {PLANS.map((plan) => (
-            <FadeIn
-              key={plan.nameKey}
-              as="article"
-              className={['pricing-card', plan.highlight ? 'pricing-card--highlight' : '']
-                .filter(Boolean)
-                .join(' ')}
-            >
-              <span className="pricing-card__badge">{landingT(lang, plan.badgeKey)}</span>
-              <h3 className="pricing-card__name">{landingT(lang, plan.nameKey)}</h3>
-              <p className="pricing-card__price">{landingT(lang, plan.priceKey)}</p>
-              <p className="pricing-card__period">{landingT(lang, plan.periodKey)}</p>
-              <ul className="pricing-card__features">
-                {plan.featureKeys.map((key) => (
-                  <li key={key}>
-                    <CheckIcon />
-                    <span>{landingT(lang, key)}</span>
-                  </li>
-                ))}
-              </ul>
-              <Button href={app} variant={plan.variant}>
-                {landingT(lang, plan.ctaKey)}
-              </Button>
-            </FadeIn>
-          ))}
+          <FadeIn as="article" className="pricing-card pricing-card--highlight">
+            <span className="pricing-card__badge">{landingT(lang, 'planBadge')}</span>
+            <h3 className="pricing-card__name">{landingT(lang, 'planName')}</h3>
+            <p className="pricing-card__price">{landingT(lang, 'planPrice')}</p>
+            <p className="pricing-card__period">{landingT(lang, 'planPeriod')}</p>
+            <ul className="pricing-card__features">
+              {PLAN_FEATURES.map((key) => (
+                <li key={key}>
+                  <CheckIcon />
+                  <span>{landingT(lang, key)}</span>
+                </li>
+              ))}
+            </ul>
+            <Button href={app} variant="primary">
+              {landingT(lang, 'planCta')}
+            </Button>
+          </FadeIn>
         </div>
       </div>
     </section>

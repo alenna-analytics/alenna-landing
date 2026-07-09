@@ -86,11 +86,11 @@ const TERMS_ES: LegalPageContent = {
       blocks: [
         {
           kind: 'p',
-          text: 'Alenna puede ofrecer planes gratuitos, periodos de prueba y planes de pago. Las características, límites y precios vigentes se muestran en alenna.io o dentro del panel al momento de contratar.',
+          text: 'Alenna ofrece un periodo de prueba gratuita de 30 días y un plan de pago único de USD 99 al mes con acceso completo a todas las funcionalidades disponibles. Los precios vigentes se muestran en alenna.io o dentro del panel al momento de contratar.',
         },
         {
           kind: 'p',
-          text: 'Si contratas un plan de pago, aceptas las tarifas publicadas y el ciclo de facturación indicado. Los pagos se procesan a través de nuestro proveedor de pagos; no almacenamos números de tarjeta.',
+          text: 'Al finalizar la prueba, la suscripción de pago se activa según el flujo indicado en el panel, salvo que canceles antes. Si contratas el plan de pago, aceptas la tarifa publicada y el ciclo mensual. Los pagos se procesan a través de nuestro proveedor de pagos; no almacenamos números de tarjeta.',
         },
         {
           kind: 'p',
@@ -187,7 +187,7 @@ const TERMS_ES: LegalPageContent = {
         },
         {
           kind: 'p',
-          text: 'Puedes solicitar la eliminación de tu cuenta en privacidad@alenna.io. Tras verificar tu identidad, marcaremos la cuenta para baja y, transcurridos 90 días, eliminaremos o anonimizaremos de forma definitiva tus datos personales y los datos comerciales de tu espacio de trabajo, salvo lo que debamos conservar por obligación legal. Si deseas una eliminación anticipada, indícalo expresamente en tu solicitud.',
+          text: 'Puedes solicitar la eliminación de tu espacio de trabajo desde el panel, en Configuración → General (administradores y titulares del workspace), o escribiendo a privacidad@alenna.io. Marcaremos la cuenta para baja y, transcurridos 90 días, eliminaremos o anonimizaremos de forma definitiva tus datos personales y los datos comerciales de tu espacio de trabajo, salvo lo que debamos conservar por obligación legal. Durante ese periodo puedes cancelar la solicitud desde el panel. Si deseas una eliminación anticipada, indícalo expresamente en tu solicitud por correo.',
         },
         {
           kind: 'p',
@@ -319,11 +319,11 @@ const TERMS_EN: LegalPageContent = {
       blocks: [
         {
           kind: 'p',
-          text: 'Alenna may offer free plans, trial periods, and paid plans. Current features, limits, and prices are shown at alenna.io or in the dashboard when you subscribe.',
+          text: 'Alenna offers a 30-day free trial and a single paid plan at USD 99 per month with full access to all available features. Current prices are shown at alenna.io or in the dashboard when you subscribe.',
         },
         {
           kind: 'p',
-          text: 'If you subscribe to a paid plan, you accept the published fees and billing cycle. Payments are processed through our payment provider; we do not store card numbers.',
+          text: 'When the trial ends, the paid subscription starts according to the dashboard flow unless you cancel beforehand. If you subscribe to the paid plan, you accept the published fee and monthly billing cycle. Payments are processed through our payment provider; we do not store card numbers.',
         },
         {
           kind: 'p',
@@ -420,7 +420,7 @@ const TERMS_EN: LegalPageContent = {
         },
         {
           kind: 'p',
-          text: 'You may request account deletion at privacidad@alenna.io. After verifying your identity, we will mark the account for closure and, after 90 days, permanently delete or anonymize your personal data and your workspace commercial data, except what we must retain by law. If you want earlier deletion, state so explicitly in your request.',
+          text: 'You may request deletion of your workspace from the dashboard under Settings → General (workspace admins and owners), or by emailing privacidad@alenna.io. We will mark the account for closure and, after 90 days, permanently delete or anonymize your personal data and your workspace commercial data, except what we must retain by law. During that period you may cancel the request from the dashboard. If you want earlier deletion, state so explicitly in your email request.',
         },
         {
           kind: 'p',

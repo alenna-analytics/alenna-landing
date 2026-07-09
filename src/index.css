@@ -602,8 +602,9 @@ html[lang='en'] .integrations__pill--soon::after {
 .pricing__grid {
   display: grid;
   gap: 12px;
-  max-width: 880px;
+  max-width: 440px;
   margin-inline: auto;
+  grid-template-columns: 1fr;
 }
 
 .pricing-card {
@@ -952,10 +953,6 @@ html[lang='en'] .integrations__pill--soon::after {
 
   .steps {
     grid-template-columns: repeat(3, 1fr);
-  }
-
-  .pricing__grid {
-    grid-template-columns: repeat(2, 1fr);
   }
 
   .footer__top {
