@@ -86,7 +86,7 @@ const TERMS_ES: LegalPageContent = {
       blocks: [
         {
           kind: 'p',
-          text: 'Alenna ofrece un periodo de prueba gratuita de 30 días y un plan de pago único de USD 99 al mes con acceso completo a todas las funcionalidades disponibles. Los precios vigentes se muestran en alenna.io o dentro del panel al momento de contratar.',
+          text: 'Alenna ofrece una prueba gratuita de 15 días del plan Basic. Después, los planes Basic (USD 30/mes) y Growth (USD 60/mes) incluyen todos los módulos e integraciones ilimitadas, con límites de pedidos y productos según el plan. Los planes Custom se cotizan por contacto. Los precios vigentes se muestran en alenna.io.',
         },
         {
           kind: 'p',
@@ -319,7 +319,7 @@ const TERMS_EN: LegalPageContent = {
       blocks: [
         {
           kind: 'p',
-          text: 'Alenna offers a 30-day free trial and a single paid plan at USD 99 per month with full access to all available features. Current prices are shown at alenna.io or in the dashboard when you subscribe.',
+          text: 'Alenna offers a 15-day free trial of the Basic plan. After that, Basic (USD 30/month) and Growth (USD 60/month) include all modules and unlimited integrations, with order and product limits per plan. Custom plans are quoted on request. Current prices are shown at alenna.io.',
         },
         {
           kind: 'p',
