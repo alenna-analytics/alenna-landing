@@ -15,10 +15,11 @@ const FEATURES: Array<{
   titleKey: LandingStringKey
   descKey: LandingStringKey
   icon: string
+  layout?: 'wide'
 }> = [
-  { titleKey: 'feature1Title', descKey: 'feature1Desc', icon: productsIcon },
+  { titleKey: 'feature1Title', descKey: 'feature1Desc', icon: productsIcon, layout: 'wide' },
   { titleKey: 'feature2Title', descKey: 'feature2Desc', icon: notificationsIcon },
-  { titleKey: 'feature3Title', descKey: 'feature3Desc', icon: reportsIcon },
+  { titleKey: 'feature3Title', descKey: 'feature3Desc', icon: reportsIcon, layout: 'wide' },
   { titleKey: 'feature4Title', descKey: 'feature4Desc', icon: channelsIcon },
   { titleKey: 'feature5Title', descKey: 'feature5Desc', icon: growthIcon },
   { titleKey: 'feature6Title', descKey: 'feature6Desc', icon: homeIcon },
@@ -32,15 +33,24 @@ export function FeaturesSection() {
       <div className="container">
         <FadeIn>
           <SectionHeader
+            eyebrow={landingT(lang, 'featuresEyebrow')}
             title={landingT(lang, 'featuresTitle')}
             subtitle={landingT(lang, 'featuresSubtitle')}
             centered
           />
         </FadeIn>
-        <div className="features__grid">
+        <div className="features__bento">
           {FEATURES.map((feature) => (
-            <FadeIn key={feature.titleKey} as="article" className="feature-card">
-              <img src={feature.icon} className="feature-card__icon" alt="" aria-hidden="true" />
+            <FadeIn
+              key={feature.titleKey}
+              as="article"
+              className={['feature-card', feature.layout === 'wide' ? 'feature-card--wide' : '']
+                .filter(Boolean)
+                .join(' ')}
+            >
+              <div className="feature-card__icon-wrap">
+                <img src={feature.icon} className="feature-card__icon" alt="" aria-hidden="true" />
+              </div>
               <h3 className="feature-card__title">{landingT(lang, feature.titleKey)}</h3>
               <p className="feature-card__desc">{landingT(lang, feature.descKey)}</p>
             </FadeIn>

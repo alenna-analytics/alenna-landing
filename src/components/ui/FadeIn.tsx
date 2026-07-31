@@ -3,7 +3,7 @@ import { useEffect, useRef, useState, type ReactNode } from 'react'
 type FadeInProps = {
   children: ReactNode
   className?: string
-  as?: 'div' | 'article' | 'header' | 'section'
+  as?: 'div' | 'article' | 'header' | 'section' | 'li'
 }
 
 export function FadeIn({ children, className = '', as: Tag = 'div' }: FadeInProps) {

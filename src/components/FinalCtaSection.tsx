@@ -11,10 +11,13 @@ export function FinalCtaSection() {
   return (
     <section className="final-cta section" id="final-cta">
       <div className="container">
-        <FadeIn className="final-cta__inner">
-          <h2 className="final-cta__title">{landingT(lang, 'finalCtaTitle')}</h2>
-          <p className="final-cta__subtext">{landingT(lang, 'finalCtaSubtext')}</p>
-          <Button href={app} variant="primary">
+        <FadeIn className="final-cta__panel">
+          <div className="final-cta__copy">
+            <p className="final-cta__eyebrow">{landingT(lang, 'planBasicBadge')}</p>
+            <h2 className="final-cta__title">{landingT(lang, 'finalCtaTitle')}</h2>
+            <p className="final-cta__subtext">{landingT(lang, 'finalCtaSubtext')}</p>
+          </div>
+          <Button href={app} variant="primary" className="final-cta__btn">
             {landingT(lang, 'finalCtaButton')}
           </Button>
         </FadeIn>

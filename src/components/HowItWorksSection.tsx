@@ -16,17 +16,22 @@ export function HowItWorksSection() {
     <section className="how-it-works section" id="how-it-works">
       <div className="container">
         <FadeIn>
-          <header className="section-header section-header--center">
+          <header className="section-header">
             <p className="section-eyebrow">{landingT(lang, 'howEyebrow')}</p>
             <h2 className="section-title">{landingT(lang, 'howTitle')}</h2>
           </header>
         </FadeIn>
-        <div className="steps">
-          {STEPS.map((step) => (
-            <FadeIn key={step.number} as="article" className="step">
-              <p className="step__number">{step.number}</p>
-              <h3 className="step__title">{landingT(lang, step.titleKey)}</h3>
-              <p className="step__desc">{landingT(lang, step.descKey)}</p>
+        <div className="timeline" role="list">
+          {STEPS.map((step, index) => (
+            <FadeIn key={step.number} as="article" className="timeline__item">
+              <div className="timeline__marker" aria-hidden="true">
+                <span className="timeline__number">{step.number}</span>
+                {index < STEPS.length - 1 ? <span className="timeline__line" /> : null}
+              </div>
+              <div className="timeline__body">
+                <h3 className="timeline__title">{landingT(lang, step.titleKey)}</h3>
+                <p className="timeline__desc">{landingT(lang, step.descKey)}</p>
+              </div>
             </FadeIn>
           ))}
         </div>

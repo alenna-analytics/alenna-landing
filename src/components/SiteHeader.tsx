@@ -27,7 +27,7 @@ export function SiteHeader() {
         </a>
 
         <nav className="nav__links" aria-label="Principal">
-          <a href={sitePath('/#features')}>{landingT(lang, 'navFeatures')}</a>
+          <a href={sitePath('/#modules')}>{landingT(lang, 'navFeatures')}</a>
           <a href={sitePath('/#pricing')}>{landingT(lang, 'navPlans')}</a>
         </nav>
 
@@ -57,7 +57,7 @@ export function SiteHeader() {
         className={['nav__mobile', mobileOpen ? 'is-open' : ''].filter(Boolean).join(' ')}
         aria-label="Móvil"
       >
-        <a href={sitePath('/#features')} onClick={closeMobile}>
+        <a href={sitePath('/#modules')} onClick={closeMobile}>
           {landingT(lang, 'navFeatures')}
         </a>
         <a href={sitePath('/#pricing')} onClick={closeMobile}>

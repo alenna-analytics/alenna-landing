@@ -13,10 +13,12 @@ type PricingCardConfig = {
   nameKey: LandingStringKey
   priceKey: LandingStringKey
   noteKey?: LandingStringKey
+  badgeKey?: LandingStringKey
   featureKeys: LandingStringKey[]
   ctaKey: LandingStringKey
   hrefKind: 'app' | 'custom'
   ctaVariant: 'primary' | 'secondary'
+  featured?: boolean
 }
 
 const PRICING_CARDS: PricingCardConfig[] = [
@@ -34,10 +36,12 @@ const PRICING_CARDS: PricingCardConfig[] = [
     id: 'growth',
     nameKey: 'planGrowthName',
     priceKey: 'planGrowthPriceCompact',
+    badgeKey: 'planGrowthBadge',
     featureKeys: ['planGrowthOrdersLimit', 'planGrowthProductsLimit', 'planFeatureCore'],
     ctaKey: 'planGrowthCta',
     hrefKind: 'app',
-    ctaVariant: 'secondary',
+    ctaVariant: 'primary',
+    featured: true,
   },
   {
     id: 'custom',
@@ -69,7 +73,16 @@ export function PricingSection() {
         </FadeIn>
         <div className="pricing__grid pricing__grid--three">
           {PRICING_CARDS.map((card) => (
-            <FadeIn key={card.id} as="article" className="pricing-card">
+            <FadeIn
+              key={card.id}
+              as="article"
+              className={['pricing-card', card.featured ? 'pricing-card--featured' : '']
+                .filter(Boolean)
+                .join(' ')}
+            >
+              {card.badgeKey ? (
+                <span className="pricing-card__badge">{landingT(lang, card.badgeKey)}</span>
+              ) : null}
               <h3 className="pricing-card__name">{landingT(lang, card.nameKey)}</h3>
               <p className="pricing-card__price">{landingT(lang, card.priceKey)}</p>
               {card.noteKey ? (
