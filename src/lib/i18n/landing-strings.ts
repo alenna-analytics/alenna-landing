@@ -10,8 +10,9 @@ const LANDING_STRINGS = {
     langEs: 'ES',
     langEn: 'EN',
     heroEyebrow: 'Inteligencia comercial para ecommerce',
-    heroHeadlineLine1: 'Tu operación multicanal,',
-    heroHeadlineAccent: 'con números que cuadran.',
+    heroHeadlineLine1: 'Todo tu negocio',
+    heroHeadlineAccent: 'consolidado en un solo lugar.',
+    brandSlogan: 'Todo tu negocio consolidado en un solo lugar',
     heroSupporting:
       'Ventas netas, utilidad, ROAS y alertas de stock en un solo panel. Conecta Shopify y Mercado Libre hoy; Amazon y publicidad en camino.',
     heroCtaPrimary: 'Empezar gratis',
@@ -119,7 +120,7 @@ const LANDING_STRINGS = {
     finalCtaSubtext:
       'Conecta tu tienda en minutos y descubre la rentabilidad real de tu ecommerce.',
     finalCtaButton: 'Crear cuenta gratis',
-    footerTagline: 'Rentabilidad multicanal sin hojas de cálculo.',
+    footerTagline: 'Todo tu negocio consolidado en un solo lugar',
     footerCta: 'Crear cuenta gratis',
     footerProduct: 'Producto',
     footerCompany: 'Empresa',
@@ -141,8 +142,9 @@ const LANDING_STRINGS = {
     langEs: 'ES',
     langEn: 'EN',
     heroEyebrow: 'Commerce intelligence for ecommerce',
-    heroHeadlineLine1: 'Your multi-channel operation,',
-    heroHeadlineAccent: 'with numbers that add up.',
+    heroHeadlineLine1: 'Your entire business',
+    heroHeadlineAccent: 'consolidated in one place.',
+    brandSlogan: 'Your entire business consolidated in one place',
     heroSupporting:
       'Net sales, profit, ROAS, and stock alerts in one dashboard. Connect Shopify and Mercado Libre today; Amazon and ads on the way.',
     heroCtaPrimary: 'Start free',
@@ -244,7 +246,7 @@ const LANDING_STRINGS = {
     finalCtaSubtext:
       'Connect your store in minutes and discover the real profitability of your ecommerce.',
     finalCtaButton: 'Create free account',
-    footerTagline: 'Multi-channel profitability without spreadsheets.',
+    footerTagline: 'Your entire business consolidated in one place',
     footerCta: 'Create free account',
     footerProduct: 'Product',
     footerCompany: 'Company',
