@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react'
 
-type ButtonVariant = 'primary' | 'secondary' | 'ghost' | 'dark' | 'outline'
+type ButtonVariant = 'primary' | 'secondary' | 'soft' | 'ghost' | 'dark' | 'outline'
 
 type ButtonProps = {
   variant?: ButtonVariant

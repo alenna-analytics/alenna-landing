@@ -6,18 +6,15 @@ import { useLanguage } from '@/providers/language-provider'
 
 export function FinalCtaSection() {
   const { lang } = useLanguage()
-  const app = appUrl()
 
   return (
-    <section className="final-cta section" id="final-cta">
-      <div className="container">
-        <FadeIn className="final-cta__panel">
-          <div className="final-cta__copy">
-            <p className="final-cta__eyebrow">{landingT(lang, 'planBasicBadge')}</p>
-            <h2 className="final-cta__title">{landingT(lang, 'finalCtaTitle')}</h2>
-            <p className="final-cta__subtext">{landingT(lang, 'finalCtaSubtext')}</p>
-          </div>
-          <Button href={app} variant="primary" className="final-cta__btn">
+    <section className="signup section" id="signup">
+      <div className="container signup__inner">
+        <FadeIn>
+          <p className="signup__badge">{landingT(lang, 'planBasicBadge')}</p>
+          <h2 className="signup__title">{landingT(lang, 'finalCtaTitle')}</h2>
+          <p className="signup__lede">{landingT(lang, 'finalCtaSubtext')}</p>
+          <Button href={appUrl()} variant="primary" className="signup__btn">
             {landingT(lang, 'finalCtaButton')}
           </Button>
         </FadeIn>

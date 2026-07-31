@@ -8,7 +8,7 @@ import { useLanguage } from '@/providers/language-provider'
 
 const CONTACT_MAILTO = 'mailto:support@alenna.io?subject=Custom%20plan%20inquiry'
 
-type PricingCardConfig = {
+type PlanCard = {
   id: string
   nameKey: LandingStringKey
   priceKey: LandingStringKey
@@ -21,7 +21,7 @@ type PricingCardConfig = {
   featured?: boolean
 }
 
-const PRICING_CARDS: PricingCardConfig[] = [
+const PLANS: PlanCard[] = [
   {
     id: 'basic',
     nameKey: 'planBasicName',
@@ -40,7 +40,7 @@ const PRICING_CARDS: PricingCardConfig[] = [
     featureKeys: ['planGrowthOrdersLimit', 'planGrowthProductsLimit', 'planFeatureCore'],
     ctaKey: 'planGrowthCta',
     hrefKind: 'app',
-    ctaVariant: 'primary',
+    ctaVariant: 'secondary',
     featured: true,
   },
   {
@@ -54,51 +54,44 @@ const PRICING_CARDS: PricingCardConfig[] = [
   },
 ]
 
-function hrefForCard(kind: PricingCardConfig['hrefKind']): string {
-  if (kind === 'app') return appUrl()
-  return CONTACT_MAILTO
+function planHref(kind: PlanCard['hrefKind']): string {
+  return kind === 'app' ? appUrl() : CONTACT_MAILTO
 }
 
 export function PricingSection() {
   const { lang } = useLanguage()
 
   return (
-    <section className="pricing section" id="pricing">
-      <div className="container">
-        <FadeIn>
-          <header className="pricing__header">
-            <h2 className="pricing__title">{landingT(lang, 'pricingTitleMinimal')}</h2>
-            <p className="pricing__subtitle">{landingT(lang, 'pricingSubtitle')}</p>
-          </header>
+    <section className="plans section" id="pricing">
+      <div className="container plans__layout">
+        <FadeIn className="plans__intro">
+          <p className="eyebrow">{landingT(lang, 'pricingEyebrow')}</p>
+          <h2 className="section-heading section-heading--center">{landingT(lang, 'pricingTitleMinimal')}</h2>
+          <p className="section-lede">{landingT(lang, 'pricingSubtitle')}</p>
         </FadeIn>
-        <div className="pricing__grid pricing__grid--three">
-          {PRICING_CARDS.map((card) => (
+
+        <div className="plans__cards">
+          {PLANS.map((plan) => (
             <FadeIn
-              key={card.id}
+              key={plan.id}
               as="article"
-              className={['pricing-card', card.featured ? 'pricing-card--featured' : '']
-                .filter(Boolean)
-                .join(' ')}
+              className={['plan-card', plan.featured ? 'plan-card--featured' : ''].filter(Boolean).join(' ')}
             >
-              {card.badgeKey ? (
-                <span className="pricing-card__badge">{landingT(lang, card.badgeKey)}</span>
-              ) : null}
-              <h3 className="pricing-card__name">{landingT(lang, card.nameKey)}</h3>
-              <p className="pricing-card__price">{landingT(lang, card.priceKey)}</p>
-              {card.noteKey ? (
-                <p className="pricing-card__note">{landingT(lang, card.noteKey)}</p>
-              ) : null}
-              <p className="pricing-card__includes">{landingT(lang, 'planIncludesLabel')}</p>
-              <ul className="pricing-card__features">
-                {card.featureKeys.map((key) => (
+              {plan.badgeKey ? <span className="plan-card__badge">{landingT(lang, plan.badgeKey)}</span> : null}
+              <h3 className="plan-card__name">{landingT(lang, plan.nameKey)}</h3>
+              <p className="plan-card__price">{landingT(lang, plan.priceKey)}</p>
+              {plan.noteKey ? <p className="plan-card__note">{landingT(lang, plan.noteKey)}</p> : null}
+              <p className="plan-card__includes">{landingT(lang, 'planIncludesLabel')}</p>
+              <ul className="plan-card__features">
+                {plan.featureKeys.map((key) => (
                   <li key={key}>
                     <CheckIcon />
                     <span>{landingT(lang, key)}</span>
                   </li>
                 ))}
               </ul>
-              <Button href={hrefForCard(card.hrefKind)} variant={card.ctaVariant}>
-                {landingT(lang, card.ctaKey)}
+              <Button href={planHref(plan.hrefKind)} variant={plan.ctaVariant} className="plan-card__cta">
+                {landingT(lang, plan.ctaKey)}
               </Button>
             </FadeIn>
           ))}
