@@ -13,47 +13,40 @@ export function SiteFooter() {
   const year = new Date().getFullYear()
 
   return (
-    <footer className="footer" id="footer">
-      <div className="container footer__top">
-        <div className="footer__cols">
-          <div className="footer__col">
-            <a href={sitePath('/#features')}>{landingT(lang, 'navFeatures')}</a>
-            <a href={sitePath('/#pricing')}>{landingT(lang, 'navPlans')}</a>
-            <a href={sitePath('/#how-it-works')}>{landingT(lang, 'howEyebrow')}</a>
-          </div>
-          <div className="footer__col">
-            <a href={sitePath('/#features')}>{landingT(lang, 'feature1Title')}</a>
-            <a href={sitePath('/#features')}>{landingT(lang, 'feature3Title')}</a>
-            <a href={sitePath('/#features')}>{landingT(lang, 'feature4Title')}</a>
-          </div>
-          <div className="footer__col">
-            <p className="footer__col-label">{landingT(lang, 'footerContact')}</p>
-            <a href={`mailto:${CONTACT_EMAIL}`} className="footer__email">
-              {CONTACT_EMAIL}
-            </a>
-          </div>
-          <div className="footer__col">
-            <p className="footer__col-label">{landingT(lang, 'footerLegal')}</p>
-            <a href={sitePath(INTEGRATIONS_PATH)}>{landingT(lang, 'footerIntegrations')}</a>
-            <a href={sitePath(PRIVACY_PATH)}>{landingT(lang, 'footerPrivacy')}</a>
-            <a href={sitePath(TERMS_PATH)}>{landingT(lang, 'footerTerms')}</a>
-          </div>
+    <footer className="site-footer">
+      <div className="container site-footer__grid">
+        <div className="site-footer__brand">
+          <a href={sitePath('/')} className="site-footer__logo" aria-label={landingT(lang, 'brandName')}>
+            <img
+              src={publicAsset('assets/alenna-logo.svg')}
+              alt={landingT(lang, 'brandName')}
+              width={100}
+              height={20}
+            />
+          </a>
+          <p className="site-footer__tagline">{landingT(lang, 'footerTagline')}</p>
         </div>
 
-        <div className="footer__aside">
-          <LangToggle variant="dark" />
+        <nav className="site-footer__nav" aria-label="Footer">
+          <a href={sitePath('/#product')}>{landingT(lang, 'navFeatures')}</a>
+          <a href={sitePath('/#flow')}>{landingT(lang, 'howEyebrow')}</a>
+          <a href={sitePath('/#pricing')}>{landingT(lang, 'navPlans')}</a>
+          <a href={sitePath(INTEGRATIONS_PATH)}>{landingT(lang, 'footerIntegrations')}</a>
+          <a href={sitePath(PRIVACY_PATH)}>{landingT(lang, 'footerPrivacy')}</a>
+          <a href={sitePath(TERMS_PATH)}>{landingT(lang, 'footerTerms')}</a>
+          <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
+        </nav>
+
+        <div className="site-footer__meta">
+          <LangToggle />
         </div>
       </div>
 
-      <div className="footer__wordmark" aria-hidden="true">
-        <img src={publicAsset('assets/alenna-logo-white.svg')} alt="" />
-      </div>
-
-      <div className="container footer__bar">
-        <p className="footer__legal">
+      <div className="container site-footer__legal">
+        <p>
           <LegalFooterLine lang={lang} />
         </p>
-        <p className="footer__copyright">{landingT(lang, 'footerCopyright', { year })}</p>
+        <p>{landingT(lang, 'footerCopyright', { year })}</p>
       </div>
     </footer>
   )
@@ -66,9 +59,7 @@ function LegalFooterLine({ lang }: { lang: Language }) {
   return (
     <>
       {beforeEmail}
-      <a href={`mailto:${CONTACT_EMAIL}`} className="footer__legal-email">
-        {CONTACT_EMAIL}
-      </a>
+      <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
       {afterEmail}
     </>
   )
