@@ -14,7 +14,6 @@ type PlanCard = {
   badgeKey?: LandingStringKey
   featureKeys: LandingStringKey[]
   ctaKey: LandingStringKey
-  hrefKind: 'app' | 'custom'
   ctaVariant: 'primary' | 'secondary'
   featured?: boolean
 }
@@ -27,7 +26,6 @@ const PLANS: PlanCard[] = [
     noteKey: 'planBasicBadge',
     featureKeys: ['planBasicOrdersLimit', 'planBasicProductsLimit', 'planFeatureCore'],
     ctaKey: 'planBasicCta',
-    hrefKind: 'app',
     ctaVariant: 'primary',
   },
   {
@@ -37,7 +35,6 @@ const PLANS: PlanCard[] = [
     badgeKey: 'planGrowthBadge',
     featureKeys: ['planGrowthOrdersLimit', 'planGrowthProductsLimit', 'planFeatureCore'],
     ctaKey: 'planGrowthCta',
-    hrefKind: 'app',
     ctaVariant: 'secondary',
     featured: true,
   },
@@ -47,7 +44,6 @@ const PLANS: PlanCard[] = [
     priceKey: 'planCustomPriceCompact',
     featureKeys: ['planCustomLimits', 'planFeatureCore'],
     ctaKey: 'planCustomCta',
-    hrefKind: 'custom',
     ctaVariant: 'secondary',
   },
 ]
@@ -70,7 +66,7 @@ export function PricingSection() {
               key={plan.id}
               as="article"
               className={['plan-card', plan.featured ? 'plan-card--featured' : ''].filter(Boolean).join(' ')}
-              delay={index * 70}
+              delay={index * 50}
             >
               {plan.badgeKey ? <span className="plan-card__badge">{landingT(lang, plan.badgeKey)}</span> : null}
               <h3 className="plan-card__name">{landingT(lang, plan.nameKey)}</h3>

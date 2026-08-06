@@ -6,7 +6,7 @@ import type { LandingStringKey } from '@/lib/i18n/landing-strings'
 import { landingT } from '@/lib/i18n/landing-strings'
 import { appUrl, publicAsset, sitePath } from '@/lib/utils'
 import { useLanguage } from '@/providers/language-provider'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 type NavItem = {
   labelKey: LandingStringKey
@@ -19,13 +19,6 @@ export function SiteHeader() {
   const [mobileOpen, setMobileOpen] = useState(false)
   const loginUrl = appUrl()
   const closeMobile = () => setMobileOpen(false)
-
-  useEffect(() => {
-    document.body.style.overflow = mobileOpen ? 'hidden' : ''
-    return () => {
-      document.body.style.overflow = ''
-    }
-  }, [mobileOpen])
 
   const navItems: NavItem[] = [
     { labelKey: 'navProduct', href: sitePath('/#product') },
@@ -76,12 +69,6 @@ export function SiteHeader() {
           </div>
         </div>
       </div>
-
-      <div
-        className={['site-nav__drawer-backdrop', mobileOpen ? 'is-open' : ''].filter(Boolean).join(' ')}
-        aria-hidden="true"
-        onClick={closeMobile}
-      />
 
       <nav className={['site-nav__drawer', mobileOpen ? 'is-open' : ''].filter(Boolean).join(' ')} aria-label="Móvil">
         {navItems.map((item) => (
