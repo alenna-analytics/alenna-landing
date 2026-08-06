@@ -1,12 +1,13 @@
-import { useEffect, useRef, useState, type ReactNode } from 'react'
+import { useEffect, useRef, useState, type CSSProperties, type ReactNode } from 'react'
 
 type FadeInProps = {
   children: ReactNode
   className?: string
   as?: 'div' | 'article' | 'header' | 'section' | 'li'
+  delay?: number
 }
 
-export function FadeIn({ children, className = '', as: Tag = 'div' }: FadeInProps) {
+export function FadeIn({ children, className = '', as: Tag = 'div', delay = 0 }: FadeInProps) {
   const ref = useRef<HTMLElement>(null)
   const [visible, setVisible] = useState(false)
 
@@ -26,7 +27,7 @@ export function FadeIn({ children, className = '', as: Tag = 'div' }: FadeInProp
           observer.disconnect()
         }
       },
-      { threshold: 0.12, rootMargin: '0px 0px -40px 0px' },
+      { threshold: 0.08, rootMargin: '0px 0px -32px 0px' },
     )
 
     observer.observe(el)
@@ -34,9 +35,10 @@ export function FadeIn({ children, className = '', as: Tag = 'div' }: FadeInProp
   }, [])
 
   const classes = ['fade-in', visible ? 'is-visible' : '', className].filter(Boolean).join(' ')
+  const style: CSSProperties = delay > 0 ? { '--fade-delay': `${delay}ms` } as CSSProperties : {}
 
   return (
-    <Tag ref={ref as never} className={classes}>
+    <Tag ref={ref as never} className={classes} style={style}>
       {children}
     </Tag>
   )

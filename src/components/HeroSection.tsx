@@ -11,7 +11,7 @@ export function HeroSection() {
   return (
     <section className="hero" id="hero">
       <div className="container hero__inner">
-        <FadeIn className="hero__copy">
+        <FadeIn className="hero__copy" delay={0}>
           <h1 className="hero__title">
             <span className="hero__title-line">{landingT(lang, 'heroHeadlineLead')}</span>
             <span className="hero__title-line hero__title-line--lead">
@@ -32,7 +32,7 @@ export function HeroSection() {
           </div>
         </FadeIn>
 
-        <FadeIn className="hero__frame">
+        <FadeIn className="hero__frame" delay={120}>
           <div className="hero__frame-chrome">
             <span />
             <span />
@@ -47,7 +47,7 @@ export function HeroSection() {
           />
         </FadeIn>
 
-        <FadeIn className="hero__integrations">
+        <FadeIn className="hero__integrations" delay={240}>
           <p>{landingT(lang, 'integrationsStripCaption')}</p>
         </FadeIn>
       </div>

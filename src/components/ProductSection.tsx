@@ -38,8 +38,8 @@ export function ProductSection() {
         </FadeIn>
 
         <div className="module-cards">
-          {MODULES.map((mod) => (
-            <FadeIn key={mod.titleKey} as="article" className="module-card">
+          {MODULES.map((mod, index) => (
+            <FadeIn key={mod.titleKey} as="article" className="module-card" delay={index * 60}>
               <div className="module-card__icon">
                 <img src={mod.icon} alt="" aria-hidden="true" />
               </div>

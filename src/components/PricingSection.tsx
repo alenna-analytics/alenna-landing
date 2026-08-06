@@ -65,11 +65,12 @@ export function PricingSection() {
         </FadeIn>
 
         <div className="plans__cards">
-          {PLANS.map((plan) => (
+          {PLANS.map((plan, index) => (
             <FadeIn
               key={plan.id}
               as="article"
               className={['plan-card', plan.featured ? 'plan-card--featured' : ''].filter(Boolean).join(' ')}
+              delay={index * 70}
             >
               {plan.badgeKey ? <span className="plan-card__badge">{landingT(lang, plan.badgeKey)}</span> : null}
               <h3 className="plan-card__name">{landingT(lang, plan.nameKey)}</h3>

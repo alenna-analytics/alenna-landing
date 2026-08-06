@@ -22,7 +22,7 @@ export function FlowSection() {
 
         <div className="flow__grid">
           {STEPS.map((step, index) => (
-            <FadeIn key={step.titleKey} as="article" className="flow__step">
+            <FadeIn key={step.titleKey} as="article" className="flow__step" delay={index * 80}>
               <span className="flow__step-num">{index + 1}</span>
               <h3>{landingT(lang, step.titleKey)}</h3>
               <p>{landingT(lang, step.descKey)}</p>
