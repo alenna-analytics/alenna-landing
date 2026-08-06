@@ -864,6 +864,137 @@ button {
   font-weight: 500;
 }
 
+.enterprise-page {
+  padding-top: calc(var(--nav-h) + 48px);
+  padding-bottom: 80px;
+}
+
+.enterprise-page__inner {
+  max-width: calc(var(--container) + var(--gutter) * 2);
+}
+
+.enterprise-page__back {
+  display: inline-block;
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 28px;
+}
+
+.enterprise-page__back:hover {
+  color: var(--green);
+}
+
+.enterprise-page__layout {
+  display: grid;
+  gap: 40px;
+}
+
+.enterprise-page__brand {
+  font-family: var(--display);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--green);
+  margin-bottom: 8px;
+}
+
+.enterprise-page__title {
+  font-family: var(--display);
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin-bottom: 12px;
+}
+
+.enterprise-page__intro {
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--muted);
+  max-width: 36ch;
+}
+
+.enterprise-page__form-panel {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 28px;
+  background: var(--white);
+}
+
+.enterprise-page__success-title {
+  font-family: var(--display);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.enterprise-page__success-message {
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--muted);
+}
+
+.enterprise-form {
+  display: grid;
+  gap: 18px;
+}
+
+.enterprise-form__row {
+  display: grid;
+  gap: 18px;
+}
+
+.enterprise-form__field {
+  display: grid;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.enterprise-form__field input,
+.enterprise-form__field textarea {
+  width: 100%;
+  font: inherit;
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 10px 12px;
+  background: var(--white);
+  transition: border-color 0.15s ease;
+}
+
+.enterprise-form__field input:focus,
+.enterprise-form__field textarea:focus {
+  outline: none;
+  border-color: var(--green);
+}
+
+.enterprise-form__field textarea {
+  resize: vertical;
+  min-height: 96px;
+}
+
+.enterprise-form__error {
+  font-size: 14px;
+  color: #b42318;
+}
+
+.enterprise-form__submit {
+  justify-self: start;
+}
+
+@media (min-width: 768px) {
+  .enterprise-page__layout {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+    gap: 56px;
+    align-items: start;
+  }
+
+  .enterprise-form__row {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 @media (min-width: 768px) {
   :root {
     --gutter: 24px;
