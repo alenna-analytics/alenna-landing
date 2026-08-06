@@ -7,6 +7,8 @@ export const ENTERPRISE_FIELD_LIMITS = {
   message: 2000,
 } as const
 
+export type RecommendedPlan = 'basic' | 'growth'
+
 export type MonthlyOrderRange =
   | 'up_to_1000'
   | '1001_2000'
@@ -23,6 +25,12 @@ export const MONTHLY_ORDER_RANGES: MonthlyOrderRange[] = [
   '4001_5000',
   '5000_plus',
 ]
+
+export function recommendedPlanForRange(range: MonthlyOrderRange | ''): RecommendedPlan | null {
+  if (range === 'up_to_1000') return 'basic'
+  if (range === '1001_2000') return 'growth'
+  return null
+}
 
 export function monthlyOrdersFromRange(range: MonthlyOrderRange): number {
   const values: Record<MonthlyOrderRange, number> = {

@@ -1,3 +1,4 @@
+import { MonthlyOrdersSelect } from '@/components/enterprise/MonthlyOrdersSelect'
 import { SiteFooter } from '@/components/SiteFooter'
 import { SiteHeader } from '@/components/SiteHeader'
 import {
@@ -11,7 +12,6 @@ import {
   ENTERPRISE_CONTACT_EMAIL,
   ENTERPRISE_PATH,
   enterpriseContent,
-  MONTHLY_ORDER_RANGES,
 } from '@/lib/i18n/enterprise-strings'
 import { sitePath } from '@/lib/utils'
 import { useLanguage } from '@/providers/language-provider'
@@ -205,26 +205,14 @@ export function EnterprisePage() {
                     </label>
                   </div>
 
-                  <label className="enterprise-form__field">
-                    <span>{content.monthlyOrdersLabel}</span>
-                    <select
-                      name="monthly_orders_range"
-                      required
-                      value={fields.monthly_orders_range}
-                      onChange={(event) =>
-                        updateField('monthly_orders_range', event.target.value as MonthlyOrderRange | '')
-                      }
-                    >
-                      <option value="" disabled>
-                        {content.monthlyOrdersPlaceholder}
-                      </option>
-                      {MONTHLY_ORDER_RANGES.map((range) => (
-                        <option key={range} value={range}>
-                          {content.monthlyOrderOptions[range]}
-                        </option>
-                      ))}
-                    </select>
-                  </label>
+                  <MonthlyOrdersSelect
+                    label={content.monthlyOrdersLabel}
+                    placeholder={content.monthlyOrdersPlaceholder}
+                    options={content.monthlyOrderOptions}
+                    recommendationContent={content.planRecommendations}
+                    value={fields.monthly_orders_range}
+                    onChange={(range) => updateField('monthly_orders_range', range)}
+                  />
 
                   <label className="enterprise-form__field">
                     <span>{content.messageLabel}</span>
