@@ -28,4 +28,5 @@ jobs:
       - name: Build
         env:
           VITE_APP_URL: https://app.alenna.io
+          VITE_API_URL: https://api.alenna.io
         run: pnpm build

@@ -36,6 +36,7 @@ export function EnterprisePage() {
   const content = enterpriseContent(lang)
   const [fields, setFields] = useState<FormFields>(EMPTY_FORM)
   const [status, setStatus] = useState<FormStatus>('idle')
+  const [errorMessage, setErrorMessage] = useState<string | null>(null)
 
   useEffect(() => {
     document.title = content.metaTitle
@@ -51,6 +52,7 @@ export function EnterprisePage() {
     }
 
     setStatus('submitting')
+    setErrorMessage(null)
 
     const payload = {
       company_name: fields.company_name.trim(),
@@ -71,11 +73,28 @@ export function EnterprisePage() {
       if (response.status === 201) {
         setStatus('success')
         setFields(EMPTY_FORM)
+        setErrorMessage(null)
         return
       }
 
+      if (response.status === 422) {
+        const body = (await response.json().catch(() => null)) as {
+          detail?: { message?: string } | string
+        } | null
+        const detail = body?.detail
+        const message =
+          typeof detail === 'object' && detail && 'message' in detail && detail.message
+            ? detail.message
+            : content.errorGeneric
+        setErrorMessage(message)
+        setStatus('error')
+        return
+      }
+
+      setErrorMessage(content.errorGeneric)
       setStatus('error')
     } catch {
+      setErrorMessage(content.errorGeneric)
       setStatus('error')
     }
   }
@@ -183,7 +202,9 @@ export function EnterprisePage() {
 
                   {status === 'error' ? (
                     <p className="enterprise-form__error" role="alert">
-                      {!planInquiryEndpoint() ? content.errorConfig : content.errorGeneric}
+                      {!planInquiryEndpoint()
+                        ? content.errorConfig
+                        : errorMessage ?? content.errorGeneric}
                     </p>
                   ) : null}
 

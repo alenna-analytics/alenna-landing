@@ -14,7 +14,10 @@ pnpm install
 cp .env.example .env
 ```
 
-Edit `.env` and set `VITE_APP_URL` to your dashboard origin.
+Edit `.env` and set:
+
+- `VITE_APP_URL` — dashboard origin (sign-up links)
+- `VITE_API_URL` — API origin (required for `/enterprise` plan inquiry form)
 
 ## Scripts
 
