@@ -1,7 +1,11 @@
-export function appUrl(): string {
+export function appUrl(pathSuffix = ''): string {
   const raw = import.meta.env.VITE_APP_URL as string | undefined
   const trimmed = raw?.trim() ?? ''
-  return trimmed.length > 0 ? trimmed.replace(/\/$/, '') : '#'
+  const base = trimmed.length > 0 ? trimmed.replace(/\/$/, '') : '#'
+  if (!pathSuffix) return base
+  if (base === '#') return '#'
+  const normalized = pathSuffix.startsWith('/') ? pathSuffix : `/${pathSuffix}`
+  return `${base}${normalized}`
 }
 
 function normalizePath(pathname: string): string {

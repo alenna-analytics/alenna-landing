@@ -3,10 +3,8 @@ import { CheckIcon } from '@/components/ui/CheckIcon'
 import { FadeIn } from '@/components/ui/FadeIn'
 import type { LandingStringKey } from '@/lib/i18n/landing-strings'
 import { landingT } from '@/lib/i18n/landing-strings'
-import { appUrl } from '@/lib/utils'
+import { planHref } from '@/lib/pricing-links'
 import { useLanguage } from '@/providers/language-provider'
-
-const CONTACT_MAILTO = 'mailto:support@alenna.io?subject=Custom%20plan%20inquiry'
 
 type PlanCard = {
   id: string
@@ -54,10 +52,6 @@ const PLANS: PlanCard[] = [
   },
 ]
 
-function planHref(kind: PlanCard['hrefKind']): string {
-  return kind === 'app' ? appUrl() : CONTACT_MAILTO
-}
-
 export function PricingSection() {
   const { lang } = useLanguage()
 
@@ -90,7 +84,7 @@ export function PricingSection() {
                   </li>
                 ))}
               </ul>
-              <Button href={planHref(plan.hrefKind)} variant={plan.ctaVariant} className="plan-card__cta">
+              <Button href={planHref(plan)} variant={plan.ctaVariant} className="plan-card__cta">
                 {landingT(lang, plan.ctaKey)}
               </Button>
             </FadeIn>
