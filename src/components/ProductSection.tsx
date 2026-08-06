@@ -39,7 +39,7 @@ export function ProductSection() {
 
         <div className="module-cards">
           {MODULES.map((mod, index) => (
-            <FadeIn key={mod.titleKey} as="article" className="module-card" delay={index * 60}>
+            <FadeIn key={mod.titleKey} as="article" className="module-card" delay={index * 50}>
               <div className="module-card__icon">
                 <img src={mod.icon} alt="" aria-hidden="true" />
               </div>

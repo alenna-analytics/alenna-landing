@@ -1,16 +1,29 @@
+import { MonthlyOrdersSelect } from '@/components/enterprise/MonthlyOrdersSelect'
 import { SiteFooter } from '@/components/SiteFooter'
 import { SiteHeader } from '@/components/SiteHeader'
-import { ENTERPRISE_PATH, enterpriseContent } from '@/lib/i18n/enterprise-strings'
+import {
+  buildInquiryMessage,
+  ENTERPRISE_FIELD_LIMITS,
+  monthlyOrdersFromRange,
+  parseCountInput,
+  type MonthlyOrderRange,
+} from '@/lib/enterprise-form'
+import {
+  ENTERPRISE_CONTACT_EMAIL,
+  ENTERPRISE_PATH,
+  enterpriseContent,
+} from '@/lib/i18n/enterprise-strings'
 import { sitePath } from '@/lib/utils'
 import { useLanguage } from '@/providers/language-provider'
 import { useEffect, useState, type FormEvent } from 'react'
 
 type FormFields = {
   company_name: string
+  contact_name: string
   email: string
   user_count: string
   product_count: string
-  monthly_orders: string
+  monthly_orders_range: MonthlyOrderRange | ''
   message: string
 }
 
@@ -18,10 +31,11 @@ type FormStatus = 'idle' | 'submitting' | 'success' | 'error'
 
 const EMPTY_FORM: FormFields = {
   company_name: '',
+  contact_name: '',
   email: '',
   user_count: '',
   product_count: '',
-  monthly_orders: '',
+  monthly_orders_range: '',
   message: '',
 }
 
@@ -50,15 +64,24 @@ export function EnterprisePage() {
       return
     }
 
+    const userCount = parseCountInput(fields.user_count, ENTERPRISE_FIELD_LIMITS.userCount)
+    const productCount = parseCountInput(fields.product_count, ENTERPRISE_FIELD_LIMITS.productCount)
+    const monthlyRange = fields.monthly_orders_range
+
+    if (!userCount || !productCount || !monthlyRange) {
+      setStatus('error')
+      return
+    }
+
     setStatus('submitting')
 
     const payload = {
       company_name: fields.company_name.trim(),
       email: fields.email.trim(),
-      user_count: Number.parseInt(fields.user_count, 10),
-      product_count: Number.parseInt(fields.product_count, 10),
-      monthly_orders: Number.parseInt(fields.monthly_orders, 10),
-      message: fields.message.trim() || null,
+      user_count: userCount,
+      product_count: productCount,
+      monthly_orders: monthlyOrdersFromRange(monthlyRange),
+      message: buildInquiryMessage(fields.contact_name, fields.message, content.inquiryNamePrefix),
     }
 
     try {
@@ -98,6 +121,12 @@ export function EnterprisePage() {
               <p className="enterprise-page__brand">{content.brandLabel}</p>
               <h1 className="enterprise-page__title">{content.title}</h1>
               <p className="enterprise-page__intro">{content.intro}</p>
+              <p className="enterprise-page__contact">
+                <span className="enterprise-page__contact-label">{content.contactEmailLabel}</span>
+                <a href={`mailto:${ENTERPRISE_CONTACT_EMAIL}`} className="enterprise-page__contact-email">
+                  {ENTERPRISE_CONTACT_EMAIL}
+                </a>
+              </p>
             </div>
 
             <div className="enterprise-page__form-panel">
@@ -114,9 +143,22 @@ export function EnterprisePage() {
                       type="text"
                       name="company_name"
                       required
-                      maxLength={200}
+                      maxLength={ENTERPRISE_FIELD_LIMITS.companyName}
                       value={fields.company_name}
                       onChange={(event) => updateField('company_name', event.target.value)}
+                    />
+                  </label>
+
+                  <label className="enterprise-form__field">
+                    <span>{content.contactNameLabel}</span>
+                    <input
+                      type="text"
+                      name="contact_name"
+                      required
+                      maxLength={ENTERPRISE_FIELD_LIMITS.contactName}
+                      autoComplete="name"
+                      value={fields.contact_name}
+                      onChange={(event) => updateField('contact_name', event.target.value)}
                     />
                   </label>
 
@@ -126,6 +168,8 @@ export function EnterprisePage() {
                       type="email"
                       name="email"
                       required
+                      maxLength={ENTERPRISE_FIELD_LIMITS.email}
+                      autoComplete="email"
                       value={fields.email}
                       onChange={(event) => updateField('email', event.target.value)}
                     />
@@ -135,46 +179,47 @@ export function EnterprisePage() {
                     <label className="enterprise-form__field">
                       <span>{content.userCountLabel}</span>
                       <input
-                        type="number"
+                        type="text"
                         name="user_count"
                         required
-                        min={1}
+                        inputMode="numeric"
+                        pattern="[0-9]*"
+                        maxLength={ENTERPRISE_FIELD_LIMITS.userCount}
                         value={fields.user_count}
-                        onChange={(event) => updateField('user_count', event.target.value)}
+                        onChange={(event) => updateField('user_count', event.target.value.replace(/\D/g, ''))}
                       />
                     </label>
 
                     <label className="enterprise-form__field">
                       <span>{content.productCountLabel}</span>
                       <input
-                        type="number"
+                        type="text"
                         name="product_count"
                         required
-                        min={1}
+                        inputMode="numeric"
+                        pattern="[0-9]*"
+                        maxLength={ENTERPRISE_FIELD_LIMITS.productCount}
                         value={fields.product_count}
-                        onChange={(event) => updateField('product_count', event.target.value)}
+                        onChange={(event) => updateField('product_count', event.target.value.replace(/\D/g, ''))}
                       />
                     </label>
                   </div>
 
-                  <label className="enterprise-form__field">
-                    <span>{content.monthlyOrdersLabel}</span>
-                    <input
-                      type="number"
-                      name="monthly_orders"
-                      required
-                      min={1}
-                      value={fields.monthly_orders}
-                      onChange={(event) => updateField('monthly_orders', event.target.value)}
-                    />
-                  </label>
+                  <MonthlyOrdersSelect
+                    label={content.monthlyOrdersLabel}
+                    placeholder={content.monthlyOrdersPlaceholder}
+                    options={content.monthlyOrderOptions}
+                    recommendationContent={content.planRecommendations}
+                    value={fields.monthly_orders_range}
+                    onChange={(range) => updateField('monthly_orders_range', range)}
+                  />
 
                   <label className="enterprise-form__field">
                     <span>{content.messageLabel}</span>
                     <textarea
                       name="message"
                       rows={4}
-                      maxLength={2000}
+                      maxLength={ENTERPRISE_FIELD_LIMITS.message}
                       placeholder={content.messagePlaceholder}
                       value={fields.message}
                       onChange={(event) => updateField('message', event.target.value)}

@@ -5,13 +5,16 @@ import { landingT } from '@/lib/i18n/landing-strings'
 import { sitePath } from '@/lib/utils'
 import { useLanguage } from '@/providers/language-provider'
 
+const LIVE_INTEGRATIONS = ['integrationShopify', 'integrationMercadoLibre'] as const
+
 export function HeroSection() {
   const { lang } = useLanguage()
 
   return (
     <section className="hero" id="hero">
       <div className="container hero__inner">
-        <FadeIn className="hero__copy" delay={0}>
+        <FadeIn className="hero__copy">
+          <p className="hero__eyebrow">{landingT(lang, 'heroEyebrow')}</p>
           <h1 className="hero__title">
             <span className="hero__title-line">{landingT(lang, 'heroHeadlineLead')}</span>
             <span className="hero__title-line hero__title-line--lead">
@@ -32,7 +35,7 @@ export function HeroSection() {
           </div>
         </FadeIn>
 
-        <FadeIn className="hero__frame" delay={120}>
+        <FadeIn className="hero__frame" delay={60}>
           <div className="hero__frame-chrome">
             <span />
             <span />
@@ -47,8 +50,24 @@ export function HeroSection() {
           />
         </FadeIn>
 
-        <FadeIn className="hero__integrations" delay={240}>
-          <p>{landingT(lang, 'integrationsStripCaption')}</p>
+        <FadeIn className="hero__integrations" delay={120}>
+          <p className="hero__integrations-label">{landingT(lang, 'integrationsStripCaption')}</p>
+          <ul className="hero__integration-list">
+            {LIVE_INTEGRATIONS.map((key) => (
+              <li key={key} className="hero__integration-item">
+                <span>{landingT(lang, key)}</span>
+                <span className="hero__integration-tag hero__integration-tag--live">
+                  {landingT(lang, 'integrationStatusLive')}
+                </span>
+              </li>
+            ))}
+            <li className="hero__integration-item hero__integration-item--soon">
+              <span>{landingT(lang, 'integrationAmazonSoon')}</span>
+              <span className="hero__integration-tag hero__integration-tag--soon">
+                {landingT(lang, 'integrationsComingSoonLabel')}
+              </span>
+            </li>
+          </ul>
         </FadeIn>
       </div>
     </section>
