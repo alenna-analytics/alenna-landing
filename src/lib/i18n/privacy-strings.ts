@@ -23,7 +23,7 @@ const PRIVACY_ES: PrivacyContent = {
   metaTitle: 'Política de Privacidad — Alenna Analytics',
   brandLabel: 'Alenna Analytics',
   title: 'Política de Privacidad',
-  updated: 'Última actualización: 8 de julio de 2026',
+  updated: 'Última actualización: 12 de agosto de 2026',
   intro:
     'Alenna Analytics ("Alenna", "nosotros") es una plataforma de inteligencia comercial para ecommerce, disponible en alenna.io y operada por Sergio Garnica González. Esta Política de Privacidad describe qué datos recopilamos, cuáles no almacenamos, cómo los tratamos, con quién los compartimos y cuáles son tus derechos. Al crear una cuenta o usar nuestros servicios, aceptas las prácticas descritas en este documento.',
   sections: [
@@ -56,12 +56,12 @@ const PRIVACY_ES: PrivacyContent = {
             'Nombre de tu empresa o espacio de trabajo, si lo proporcionas.',
             'Rol y membresía en el espacio de trabajo (tenant).',
             'Preferencias de la cuenta (por ejemplo, moneda de visualización).',
-            'Si contratas un plan de pago: identificadores de facturación y estado de suscripción a través de nuestro proveedor de pagos. No almacenamos números de tarjeta.',
+            'Si contratas un plan de pago: identificadores de cliente y suscripción en Stripe (nuestro procesador de pagos), plan contratado, estado de facturación y fechas asociadas. No almacenamos números de tarjeta ni datos completos del método de pago.',
           ],
         },
         {
           kind: 'p',
-          text: 'Las contraseñas y el inicio de sesión los gestiona Clerk. Alenna no almacena contraseñas en texto plano ni hashes de contraseña en sus propios servidores.',
+          text: 'Las contraseñas y el inicio de sesión los gestiona Clerk. Alenna no almacena contraseñas en texto plano ni hashes de contraseña en sus propios servidores. Los pagos de suscripción se procesan en Stripe Checkout y el Customer Portal de Stripe; la tarjeta y otros datos de pago los recibe y trata Stripe conforme a su propia política de privacidad (stripe.com/privacy).',
         },
         { kind: 'h3', text: '2.2 Datos comerciales de tus canales conectados' },
         {
@@ -165,7 +165,7 @@ const PRIVACY_ES: PrivacyContent = {
             'Supabase — base de datos (PostgreSQL).',
             'Fly.io — alojamiento de la API y trabajos de sincronización.',
             'Vercel — alojamiento del sitio web y panel de usuario.',
-            'Proveedor de pagos — facturación de suscripciones, cuando contrates un plan de pago.',
+            'Stripe — procesamiento de pagos, facturación de suscripciones, portal de cliente y recibos, cuando contratas o gestionas un plan de pago. Ver stripe.com/privacy.',
           ],
         },
         { kind: 'h3', text: '6.2 Plataformas que tú conectas' },
@@ -185,7 +185,7 @@ const PRIVACY_ES: PrivacyContent = {
       blocks: [
         {
           kind: 'p',
-          text: 'Algunos proveedores (Clerk, Supabase, Fly.io, Vercel) pueden procesar datos en Estados Unidos u otros países. Cuando esto ocurre, nos apoyamos en las salvaguardas contractuales y de seguridad que ofrecen dichos proveedores, y en las bases legales aplicables bajo la LFPDPPP.',
+          text: 'Algunos proveedores (Clerk, Supabase, Fly.io, Vercel, Stripe) pueden procesar datos en Estados Unidos u otros países. Cuando esto ocurre, nos apoyamos en las salvaguardas contractuales y de seguridad que ofrecen dichos proveedores, y en las bases legales aplicables bajo la LFPDPPP.',
         },
       ],
     },
@@ -203,7 +203,7 @@ const PRIVACY_ES: PrivacyContent = {
             'Datos comerciales sincronizados (pedidos, catálogo, métricas): mientras tu cuenta esté activa, para que puedas consultar el historial completo de tu operación en la plataforma. Solo se eliminan si cancelas tu cuenta o nos lo solicitas expresamente.',
             'Tokens de integración (OAuth): mientras la conexión esté activa; se eliminan al desconectar la integración.',
             'Registros técnicos y de seguridad: hasta 12 meses, o el plazo que imponga el proveedor de infraestructura.',
-            'Datos de facturación: el plazo que exija la legislación fiscal aplicable (hasta 5 años en México, cuando corresponda).',
+            'Identificadores y registros de facturación en Alenna (p. ej. IDs de cliente/suscripción Stripe y estado del plan): el plazo que exija la legislación fiscal aplicable (hasta 5 años en México, cuando corresponda). Stripe puede conservar datos de pago adicionales según su propia política.',
           ],
         },
         {
@@ -331,7 +331,7 @@ const PRIVACY_EN: PrivacyContent = {
   metaTitle: 'Privacy Policy — Alenna Analytics',
   brandLabel: 'Alenna Analytics',
   title: 'Privacy Policy',
-  updated: 'Last updated: July 8, 2026',
+  updated: 'Last updated: August 12, 2026',
   intro:
     'Alenna Analytics ("Alenna", "we") is a commerce intelligence platform for ecommerce, available at alenna.io and operated by Sergio Garnica González. This Privacy Policy describes what data we collect, what we do not store, how we process it, who we share it with, and your rights. By creating an account or using our services, you accept the practices described in this document.',
   sections: [
@@ -364,12 +364,12 @@ const PRIVACY_EN: PrivacyContent = {
             'Company or workspace name, if you provide it.',
             'Role and workspace (tenant) membership.',
             'Account preferences (e.g. display currency).',
-            'If you subscribe to a paid plan: billing identifiers and subscription status through our payment provider. We do not store card numbers.',
+            'If you subscribe to a paid plan: Stripe customer and subscription identifiers (our payment processor), subscribed plan, billing status, and related dates. We do not store card numbers or full payment-method details.',
           ],
         },
         {
           kind: 'p',
-          text: 'Passwords and sign-in are managed by Clerk. Alenna does not store plaintext passwords or password hashes on its own servers.',
+          text: 'Passwords and sign-in are managed by Clerk. Alenna does not store plaintext passwords or password hashes on its own servers. Subscription payments are processed via Stripe Checkout and the Stripe Customer Portal; card and other payment data are received and processed by Stripe under its own privacy policy (stripe.com/privacy).',
         },
         { kind: 'h3', text: '2.2 Commercial data from your connected channels' },
         {
@@ -473,7 +473,7 @@ const PRIVACY_EN: PrivacyContent = {
             'Supabase — database (PostgreSQL).',
             'Fly.io — API hosting and sync workers.',
             'Vercel — website and dashboard hosting.',
-            'Payment provider — subscription billing when you subscribe to a paid plan.',
+            'Stripe — payment processing, subscription billing, customer portal, and receipts when you subscribe to or manage a paid plan. See stripe.com/privacy.',
           ],
         },
         { kind: 'h3', text: '6.2 Platforms you connect' },
@@ -493,7 +493,7 @@ const PRIVACY_EN: PrivacyContent = {
       blocks: [
         {
           kind: 'p',
-          text: 'Some providers (Clerk, Supabase, Fly.io, Vercel) may process data in the United States or other countries. When this occurs, we rely on contractual and security safeguards offered by those providers and applicable legal bases under LFPDPPP.',
+          text: 'Some providers (Clerk, Supabase, Fly.io, Vercel, Stripe) may process data in the United States or other countries. When this occurs, we rely on contractual and security safeguards offered by those providers and applicable legal bases under LFPDPPP.',
         },
       ],
     },
@@ -511,7 +511,7 @@ const PRIVACY_EN: PrivacyContent = {
             'Synchronized commercial data (orders, catalog, metrics): while your account is active, so you can access your full operational history on the platform. Deleted only if you close your account or explicitly request deletion.',
             'Integration tokens (OAuth): while the connection is active; deleted when you disconnect.',
             'Technical and security logs: up to 12 months, or as required by the infrastructure provider.',
-            'Billing data: as required by applicable tax law (up to 5 years in Mexico, when applicable).',
+            'Billing identifiers and records in Alenna (e.g. Stripe customer/subscription IDs and plan status): as required by applicable tax law (up to 5 years in Mexico, when applicable). Stripe may retain additional payment data under its own policy.',
           ],
         },
         {
