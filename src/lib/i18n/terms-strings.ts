@@ -5,7 +5,7 @@ const TERMS_ES: LegalPageContent = {
   metaTitle: 'Términos y Condiciones — Alenna Analytics',
   brandLabel: 'Alenna Analytics',
   title: 'Términos y Condiciones',
-  updated: 'Última actualización: 8 de julio de 2026',
+  updated: 'Última actualización: 12 de agosto de 2026',
   intro:
     'Estos Términos y Condiciones ("Términos") regulan el acceso y uso de Alenna Analytics ("Alenna", "el Servicio"), disponible en alenna.io y operado por Sergio Garnica González. Al crear una cuenta o usar el Servicio, aceptas estos Términos y nuestra Política de Privacidad en alenna.io/privacidad. Si no estás de acuerdo, no uses el Servicio.',
   sections: [
@@ -86,15 +86,23 @@ const TERMS_ES: LegalPageContent = {
       blocks: [
         {
           kind: 'p',
-          text: 'Alenna ofrece una prueba gratuita de 15 días del plan Basic. Después, los planes Basic (USD 30/mes) y Growth (USD 60/mes) incluyen todos los módulos e integraciones ilimitadas, con límites de pedidos y productos según el plan. Los planes Custom se cotizan por contacto. Los precios vigentes se muestran en alenna.io.',
+          text: 'Alenna ofrece planes Basic (USD 30/mes) y Growth (USD 60/mes), con todos los módulos e integraciones ilimitadas y límites de pedidos y productos según el plan. Los planes Custom se cotizan por contacto. Los precios vigentes se muestran en alenna.io.',
         },
         {
           kind: 'p',
-          text: 'Al finalizar la prueba, la suscripción de pago se activa según el flujo indicado en el panel, salvo que canceles antes. Si contratas el plan de pago, aceptas la tarifa publicada y el ciclo mensual. Los pagos se procesan a través de nuestro proveedor de pagos; no almacenamos números de tarjeta.',
+          text: 'Puedes iniciar con una prueba gratuita de 15 días del plan Basic. Si eliges Growth al registrarte, el acceso al Servicio requiere completar el pago antes de usar el panel. Al finalizar la prueba Basic sin suscribirte a un plan de pago, el acceso al panel se restringe hasta que contrates un plan.',
         },
         {
           kind: 'p',
-          text: 'Salvo que se indique lo contrario, las suscripciones se renuevan automáticamente hasta que las canceles desde el panel o nos escribas a contacto@alenna.io. No hay reembolsos por periodos parciales ya iniciados, salvo cuando la ley aplicable exija lo contrario.',
+          text: 'Los pagos de suscripción se procesan mediante Stripe (Checkout y Customer Portal). Alenna no almacena números de tarjeta ni datos completos del método de pago. Al contratar, aceptas la tarifa publicada, el ciclo de facturación mensual y los cargos que Stripe realice en tu nombre conforme a tu método de pago.',
+        },
+        {
+          kind: 'p',
+          text: 'Salvo que se indique lo contrario, las suscripciones se renuevan automáticamente al final de cada periodo hasta que las canceles. Puedes gestionar o cancelar la suscripción desde el panel (portal de Stripe) o escribiendo a contacto@alenna.io. La cancelación evita cargos futuros; no hay reembolsos por periodos parciales ya iniciados, salvo cuando la ley aplicable exija lo contrario.',
+        },
+        {
+          kind: 'p',
+          text: 'Si cancelas o el pago falla y la suscripción deja de estar activa, el espacio de trabajo puede quedar con acceso restringido hasta que renueves o contrates un plan. Los límites del plan (por ejemplo, pedidos o SKUs) pueden pausar sincronizaciones o funciones asociadas hasta que reduzcas el uso o mejores de plan.',
         },
         {
           kind: 'p',
@@ -175,11 +183,11 @@ const TERMS_ES: LegalPageContent = {
       blocks: [
         {
           kind: 'p',
-          text: 'Puedes dejar de usar el Servicio en cualquier momento. Si tienes una suscripción de pago, debes cancelarla según el procedimiento indicado para evitar cargos futuros.',
+          text: 'Puedes dejar de usar el Servicio en cualquier momento. Si tienes una suscripción de pago, debes cancelarla desde el portal de facturación en el panel (Stripe) o contactándonos, para evitar cargos futuros.',
         },
         {
           kind: 'p',
-          text: 'Podemos suspender o dar por terminado tu acceso si incumples estos Términos, si la ley lo exige, si dejas de pagar un plan contratado o si discontinuamos el Servicio con aviso previo.',
+          text: 'Podemos suspender o dar por terminado tu acceso si incumples estos Términos, si la ley lo exige, si dejas de pagar un plan contratado, si la suscripción queda inactiva, o si discontinuamos el Servicio con aviso previo.',
         },
         {
           kind: 'h3',
@@ -238,7 +246,7 @@ const TERMS_EN: LegalPageContent = {
   metaTitle: 'Terms and Conditions — Alenna Analytics',
   brandLabel: 'Alenna Analytics',
   title: 'Terms and Conditions',
-  updated: 'Last updated: July 8, 2026',
+  updated: 'Last updated: August 12, 2026',
   intro:
     'These Terms and Conditions ("Terms") govern access to and use of Alenna Analytics ("Alenna", "the Service"), available at alenna.io and operated by Sergio Garnica González. By creating an account or using the Service, you accept these Terms and our Privacy Policy at alenna.io/privacidad. If you do not agree, do not use the Service.',
   sections: [
@@ -319,15 +327,23 @@ const TERMS_EN: LegalPageContent = {
       blocks: [
         {
           kind: 'p',
-          text: 'Alenna offers a 15-day free trial of the Basic plan. After that, Basic (USD 30/month) and Growth (USD 60/month) include all modules and unlimited integrations, with order and product limits per plan. Custom plans are quoted on request. Current prices are shown at alenna.io.',
+          text: 'Alenna offers Basic (USD 30/month) and Growth (USD 60/month) plans, with all modules and unlimited integrations and order/product limits per plan. Custom plans are quoted on request. Current prices are shown at alenna.io.',
         },
         {
           kind: 'p',
-          text: 'When the trial ends, the paid subscription starts according to the dashboard flow unless you cancel beforehand. If you subscribe to the paid plan, you accept the published fee and monthly billing cycle. Payments are processed through our payment provider; we do not store card numbers.',
+          text: 'You may start with a 15-day free trial of the Basic plan. If you choose Growth at signup, access to the Service requires completing payment before using the dashboard. When the Basic trial ends without a paid subscription, dashboard access is restricted until you subscribe to a plan.',
         },
         {
           kind: 'p',
-          text: 'Unless stated otherwise, subscriptions renew automatically until you cancel from the dashboard or contact us at contacto@alenna.io. There are no refunds for partial periods already started, except where applicable law requires otherwise.',
+          text: 'Subscription payments are processed by Stripe (Checkout and Customer Portal). Alenna does not store card numbers or full payment-method details. By subscribing, you accept the published fee, the monthly billing cycle, and charges Stripe places on your payment method on our behalf.',
+        },
+        {
+          kind: 'p',
+          text: 'Unless stated otherwise, subscriptions renew automatically at the end of each period until you cancel. You may manage or cancel from the dashboard (Stripe portal) or by emailing contacto@alenna.io. Cancellation stops future charges; there are no refunds for partial periods already started, except where applicable law requires otherwise.',
+        },
+        {
+          kind: 'p',
+          text: 'If you cancel or payment fails and the subscription is no longer active, the workspace may have restricted access until you renew or subscribe again. Plan limits (for example, orders or SKUs) may pause related syncs or features until you reduce usage or upgrade.',
         },
         {
           kind: 'p',
@@ -408,11 +424,11 @@ const TERMS_EN: LegalPageContent = {
       blocks: [
         {
           kind: 'p',
-          text: 'You may stop using the Service at any time. If you have a paid subscription, you must cancel it according to the indicated procedure to avoid future charges.',
+          text: 'You may stop using the Service at any time. If you have a paid subscription, you must cancel it from the billing portal in the dashboard (Stripe) or by contacting us, to avoid future charges.',
         },
         {
           kind: 'p',
-          text: 'We may suspend or terminate your access if you breach these Terms, if required by law, if you fail to pay for a subscribed plan, or if we discontinue the Service with prior notice.',
+          text: 'We may suspend or terminate your access if you breach these Terms, if required by law, if you fail to pay for a subscribed plan, if the subscription becomes inactive, or if we discontinue the Service with prior notice.',
         },
         {
           kind: 'h3',
