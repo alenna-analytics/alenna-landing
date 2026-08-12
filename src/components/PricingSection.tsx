@@ -9,9 +9,11 @@ import { useLanguage } from '@/providers/language-provider'
 type PlanCard = {
   id: string
   nameKey: LandingStringKey
-  priceKey: LandingStringKey
-  noteKey?: LandingStringKey
+  taglineKey: LandingStringKey
+  priceKey?: LandingStringKey
+  periodKey?: LandingStringKey
   badgeKey?: LandingStringKey
+  includesPriorKey?: LandingStringKey
   featureKeys: LandingStringKey[]
   ctaKey: LandingStringKey
   ctaVariant: 'primary' | 'secondary'
@@ -22,8 +24,9 @@ const PLANS: PlanCard[] = [
   {
     id: 'basic',
     nameKey: 'planBasicName',
-    priceKey: 'planBasicPriceCompact',
-    noteKey: 'planBasicBadge',
+    taglineKey: 'planBasicTagline',
+    priceKey: 'planBasicPrice',
+    periodKey: 'planBasicPeriod',
     featureKeys: [
       'planBasicOrdersLimit',
       'planBasicProductsLimit',
@@ -36,13 +39,15 @@ const PLANS: PlanCard[] = [
   {
     id: 'growth',
     nameKey: 'planGrowthName',
-    priceKey: 'planGrowthPriceCompact',
+    taglineKey: 'planGrowthTagline',
+    priceKey: 'planGrowthPrice',
+    periodKey: 'planGrowthPeriod',
     badgeKey: 'planGrowthBadge',
+    includesPriorKey: 'planGrowthIncludesPrior',
     featureKeys: [
       'planGrowthOrdersLimit',
       'planGrowthProductsLimit',
       'planGrowthUsersLimit',
-      'planFeatureCore',
     ],
     ctaKey: 'planGrowthCta',
     ctaVariant: 'secondary',
@@ -51,8 +56,9 @@ const PLANS: PlanCard[] = [
   {
     id: 'custom',
     nameKey: 'planCustomName',
-    priceKey: 'planCustomPriceCompact',
-    featureKeys: ['planCustomLimits', 'planCustomUsersLimit', 'planFeatureCore'],
+    taglineKey: 'planCustomTagline',
+    includesPriorKey: 'planCustomIncludesPrior',
+    featureKeys: ['planCustomLimits', 'planCustomUsersLimit'],
     ctaKey: 'planCustomCta',
     ctaVariant: 'secondary',
   },
@@ -65,7 +71,6 @@ export function PricingSection() {
     <section className="plans section" id="pricing">
       <div className="container plans__layout">
         <FadeIn className="plans__intro">
-          <p className="eyebrow">{landingT(lang, 'pricingEyebrow')}</p>
           <h2 className="section-heading section-heading--center">{landingT(lang, 'pricingTitleMinimal')}</h2>
           <p className="section-lede">{landingT(lang, 'pricingSubtitle')}</p>
         </FadeIn>
@@ -79,10 +84,29 @@ export function PricingSection() {
               delay={index * 50}
             >
               {plan.badgeKey ? <span className="plan-card__badge">{landingT(lang, plan.badgeKey)}</span> : null}
-              <h3 className="plan-card__name">{landingT(lang, plan.nameKey)}</h3>
-              <p className="plan-card__price">{landingT(lang, plan.priceKey)}</p>
-              {plan.noteKey ? <p className="plan-card__note">{landingT(lang, plan.noteKey)}</p> : null}
-              <p className="plan-card__includes">{landingT(lang, 'planIncludesLabel')}</p>
+
+              <div className="plan-card__header">
+                <h3 className="plan-card__name">{landingT(lang, plan.nameKey)}</h3>
+                <p className="plan-card__tagline">{landingT(lang, plan.taglineKey)}</p>
+                <div className="plan-card__pricing">
+                  {plan.priceKey ? (
+                    <p className="plan-card__price">{landingT(lang, plan.priceKey)}</p>
+                  ) : null}
+                  {plan.periodKey ? (
+                    <p className="plan-card__period">{landingT(lang, plan.periodKey)}</p>
+                  ) : null}
+                </div>
+              </div>
+
+              <Button href={planHref(plan)} variant={plan.ctaVariant} className="plan-card__cta">
+                {landingT(lang, plan.ctaKey)}
+              </Button>
+
+              <div className="plan-card__divider" aria-hidden="true" />
+
+              {plan.includesPriorKey ? (
+                <p className="plan-card__includes-prior">{landingT(lang, plan.includesPriorKey)}</p>
+              ) : null}
               <ul className="plan-card__features">
                 {plan.featureKeys.map((key) => (
                   <li key={key}>
@@ -91,9 +115,6 @@ export function PricingSection() {
                   </li>
                 ))}
               </ul>
-              <Button href={planHref(plan)} variant={plan.ctaVariant} className="plan-card__cta">
-                {landingT(lang, plan.ctaKey)}
-              </Button>
             </FadeIn>
           ))}
         </div>

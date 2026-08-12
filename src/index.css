@@ -676,9 +676,9 @@ button {
   position: relative;
   display: flex;
   flex-direction: column;
-  padding: 24px;
+  padding: 28px 24px 24px;
   border: 1px solid var(--line);
-  border-radius: 12px;
+  border-radius: 16px;
   background: var(--white);
 }
 
@@ -699,19 +699,48 @@ button {
   font-weight: 600;
 }
 
+.plan-card__header {
+  margin-bottom: 20px;
+}
+
 .plan-card__name {
   font-family: var(--display);
-  font-size: 16px;
-  font-weight: 600;
-  margin-bottom: 6px;
+  font-size: clamp(28px, 3vw, 34px);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin-bottom: 8px;
+  padding-right: 72px;
+}
+
+.plan-card__tagline {
+  font-size: 14px;
+  line-height: 1.45;
+  color: var(--muted);
+  margin-bottom: 20px;
+  min-height: 2.9em;
+}
+
+.plan-card__pricing {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: calc(clamp(36px, 4vw, 44px) + 6px + 1.25em);
 }
 
 .plan-card__price {
   font-family: var(--display);
-  font-size: 24px;
+  font-size: clamp(36px, 4vw, 44px);
   font-weight: 700;
-  letter-spacing: -0.02em;
-  margin-bottom: 4px;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.plan-card__period {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--muted);
 }
 
 .plan-card__note {
@@ -721,15 +750,42 @@ button {
   margin-bottom: 16px;
 }
 
-.plan-card__includes {
+.plan-card__cta {
+  width: 100%;
+  justify-content: center;
+}
+
+.plan-card .btn--secondary {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--white);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .plan-card .btn--secondary:hover {
+    background: #1a1a1a;
+    border-color: #1a1a1a;
+    color: var(--white);
+  }
+}
+
+.plan-card__divider {
+  height: 1px;
+  background: var(--line);
+  margin: 22px 0 18px;
+}
+
+.plan-card__includes,
+.plan-card__includes-prior {
   font-size: 13px;
   font-weight: 600;
-  margin-bottom: 8px;
+  color: var(--ink);
+  margin-bottom: 10px;
 }
 
 .plan-card__features {
   flex: 1;
-  margin-bottom: 20px;
+  margin-bottom: 0;
 }
 
 .plan-card__features li {
@@ -739,7 +795,7 @@ button {
   padding-block: 6px;
   font-size: 14px;
   line-height: 1.45;
-  color: var(--muted);
+  color: var(--ink);
 }
 
 .plan-card__check,
@@ -748,11 +804,7 @@ button {
   width: 14px;
   height: 14px;
   margin-top: 3px;
-  color: var(--green);
-}
-
-.plan-card__cta {
-  width: 100%;
+  color: var(--muted);
 }
 
 /* Signup */
