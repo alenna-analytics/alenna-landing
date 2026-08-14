@@ -31,6 +31,7 @@ export function SiteFooter() {
           <a href={sitePath('/#product')}>{landingT(lang, 'navFeatures')}</a>
           <a href={sitePath('/#flow')}>{landingT(lang, 'howEyebrow')}</a>
           <a href={sitePath('/#pricing')}>{landingT(lang, 'navPlans')}</a>
+          <a href={sitePath('/#faq')}>{landingT(lang, 'navFaq')}</a>
           <a href={sitePath(INTEGRATIONS_PATH)}>{landingT(lang, 'footerIntegrations')}</a>
           <a href={sitePath(PRIVACY_PATH)}>{landingT(lang, 'footerPrivacy')}</a>
           <a href={sitePath(TERMS_PATH)}>{landingT(lang, 'footerTerms')}</a>

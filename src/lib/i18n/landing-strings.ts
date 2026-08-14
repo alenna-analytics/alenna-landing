@@ -151,6 +151,10 @@ const LANDING_STRINGS = {
     footerLegalLine:
       'Alenna Analytics · Operado por Sergio Garnica González · Querétaro, México · contacto@alenna.io',
     footerCopyright: '© {year} Alenna Analytics. Todos los derechos reservados.',
+    navFaq: 'FAQ',
+    faqEyebrow: 'Preguntas frecuentes',
+    faqTitle: 'Lo que suelen preguntar los equipos de ecommerce',
+    faqSubtitle: 'Canales, datos, márgenes y planes, en un solo lugar.',
   },
   en: {
     brandName: 'alenna',
@@ -296,8 +300,113 @@ const LANDING_STRINGS = {
     footerLegalLine:
       'Alenna Analytics · Operated by Sergio Garnica González · Querétaro, Mexico · contacto@alenna.io',
     footerCopyright: '© {year} Alenna Analytics. All rights reserved.',
+    navFaq: 'FAQ',
+    faqEyebrow: 'FAQ',
+    faqTitle: 'What ecommerce teams usually ask',
+    faqSubtitle: 'Channels, data, margins, and plans — in one place.',
   },
 } as const
+
+export type LandingFaqItem = {
+  id: string
+  question: string
+  answer: string
+}
+
+const LANDING_FAQ: Record<Language, LandingFaqItem[]> = {
+  es: [
+    {
+      id: 'what-is',
+      question: '¿Qué es Alenna Analytics?',
+      answer:
+        'Es un panel de analítica para ecommerce multicanal. Conectas tus canales de venta en línea y ves pedidos, márgenes, inventario y rentabilidad en un solo lugar, sin unir exportaciones a mano.',
+    },
+    {
+      id: 'channels',
+      question: '¿Puedo ver varios canales de venta juntos?',
+      answer:
+        'Sí. El objetivo de Alenna es consolidar tu operación: compara marketplaces y tienda propia, y revisa margen y ventas de toda la operación, no de un canal aislado.',
+    },
+    {
+      id: 'integrations',
+      question: '¿Qué integraciones están disponibles?',
+      answer:
+        'Hoy puedes conectar Shopify y Mercado Libre. Amazon estará disponible pronto. Todos los planes incluyen integraciones ilimitadas.',
+    },
+    {
+      id: 'privacy',
+      question: '¿Alenna accede a datos de mis clientes?',
+      answer:
+        'No. La app se centra en analítica de tienda: pedidos, productos e inventario. No accede a nombres, correos, teléfonos ni direcciones de clientes.',
+    },
+    {
+      id: 'margin',
+      question: '¿Cómo veo si un producto es rentable?',
+      answer:
+        'Consultas margen y beneficio por producto y a nivel de SKU, con costos y comisiones por canal. Así detectas SKUs que generan pérdidas y no solo ingresos.',
+    },
+    {
+      id: 'inventory',
+      question: '¿Hay alertas de inventario?',
+      answer:
+        'Sí. Recibes avisos antes de que el stock bajo frene las ventas o dañe los márgenes, sobre todo en productos de mayor rotación.',
+    },
+    {
+      id: 'pricing',
+      question: '¿Hay prueba gratis y qué incluyen los planes?',
+      answer:
+        'Basic incluye 15 días de prueba gratis. Basic cuesta 30 USD al mes y Growth 60 USD al mes. Todos los planes incluyen todos los módulos, reportes multicanal y sync de pedidos y catálogo. Enterprise es a medida.',
+    },
+  ],
+  en: [
+    {
+      id: 'what-is',
+      question: 'What is Alenna Analytics?',
+      answer:
+        'It is an analytics dashboard for multi-channel ecommerce. You connect your online sales channels and see orders, margins, inventory, and profitability in one place — without stitching manual exports.',
+    },
+    {
+      id: 'channels',
+      question: 'Can I see multiple sales channels together?',
+      answer:
+        'Yes. Alenna is built to consolidate your operation: compare marketplaces and your own store, and review margin and sales across the whole business, not one channel in isolation.',
+    },
+    {
+      id: 'integrations',
+      question: 'Which integrations are available?',
+      answer:
+        'You can connect Shopify and Mercado Libre today. Amazon is coming soon. Every plan includes unlimited integrations.',
+    },
+    {
+      id: 'privacy',
+      question: 'Does Alenna access my customer data?',
+      answer:
+        'No. The app focuses on store analytics: orders, products, and inventory. It does not access customer names, emails, phone numbers, or addresses.',
+    },
+    {
+      id: 'margin',
+      question: 'How do I see if a product is profitable?',
+      answer:
+        'You can review margin and profit by product and at SKU level, after costs and channel fees. That helps you spot SKUs that lose money, not just revenue.',
+    },
+    {
+      id: 'inventory',
+      question: 'Are there inventory alerts?',
+      answer:
+        'Yes. You get notified before low stock slows sales or hurts margins, especially on your fastest-moving products.',
+    },
+    {
+      id: 'pricing',
+      question: 'Is there a free trial, and what do plans include?',
+      answer:
+        'Basic includes a 15-day free trial. Basic is $30 USD per month and Growth is $60 USD per month. Every plan includes all modules, multi-channel reports, and order and catalog sync. Enterprise is custom.',
+    },
+  ],
+}
+
+export function landingFaq(lang: Language): LandingFaqItem[] {
+  return LANDING_FAQ[lang]
+}
 
 export type LandingStringKey = keyof (typeof LANDING_STRINGS)['es']
 

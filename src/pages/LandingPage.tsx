@@ -1,3 +1,4 @@
+import { FaqSection } from '@/components/FaqSection'
 import { FinalCtaSection } from '@/components/FinalCtaSection'
 import { FlowSection } from '@/components/FlowSection'
 import { HeroSection } from '@/components/HeroSection'
@@ -15,6 +16,7 @@ export function LandingPage() {
         <ProductSection />
         <FlowSection />
         <PricingSection />
+        <FaqSection />
         <FinalCtaSection />
       </main>
       <SiteFooter />
