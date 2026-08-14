@@ -68,7 +68,8 @@ const PLAN_RECOMMENDATIONS_ES: PlanRecommendationContent = {
   growth: {
     eyebrow: 'Te recomendamos',
     title: 'Plan Growth',
-    description: 'Hasta 5,000 pedidos y 2,000 productos al mes. Ideal para escalar tu operación.',
+    description:
+      'Hasta 5,000 pedidos y 2,000 productos al mes. Incluye creación de roles para tu equipo.',
     cta: 'Empezar con Growth',
   },
 }
@@ -83,7 +84,8 @@ const PLAN_RECOMMENDATIONS_EN: PlanRecommendationContent = {
   growth: {
     eyebrow: 'We recommend',
     title: 'Growth plan',
-    description: 'Up to 5,000 orders and 2,000 products per month. Built to scale with you.',
+    description:
+      'Up to 5,000 orders and 2,000 products per month. Includes role creation for your team.',
     cta: 'Start with Growth',
   },
 }

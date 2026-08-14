@@ -107,6 +107,7 @@ const LANDING_STRINGS = {
     planBasicOrdersLimit: 'Hasta 1,000 pedidos sincronizados al mes',
     planBasicProductsLimit: '500 productos',
     planBasicUsersLimit: 'Hasta 3 usuarios por espacio de trabajo',
+    planBasicRolesLimit: '3 roles de acceso predefinidos para asignar a tus usuarios',
     planBasicCta: 'Empezar prueba gratis',
     planGrowthName: 'Growth',
     planGrowthTagline: 'Para equipos que están creciendo',
@@ -116,6 +117,8 @@ const LANDING_STRINGS = {
     planGrowthOrdersLimit: 'Hasta 5,000 pedidos sincronizados al mes',
     planGrowthProductsLimit: '2,000 productos',
     planGrowthUsersLimit: 'Hasta 5 usuarios por espacio de trabajo',
+    planGrowthRolesLimit:
+      '5 roles de acceso (4 configurables y 1 propietario) para asignar a tus usuarios',
     planGrowthBadge: 'Más popular',
     planGrowthIncludesPrior: 'Todo lo de Basic, y además:',
     planGrowthCta: 'Empezar con Growth',
@@ -256,6 +259,7 @@ const LANDING_STRINGS = {
     planBasicOrdersLimit: 'Up to 1,000 orders synced per month',
     planBasicProductsLimit: '500 products',
     planBasicUsersLimit: 'Up to 3 users per workspace',
+    planBasicRolesLimit: '3 predefined access roles to assign to your users',
     planBasicCta: 'Start free trial',
     planGrowthName: 'Growth',
     planGrowthTagline: 'For teams that are scaling',
@@ -265,6 +269,8 @@ const LANDING_STRINGS = {
     planGrowthOrdersLimit: 'Up to 5,000 orders synced per month',
     planGrowthProductsLimit: '2,000 products',
     planGrowthUsersLimit: 'Up to 5 users per workspace',
+    planGrowthRolesLimit:
+      '5 access roles (4 configurable and 1 owner) to assign to your users',
     planGrowthBadge: 'Most popular',
     planGrowthIncludesPrior: 'Everything in Basic, plus:',
     planGrowthCta: 'Start with Growth',
@@ -355,7 +361,7 @@ const LANDING_FAQ: Record<Language, LandingFaqItem[]> = {
       id: 'pricing',
       question: '¿Hay prueba gratis y qué incluyen los planes?',
       answer:
-        'Basic incluye 15 días de prueba gratis. Basic cuesta 30 USD al mes y Growth 60 USD al mes. Todos los planes incluyen todos los módulos, reportes multicanal y sync de pedidos y catálogo. Enterprise es a medida.',
+        'Basic incluye 15 días de prueba gratis. Basic cuesta 30 USD al mes y Growth 60 USD al mes. Basic incluye 3 roles predefinidos; Growth incluye 5 roles (4 configurables y 1 propietario). Todos los planes incluyen todos los módulos, reportes multicanal y sync de pedidos y catálogo. Enterprise es a medida.',
     },
   ],
   en: [
@@ -399,7 +405,7 @@ const LANDING_FAQ: Record<Language, LandingFaqItem[]> = {
       id: 'pricing',
       question: 'Is there a free trial, and what do plans include?',
       answer:
-        'Basic includes a 15-day free trial. Basic is $30 USD per month and Growth is $60 USD per month. Every plan includes all modules, multi-channel reports, and order and catalog sync. Enterprise is custom.',
+        'Basic includes a 15-day free trial. Basic is $30 USD per month and Growth is $60 USD per month. Basic includes 3 predefined roles; Growth includes 5 roles (4 configurable and 1 owner). Every plan includes all modules, multi-channel reports, and order and catalog sync. Enterprise is custom.',
     },
   ],
 }
