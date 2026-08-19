@@ -5,9 +5,9 @@ const INTEGRATIONS_ES: LegalPageContent = {
   metaTitle: 'Integraciones — Alenna Analytics',
   brandLabel: 'Alenna Analytics',
   title: 'Integraciones y permisos',
-  updated: 'Última actualización: 9 de julio de 2026',
+  updated: 'Última actualización: 19 de agosto de 2026',
   intro:
-    'Alenna conecta tus canales de venta mediante OAuth para sincronizar datos comerciales y mostrarte métricas de margen, inventario y rentabilidad. Seguimos un enfoque metrics-only: no almacenamos datos personales de compradores (nombres, correos, teléfonos ni direcciones). Para el tratamiento completo de datos, consulta alenna.io/privacidad.',
+    'Alenna conecta canales de ecommerce (Amazon, Shopify y Mercado Libre) y cuentas de ads mediante OAuth para sincronizar datos comerciales y mostrarte métricas de margen, inventario, gasto publicitario y rentabilidad. Seguimos un enfoque metrics-only: no almacenamos datos personales de compradores (nombres, correos, teléfonos ni direcciones). Para el tratamiento completo de datos, consulta alenna.io/privacidad.',
   sections: [
     {
       title: 'Enfoque general',
@@ -27,7 +27,8 @@ const INTEGRATIONS_ES: LegalPageContent = {
       ],
     },
     {
-      title: 'Shopify (disponible)',
+      id: 'shopify',
+      title: 'Shopify',
       blocks: [
         {
           kind: 'p',
@@ -60,7 +61,8 @@ const INTEGRATIONS_ES: LegalPageContent = {
       ],
     },
     {
-      title: 'Mercado Libre (disponible)',
+      id: 'mercadolibre',
+      title: 'Mercado Libre',
       blocks: [
         {
           kind: 'p',
@@ -88,11 +90,29 @@ const INTEGRATIONS_ES: LegalPageContent = {
       ],
     },
     {
-      title: 'Amazon (próximamente)',
+      id: 'mercadolibre-ads',
+      title: 'Mercado Libre Ads',
       blocks: [
         {
           kind: 'p',
-          text: 'La integración con Amazon Selling Partner API (SP-API) está en desarrollo. Alenna solicitará únicamente los roles mínimos para analytics de seller, sin acceso a datos personales de compradores:',
+          text: 'Conectas la cuenta de anuncios de Mercado Libre del anunciante para medición: gasto, rendimiento de campañas y métricas necesarias para ROAS junto al P&L. Solo lectura; no operamos campañas ni compramos medios.',
+        },
+        {
+          kind: 'ul',
+          items: [
+            'Métricas de campañas y gasto publicitario (sin PII de compradores).',
+            'Uso exclusivo para reportes de rentabilidad dentro de app.alenna.io.',
+          ],
+        },
+      ],
+    },
+    {
+      id: 'amazon',
+      title: 'Amazon',
+      blocks: [
+        {
+          kind: 'p',
+          text: 'Conectas tu cuenta de vendedor de Amazon mediante OAuth con Amazon Selling Partner API (SP-API). Alenna solicita únicamente los roles mínimos para analytics de seller, sin acceso a datos personales de compradores:',
         },
         {
           kind: 'ul',
@@ -104,7 +124,7 @@ const INTEGRATIONS_ES: LegalPageContent = {
         },
         {
           kind: 'h3',
-          text: 'Qué no planeamos solicitar ni guardar',
+          text: 'Qué no pedimos ni guardamos',
         },
         {
           kind: 'ul',
@@ -116,7 +136,56 @@ const INTEGRATIONS_ES: LegalPageContent = {
         },
         {
           kind: 'p',
-          text: 'Esta integración se anunciará en alenna.io cuando esté disponible. El uso de datos seguirá nuestra Política de Privacidad en alenna.io/privacidad y los requisitos de la Data Protection Policy de Amazon.',
+          text: 'El uso de datos sigue nuestra Política de Privacidad en alenna.io/privacidad y los requisitos de la Data Protection Policy de Amazon.',
+        },
+      ],
+    },
+    {
+      id: 'amazon-ads',
+      title: 'Amazon Ads',
+      blocks: [
+        {
+          kind: 'p',
+          text: 'Alenna ofrece medición publicitaria para otros anunciantes. Estamos trabajando en Amazon Ads API (Sponsored Products, Sponsored Brands y Sponsored Display) para reportar gasto, clics, ventas atribuidas, ROAS y TACoS junto al P&L, sujeto al acceso de partner. Detalle del servicio: alenna.io/amazon-ads.',
+        },
+        {
+          kind: 'ul',
+          items: [
+            'Medición de campañas de Amazon Ads para el anunciante, no gestión ni compra de medios.',
+            'Mercado Libre Ads ya se puede conectar; Amazon Ads, Google Ads y Meta Ads se están incorporando al mismo panel.',
+            'Sin Amazon DSP, Amazon Attribution ni Amazon Marketing Cloud en esta fase.',
+          ],
+        },
+        {
+          kind: 'h3',
+          text: 'Qué no pedimos ni guardamos',
+        },
+        {
+          kind: 'ul',
+          items: [
+            'No operamos campañas ni escribimos presupuestos o creatividades en la cuenta del anunciante.',
+            'No almacenamos PII de compradores finales a través de Amazon Ads.',
+          ],
+        },
+      ],
+    },
+    {
+      id: 'google-ads',
+      title: 'Google Ads',
+      blocks: [
+        {
+          kind: 'p',
+          text: 'Estamos trabajando para conectar Google Ads y medir gasto y rendimiento en el mismo P&L, en solo lectura. No operamos campañas.',
+        },
+      ],
+    },
+    {
+      id: 'meta-ads',
+      title: 'Meta Ads',
+      blocks: [
+        {
+          kind: 'p',
+          text: 'Estamos trabajando para conectar Meta Ads y medir gasto y rendimiento en el mismo P&L, en solo lectura. No operamos campañas.',
         },
       ],
     },
@@ -136,9 +205,9 @@ const INTEGRATIONS_EN: LegalPageContent = {
   metaTitle: 'Integrations — Alenna Analytics',
   brandLabel: 'Alenna Analytics',
   title: 'Integrations and permissions',
-  updated: 'Last updated: July 9, 2026',
+  updated: 'Last updated: August 19, 2026',
   intro:
-    'Alenna connects your sales channels via OAuth to sync commercial data and show margin, inventory, and profitability metrics. We follow a metrics-only approach: we do not store buyer personal data (names, emails, phones, or addresses). For full data processing details, see alenna.io/privacidad.',
+    'Alenna connects ecommerce channels (Amazon, Shopify, and Mercado Libre) and ad accounts via OAuth to sync commercial data and show margin, inventory, ad spend, and profitability metrics. We follow a metrics-only approach: we do not store buyer personal data (names, emails, phones, or addresses). For full data processing details, see alenna.io/privacidad.',
   sections: [
     {
       title: 'General approach',
@@ -158,7 +227,8 @@ const INTEGRATIONS_EN: LegalPageContent = {
       ],
     },
     {
-      title: 'Shopify (available)',
+      id: 'shopify',
+      title: 'Shopify',
       blocks: [
         {
           kind: 'p',
@@ -191,7 +261,8 @@ const INTEGRATIONS_EN: LegalPageContent = {
       ],
     },
     {
-      title: 'Mercado Libre (available)',
+      id: 'mercadolibre',
+      title: 'Mercado Libre',
       blocks: [
         {
           kind: 'p',
@@ -219,11 +290,29 @@ const INTEGRATIONS_EN: LegalPageContent = {
       ],
     },
     {
-      title: 'Amazon (coming soon)',
+      id: 'mercadolibre-ads',
+      title: 'Mercado Libre Ads',
       blocks: [
         {
           kind: 'p',
-          text: 'Integration with Amazon Selling Partner API (SP-API) is in development. Alenna will request only the minimum seller analytics roles, with no access to buyer personal data:',
+          text: 'You connect the advertiser\'s Mercado Libre Ads account for measurement: spend, campaign performance, and the metrics needed for ROAS next to the P&L. Read-only; we do not operate campaigns or buy media.',
+        },
+        {
+          kind: 'ul',
+          items: [
+            'Campaign and ad-spend metrics (no buyer PII).',
+            'Used only for profitability reporting inside app.alenna.io.',
+          ],
+        },
+      ],
+    },
+    {
+      id: 'amazon',
+      title: 'Amazon',
+      blocks: [
+        {
+          kind: 'p',
+          text: 'You connect your Amazon seller account via OAuth with Amazon Selling Partner API (SP-API). Alenna requests only the minimum seller analytics roles, with no access to buyer personal data:',
         },
         {
           kind: 'ul',
@@ -235,7 +324,7 @@ const INTEGRATIONS_EN: LegalPageContent = {
         },
         {
           kind: 'h3',
-          text: 'What we do not plan to request or store',
+          text: 'What we do not request or store',
         },
         {
           kind: 'ul',
@@ -247,7 +336,56 @@ const INTEGRATIONS_EN: LegalPageContent = {
         },
         {
           kind: 'p',
-          text: 'This integration will be announced on alenna.io when available. Data use will follow our Privacy Policy at alenna.io/privacidad and Amazon\'s Data Protection Policy requirements.',
+          text: 'Data use follows our Privacy Policy at alenna.io/privacidad and Amazon\'s Data Protection Policy requirements.',
+        },
+      ],
+    },
+    {
+      id: 'amazon-ads',
+      title: 'Amazon Ads',
+      blocks: [
+        {
+          kind: 'p',
+          text: 'Alenna provides advertising measurement for other advertisers. We are working on Amazon Ads API (Sponsored Products, Sponsored Brands, and Sponsored Display) to report spend, clicks, attributed sales, ROAS, and TACoS next to the P&L, subject to partner access. Service details: alenna.io/amazon-ads.',
+        },
+        {
+          kind: 'ul',
+          items: [
+            'Campaign measurement for the advertiser — we do not buy media or manage campaigns.',
+            'Mercado Libre Ads already connects; Amazon Ads, Google Ads, and Meta Ads are being added to the same dashboard.',
+            'No Amazon DSP, Amazon Attribution, or Amazon Marketing Cloud in this phase.',
+          ],
+        },
+        {
+          kind: 'h3',
+          text: 'What we do not request or store',
+        },
+        {
+          kind: 'ul',
+          items: [
+            'We do not operate campaigns or write budgets or creatives in the advertiser account.',
+            'We do not store end-buyer PII through Amazon Ads.',
+          ],
+        },
+      ],
+    },
+    {
+      id: 'google-ads',
+      title: 'Google Ads',
+      blocks: [
+        {
+          kind: 'p',
+          text: 'We are working to connect Google Ads and measure spend and performance in the same P&L, read-only. We do not operate campaigns.',
+        },
+      ],
+    },
+    {
+      id: 'meta-ads',
+      title: 'Meta Ads',
+      blocks: [
+        {
+          kind: 'p',
+          text: 'We are working to connect Meta Ads and measure spend and performance in the same P&L, read-only. We do not operate campaigns.',
         },
       ],
     },

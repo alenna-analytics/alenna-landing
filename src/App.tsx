@@ -1,8 +1,10 @@
+import { AmazonAdsPage } from '@/pages/AmazonAdsPage'
 import { EnterprisePage } from '@/pages/EnterprisePage'
 import { IntegrationsPage } from '@/pages/IntegrationsPage'
 import { LandingPage } from '@/pages/LandingPage'
 import { PrivacyPolicyPage } from '@/pages/PrivacyPolicyPage'
 import { TermsPage } from '@/pages/TermsPage'
+import { AMAZON_ADS_PATH } from '@/lib/i18n/amazon-ads-strings'
 import { ENTERPRISE_PATH } from '@/lib/i18n/enterprise-strings'
 import { INTEGRATIONS_PATH } from '@/lib/i18n/integrations-strings'
 import { PRIVACY_PATH } from '@/lib/i18n/privacy-strings'
@@ -22,6 +24,10 @@ export default function App() {
 
   if (path === INTEGRATIONS_PATH) {
     return <IntegrationsPage />
+  }
+
+  if (path === AMAZON_ADS_PATH) {
+    return <AmazonAdsPage />
   }
 
   if (path === ENTERPRISE_PATH) {

@@ -5,6 +5,7 @@ import { useLanguage } from '@/providers/language-provider'
 
 import adsIcon from '@/assets/icons/ads.svg'
 import channelsIcon from '@/assets/icons/channels.svg'
+import growthIcon from '@/assets/icons/growth.svg'
 import integrationsIcon from '@/assets/icons/integrations.svg'
 import productsIcon from '@/assets/icons/products.svg'
 import reportsIcon from '@/assets/icons/reports.svg'
@@ -15,6 +16,16 @@ type ModuleCard = {
   descKey: LandingStringKey
   icon: string
 }
+
+type PillarCard = ModuleCard & {
+  accent: boolean
+}
+
+const PILLARS: PillarCard[] = [
+  { titleKey: 'pillarConnectTitle', descKey: 'pillarConnectDesc', icon: integrationsIcon, accent: false },
+  { titleKey: 'pillarAnticipateTitle', descKey: 'pillarAnticipateDesc', icon: growthIcon, accent: true },
+  { titleKey: 'pillarCostsTitle', descKey: 'pillarCostsDesc', icon: reportsIcon, accent: false },
+]
 
 const MODULES: ModuleCard[] = [
   { titleKey: 'moduleProducts', descKey: 'moduleProductsDesc', icon: productsIcon },
@@ -32,10 +43,26 @@ export function ProductSection() {
     <section className="product section" id="product">
       <div className="container">
         <FadeIn className="product__head">
-          <p className="eyebrow">{landingT(lang, 'modulesEyebrow')}</p>
           <h2 className="section-heading">{landingT(lang, 'modulesTitle')}</h2>
           <p className="section-lede product__lede">{landingT(lang, 'modulesSubtitle')}</p>
         </FadeIn>
+
+        <div className="pillar-cards">
+          {PILLARS.map((pillar, index) => (
+            <FadeIn
+              key={pillar.titleKey}
+              as="article"
+              className={['pillar-card', pillar.accent ? 'pillar-card--accent' : ''].filter(Boolean).join(' ')}
+              delay={index * 50}
+            >
+              <div className="module-card__icon">
+                <img src={pillar.icon} alt="" aria-hidden="true" />
+              </div>
+              <h3 className="pillar-card__title">{landingT(lang, pillar.titleKey)}</h3>
+              <p className="pillar-card__desc">{landingT(lang, pillar.descKey)}</p>
+            </FadeIn>
+          ))}
+        </div>
 
         <div className="module-cards">
           {MODULES.map((mod, index) => (
