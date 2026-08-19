@@ -13,7 +13,6 @@ import {
   ENTERPRISE_PATH,
   enterpriseContent,
 } from '@/lib/i18n/enterprise-strings'
-import { sitePath } from '@/lib/utils'
 import { useLanguage } from '@/providers/language-provider'
 import { useEffect, useState, type FormEvent } from 'react'
 
@@ -112,13 +111,8 @@ export function EnterprisePage() {
       <SiteHeader />
       <main className="enterprise-page">
         <div className="container enterprise-page__inner">
-          <a href={sitePath('/')} className="enterprise-page__back">
-            ← {lang === 'es' ? 'Volver al inicio' : 'Back to home'}
-          </a>
-
           <div className="enterprise-page__layout">
             <div className="enterprise-page__copy">
-              <p className="enterprise-page__brand">{content.brandLabel}</p>
               <h1 className="enterprise-page__title">{content.title}</h1>
               <p className="enterprise-page__intro">{content.intro}</p>
               <p className="enterprise-page__contact">

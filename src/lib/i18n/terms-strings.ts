@@ -35,7 +35,7 @@ const TERMS_ES: LegalPageContent = {
         },
         {
           kind: 'p',
-          text: 'Las integraciones actualmente disponibles son Shopify y Mercado Libre. Otras integraciones pueden incorporarse en el futuro y se anunciarán en el Servicio.',
+          text: 'Las integraciones actualmente disponibles son Amazon, Shopify, Mercado Libre y Mercado Libre Ads. Amazon Ads, Google Ads y Meta Ads pueden incorporarse y se anunciarán en el Servicio.',
         },
         {
           kind: 'p',
@@ -65,7 +65,7 @@ const TERMS_ES: LegalPageContent = {
       blocks: [
         {
           kind: 'p',
-          text: 'Para usar Alenna con Shopify o Mercado Libre debes autorizar el acceso mediante OAuth u otros mecanismos que cada plataforma proporcione. Al conectar una integración, declaras que tienes autoridad para vincular esa cuenta y que cumples los términos de la plataforma correspondiente.',
+          text: 'Para usar Alenna con Amazon, Shopify, Mercado Libre o Mercado Libre Ads debes autorizar el acceso mediante OAuth u otros mecanismos que cada plataforma proporcione. Al conectar una integración, declaras que tienes autoridad para vincular esa cuenta y que cumples los términos de la plataforma correspondiente.',
         },
         {
           kind: 'p',
@@ -276,7 +276,7 @@ const TERMS_EN: LegalPageContent = {
         },
         {
           kind: 'p',
-          text: 'Integrations currently available are Shopify and Mercado Libre. Other integrations may be added in the future and will be announced in the Service.',
+          text: 'Integrations currently available are Amazon, Shopify, Mercado Libre, and Mercado Libre Ads. Amazon Ads, Google Ads, and Meta Ads may be added and will be announced in the Service.',
         },
         {
           kind: 'p',
@@ -306,7 +306,7 @@ const TERMS_EN: LegalPageContent = {
       blocks: [
         {
           kind: 'p',
-          text: 'To use Alenna with Shopify or Mercado Libre you must authorize access via OAuth or other mechanisms each platform provides. By connecting an integration, you represent that you have authority to link that account and that you comply with the corresponding platform\'s terms.',
+          text: 'To use Alenna with Amazon, Shopify, Mercado Libre, or Mercado Libre Ads you must authorize access via OAuth or other mechanisms each platform provides. By connecting an integration, you represent that you have authority to link that account and that you comply with the corresponding platform\'s terms.',
         },
         {
           kind: 'p',

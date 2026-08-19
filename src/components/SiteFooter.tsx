@@ -1,4 +1,5 @@
 import { LangToggle } from '@/components/LangToggle'
+import { catalogByGroup } from '@/lib/integrations-catalog'
 import { INTEGRATIONS_PATH } from '@/lib/i18n/integrations-strings'
 import { PRIVACY_PATH } from '@/lib/i18n/privacy-strings'
 import { TERMS_PATH } from '@/lib/i18n/terms-strings'
@@ -11,14 +12,16 @@ const CONTACT_EMAIL = 'contacto@alenna.io'
 export function SiteFooter() {
   const { lang } = useLanguage()
   const year = new Date().getFullYear()
+  const ecommerce = catalogByGroup('ecommerce')
+  const ads = catalogByGroup('ads')
 
   return (
     <footer className="site-footer">
-      <div className="container site-footer__grid">
+      <div className="container site-footer__top">
         <div className="site-footer__brand">
           <a href={sitePath('/')} className="site-footer__logo" aria-label={landingT(lang, 'brandName')}>
             <img
-              src={publicAsset('assets/alenna-logo.svg')}
+              src={publicAsset('assets/alenna-logo-white.svg')}
               alt={landingT(lang, 'brandName')}
               width={100}
               height={20}
@@ -27,27 +30,55 @@ export function SiteFooter() {
           <p className="site-footer__tagline">{landingT(lang, 'footerTagline')}</p>
         </div>
 
-        <nav className="site-footer__nav" aria-label="Footer">
-          <a href={sitePath('/#product')}>{landingT(lang, 'navFeatures')}</a>
-          <a href={sitePath('/#flow')}>{landingT(lang, 'howEyebrow')}</a>
-          <a href={sitePath('/#pricing')}>{landingT(lang, 'navPlans')}</a>
-          <a href={sitePath('/#faq')}>{landingT(lang, 'navFaq')}</a>
-          <a href={sitePath(INTEGRATIONS_PATH)}>{landingT(lang, 'footerIntegrations')}</a>
-          <a href={sitePath(PRIVACY_PATH)}>{landingT(lang, 'footerPrivacy')}</a>
-          <a href={sitePath(TERMS_PATH)}>{landingT(lang, 'footerTerms')}</a>
-          <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
-        </nav>
+        <nav className="site-footer__columns" aria-label="Footer">
+          <div className="site-footer__col">
+            <p className="site-footer__heading">{landingT(lang, 'footerProduct')}</p>
+            <a href={sitePath('/#product')}>{landingT(lang, 'navFeatures')}</a>
+            <a href={sitePath('/#flow')}>{landingT(lang, 'howEyebrow')}</a>
+            <a href={sitePath('/#pricing')}>{landingT(lang, 'navPlans')}</a>
+            <a href={sitePath('/#faq')}>{landingT(lang, 'navFaq')}</a>
+          </div>
 
-        <div className="site-footer__meta">
-          <LangToggle />
-        </div>
+          <div className="site-footer__col">
+            <p className="site-footer__heading">{landingT(lang, 'footerColEcommerce')}</p>
+            {ecommerce.map((item) => (
+              <a key={item.id} href={sitePath(item.href)}>
+                {landingT(lang, item.nameKey)}
+              </a>
+            ))}
+            <a href={sitePath(INTEGRATIONS_PATH)}>{landingT(lang, 'footerAllIntegrations')}</a>
+          </div>
+
+          <div className="site-footer__col">
+            <p className="site-footer__heading">{landingT(lang, 'footerColAds')}</p>
+            {ads.map((item) => (
+              <a
+                key={item.id}
+                href={sitePath(item.href)}
+                className={item.status === 'soon' ? 'is-soon' : undefined}
+              >
+                {landingT(lang, item.nameKey)}
+              </a>
+            ))}
+          </div>
+
+          <div className="site-footer__col">
+            <p className="site-footer__heading">{landingT(lang, 'footerLegal')}</p>
+            <a href={sitePath(PRIVACY_PATH)}>{landingT(lang, 'footerPrivacy')}</a>
+            <a href={sitePath(TERMS_PATH)}>{landingT(lang, 'footerTerms')}</a>
+            <a href={`mailto:${CONTACT_EMAIL}`}>{landingT(lang, 'footerContact')}</a>
+          </div>
+        </nav>
       </div>
 
       <div className="container site-footer__legal">
-        <p>
-          <LegalFooterLine lang={lang} />
-        </p>
-        <p>{landingT(lang, 'footerCopyright', { year })}</p>
+        <div>
+          <p>
+            <LegalFooterLine lang={lang} />
+          </p>
+          <p>{landingT(lang, 'footerCopyright', { year })}</p>
+        </div>
+        <LangToggle variant="dark" />
       </div>
     </footer>
   )

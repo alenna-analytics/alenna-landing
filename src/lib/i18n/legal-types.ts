@@ -4,6 +4,7 @@ export type LegalBlock =
   | { kind: 'ul'; items: string[] }
 
 export type LegalSection = {
+  id?: string
   title: string
   blocks: LegalBlock[]
 }
