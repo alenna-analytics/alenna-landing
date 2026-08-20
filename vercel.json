@@ -2,5 +2,12 @@
   "installCommand": "pnpm install",
   "buildCommand": "pnpm build",
   "outputDirectory": "dist",
+  "redirects": [
+    {
+      "source": "/amazon-ads",
+      "destination": "/integraciones/amazon-ads",
+      "statusCode": 308
+    }
+  ],
   "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
 }
