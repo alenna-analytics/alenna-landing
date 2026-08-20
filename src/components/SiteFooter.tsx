@@ -42,7 +42,7 @@ export function SiteFooter() {
           <div className="site-footer__col">
             <p className="site-footer__heading">{landingT(lang, 'footerColEcommerce')}</p>
             {ecommerce.map((item) => (
-              <a key={item.id} href={sitePath(item.href)}>
+              <a key={item.id} href={sitePath(item.path)}>
                 {landingT(lang, item.nameKey)}
               </a>
             ))}
@@ -54,7 +54,7 @@ export function SiteFooter() {
             {ads.map((item) => (
               <a
                 key={item.id}
-                href={sitePath(item.href)}
+                href={sitePath(item.path)}
                 className={item.status === 'soon' ? 'is-soon' : undefined}
               >
                 {landingT(lang, item.nameKey)}

@@ -5,6 +5,7 @@ import { catalogByGroup } from '@/lib/integrations-catalog'
 import { INTEGRATIONS_PATH, integrationsContent } from '@/lib/i18n/integrations-strings'
 import { landingT } from '@/lib/i18n/landing-strings'
 import { sectionAnchor } from '@/lib/section-anchor'
+import { sitePath } from '@/lib/utils'
 import { useLanguage } from '@/providers/language-provider'
 import { useEffect } from 'react'
 
@@ -44,10 +45,23 @@ export function IntegrationsPage() {
             <ul>
               {ecommerce.map((item) => (
                 <li key={item.id}>
-                  <a href={`#${item.id}`}>
-                    <span className="integrations-band__name">{landingT(lang, item.nameKey)}</span>
-                    <span className="integrations-band__blurb">{landingT(lang, item.blurbKey)}</span>
-                  </a>
+                  {item.status === 'live' ? (
+                    <a href={sitePath(item.path)} className="integrations-page__catalog-link">
+                      <span className="integrations-band__name">{landingT(lang, item.nameKey)}</span>
+                      <span className="integrations-band__blurb">{landingT(lang, item.blurbKey)}</span>
+                      <span className="integrations-page__catalog-cta">
+                        {landingT(lang, 'integrationsViewDetail')}
+                      </span>
+                    </a>
+                  ) : (
+                    <div className="integrations-page__catalog-soon is-soon">
+                      <span className="integrations-band__name">{landingT(lang, item.nameKey)}</span>
+                      <span className="integrations-band__blurb">{landingT(lang, item.blurbKey)}</span>
+                      <span className="integrations-page__catalog-badge">
+                        {landingT(lang, 'integrationsComingSoonLabel')}
+                      </span>
+                    </div>
+                  )}
                 </li>
               ))}
             </ul>
@@ -57,10 +71,23 @@ export function IntegrationsPage() {
             <ul>
               {ads.map((item) => (
                 <li key={item.id}>
-                  <a href={`#${item.id}`} className={item.status === 'soon' ? 'is-soon' : undefined}>
-                    <span className="integrations-band__name">{landingT(lang, item.nameKey)}</span>
-                    <span className="integrations-band__blurb">{landingT(lang, item.blurbKey)}</span>
-                  </a>
+                  {item.status === 'live' ? (
+                    <a href={sitePath(item.path)} className="integrations-page__catalog-link">
+                      <span className="integrations-band__name">{landingT(lang, item.nameKey)}</span>
+                      <span className="integrations-band__blurb">{landingT(lang, item.blurbKey)}</span>
+                      <span className="integrations-page__catalog-cta">
+                        {landingT(lang, 'integrationsViewDetail')}
+                      </span>
+                    </a>
+                  ) : (
+                    <div className="integrations-page__catalog-soon is-soon" id={item.id}>
+                      <span className="integrations-band__name">{landingT(lang, item.nameKey)}</span>
+                      <span className="integrations-band__blurb">{landingT(lang, item.blurbKey)}</span>
+                      <span className="integrations-page__catalog-badge">
+                        {landingT(lang, 'integrationsComingSoonLabel')}
+                      </span>
+                    </div>
+                  )}
                 </li>
               ))}
             </ul>

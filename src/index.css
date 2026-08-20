@@ -1305,7 +1305,8 @@ button {
   list-style: disc;
 }
 
-.ads-page__eyebrow {
+.ads-page__eyebrow,
+.integration-detail__eyebrow {
   font-size: 13px;
   font-weight: 600;
   letter-spacing: 0.04em;
@@ -1314,12 +1315,32 @@ button {
   margin-bottom: 10px;
 }
 
-.ads-page__capabilities {
+.ads-page__capabilities,
+.integration-detail__bullets {
   list-style: none;
   padding: 0;
-  margin: 0 0 14px;
+  margin: 0 0 18px;
   display: grid;
-  gap: 12px;
+  gap: 10px;
+}
+
+.integration-detail__bullets li {
+  position: relative;
+  padding-left: 1.15rem;
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--muted);
+}
+
+.integration-detail__bullets li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--green);
 }
 
 .ads-page__capability {
@@ -1337,8 +1358,73 @@ button {
 
 .ads-page__capability p {
   font-size: 15px;
-  line-height: 1.65;
+  line-height: 1.55;
   color: var(--muted);
+}
+
+.integration-detail__kpis {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.integration-detail__kpi {
+  border: 1px solid var(--line, rgba(0, 0, 0, 0.08));
+  border-radius: 999px;
+  padding: 8px 14px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ink);
+  background: color-mix(in srgb, var(--green) 8%, white);
+}
+
+.integration-detail__steps {
+  margin: 0 0 14px;
+  padding-left: 1.25rem;
+  color: var(--muted);
+}
+
+.integration-detail__steps li {
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 8px;
+}
+
+.integration-detail__cta .btn {
+  margin-top: 8px;
+}
+
+.integrations-page__catalog-link,
+.integrations-page__catalog-soon {
+  display: grid;
+  gap: 2px;
+  text-decoration: none;
+  color: inherit;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--line, rgba(0, 0, 0, 0.06));
+}
+
+.integrations-page__catalog-link:hover .integrations-page__catalog-cta {
+  color: var(--green-dark, var(--green));
+}
+
+.integrations-page__catalog-cta {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--green);
+  margin-top: 4px;
+}
+
+.integrations-page__catalog-badge {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-top: 4px;
 }
 
 .legal-page__email {

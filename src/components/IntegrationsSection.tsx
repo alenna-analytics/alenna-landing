@@ -25,7 +25,7 @@ export function IntegrationsSection() {
             <ul>
               {ecommerce.map((item) => (
                 <li key={item.id}>
-                  <a href={sitePath(item.href)}>
+                  <a href={sitePath(item.path)}>
                     <span className="integrations-band__name">{landingT(lang, item.nameKey)}</span>
                     <span className="integrations-band__blurb">{landingT(lang, item.blurbKey)}</span>
                   </a>
@@ -39,7 +39,7 @@ export function IntegrationsSection() {
             <ul>
               {ads.map((item) => (
                 <li key={item.id}>
-                  <a href={sitePath(item.href)} className={item.status === 'soon' ? 'is-soon' : undefined}>
+                  <a href={sitePath(item.path)} className={item.status === 'soon' ? 'is-soon' : undefined}>
                     <span className="integrations-band__name">{landingT(lang, item.nameKey)}</span>
                     <span className="integrations-band__blurb">{landingT(lang, item.blurbKey)}</span>
                   </a>
