@@ -2,77 +2,77 @@ import type { Language } from '@/providers/language-provider'
 import type { IntegrationDetailContent } from '@/lib/i18n/integrations/types'
 
 const ES: IntegrationDetailContent = {
-  metaTitle: 'Amazon Ads ROAS y TACoS — Alenna',
+  metaTitle: 'Amazon Ads — próximamente en Alenna',
   metaDescription:
-    'Conecta Amazon Ads a Alenna: gasto, clics, ventas atribuidas, ROAS y TACoS junto al P&L de tu seller Amazon.',
+    'Amazon Ads llegará a Alenna: gasto, ROAS y TACoS junto a otros canales de venta. En progreso.',
   pageTitle: 'Amazon Ads',
   eyebrow: 'Integración de publicidad',
   title: 'Amazon Ads con ROAS y TACoS reales',
   intro:
-    'Conecta tu cuenta de Amazon Ads y ve gasto, rendimiento y ventas atribuidas en el mismo panel que tus ventas Amazon — para saber si la publicidad paga el margen.',
+    'Estamos construyendo la conexión con Amazon Ads para ver gasto, rendimiento y ventas atribuidas junto a otros canales de venta — y saber si la publicidad paga el margen.',
   bullets: [
     'Sponsored Products, Brands y Display en un solo lugar.',
-    'ROAS y TACoS cruzados con el net revenue del sibling de commerce.',
+    'ROAS y TACoS cruzados con el revenue de commerce cuando esté linkeado.',
     'Solo lectura: medimos campañas; no las operamos ni compramos medios.',
   ],
-  overviewTitle: 'Publicidad de Amazon, en tu rentabilidad',
+  overviewTitle: 'Publicidad de Amazon, en progreso',
   overviewBody:
-    'La consola de Ads no muestra tu P&L ni COGS. Alenna sincroniza métricas de campañas y las relaciona con el revenue de tu conexión Amazon Seller cuando están linkeadas. Si solo conectas Ads, ves spend y ROAS; TACoS aparece cuando hay sibling de ventas.',
-  kpisTitle: 'Qué puedes ver',
+    'La integración aún no está disponible para conectar. El objetivo es sincronizar métricas de campañas y relacionarlas con el revenue de tu conexión de ventas cuando estén linkeadas — igual que el resto de canales de publicidad en Alenna.',
+  kpisTitle: 'Qué podrás ver',
   kpis: ['Gasto (spend)', 'Ventas atribuidas', 'ROAS', 'TACoS', 'CPA / clics e impresiones'],
-  dataTitle: 'Datos que sincronizamos',
+  dataTitle: 'Datos que planeamos sincronizar',
   dataItems: [
     'Métricas diarias de campañas: spend, clics, impresiones, ventas y conversiones atribuidas.',
     'Sponsored Products, Sponsored Brands y Sponsored Display.',
     'Vinculación opcional a la cuenta Amazon Seller (mismo tenant) para TACoS.',
     'Sin PII de compradores; no operamos ni editamos campañas.',
   ],
-  howTitle: 'Cómo conectar',
+  howTitle: 'Cómo conectar (cuando esté listo)',
   howItems: [
     'En Integraciones → Publicidad elige Amazon Ads.',
     'Autoriza la app LWA de Advertising (consentimiento separado del Seller).',
     'Sincroniza métricas (primera sync ~90 días) y revisa Publicidad e Inicio.',
   ],
-  ctaTitle: 'Conecta Amazon Ads',
-  ctaBody: 'Mide si tu gasto en Amazon sostiene el margen de tu operación.',
-  ctaLabel: 'Empezar',
+  ctaTitle: 'Amazon Ads está en progreso',
+  ctaBody: 'Mientras tanto puedes conectar los canales de venta y publicidad ya disponibles.',
+  ctaLabel: 'Ver integraciones disponibles',
 }
 
 const EN: IntegrationDetailContent = {
-  metaTitle: 'Amazon Ads ROAS and TACoS — Alenna',
+  metaTitle: 'Amazon Ads — coming soon to Alenna',
   metaDescription:
-    'Connect Amazon Ads to Alenna: spend, clicks, attributed sales, ROAS, and TACoS next to your Amazon seller P&L.',
+    'Amazon Ads is coming to Alenna: spend, ROAS, and TACoS next to your other sales channels. In progress.',
   pageTitle: 'Amazon Ads',
   eyebrow: 'Advertising integration',
   title: 'Amazon Ads with real ROAS and TACoS',
   intro:
-    'Connect your Amazon Ads account and see spend, performance, and attributed sales in the same panel as your Amazon sales — so you know if ads pay for margin.',
+    'We are building the Amazon Ads connection so you can see spend, performance, and attributed sales next to your other sales channels — and know if ads pay for margin.',
   bullets: [
     'Sponsored Products, Brands, and Display in one place.',
-    'ROAS and TACoS crossed with sibling commerce net revenue.',
+    'ROAS and TACoS crossed with commerce revenue when linked.',
     'Read-only: we measure campaigns; we do not run them or buy media.',
   ],
-  overviewTitle: 'Amazon advertising, in your profitability',
+  overviewTitle: 'Amazon advertising, in progress',
   overviewBody:
-    'The Ads console does not show your P&L or COGS. Alenna syncs campaign metrics and relates them to Amazon Seller revenue when linked. Ads-only tenants still see spend and ROAS; TACoS appears when a sales sibling exists.',
-  kpisTitle: 'What you can see',
+    'This integration is not available to connect yet. The goal is to sync campaign metrics and relate them to your sales connection revenue when linked — like the rest of advertising channels in Alenna.',
+  kpisTitle: 'What you will see',
   kpis: ['Spend', 'Attributed sales', 'ROAS', 'TACoS', 'CPA / clicks and impressions'],
-  dataTitle: 'Data we sync',
+  dataTitle: 'Data we plan to sync',
   dataItems: [
     'Daily campaign metrics: spend, clicks, impressions, attributed sales and conversions.',
     'Sponsored Products, Sponsored Brands, and Sponsored Display.',
     'Optional link to Amazon Seller (same tenant) for TACoS.',
     'No buyer PII; we do not operate or edit campaigns.',
   ],
-  howTitle: 'How to connect',
+  howTitle: 'How to connect (when ready)',
   howItems: [
     'In Integrations → Ads choose Amazon Ads.',
     'Authorize the Advertising LWA app (separate consent from Seller).',
     'Sync metrics (first sync ~90 days) and review Ads and Home.',
   ],
-  ctaTitle: 'Connect Amazon Ads',
-  ctaBody: 'Measure whether Amazon spend supports the margin of your operation.',
-  ctaLabel: 'Get started',
+  ctaTitle: 'Amazon Ads is in progress',
+  ctaBody: 'In the meantime you can connect the sales and advertising channels already available.',
+  ctaLabel: 'See available integrations',
 }
 
 export function amazonAdsDetailContent(lang: Language): IntegrationDetailContent {

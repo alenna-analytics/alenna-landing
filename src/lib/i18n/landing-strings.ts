@@ -66,6 +66,8 @@ const LANDING_STRINGS = {
     integrationBlurbMetaAds: 'Medición de campañas y gasto',
     integrationsAvailableLabel: 'Disponibles ahora',
     integrationsComingSoonLabel: 'Próximamente',
+    integrationsInProgressBanner: 'En progreso — aún no disponible para conectar',
+    integrationsSoonCta: 'Ver integraciones disponibles',
     integrationShopify: 'Shopify',
     integrationMercadoLibre: 'Mercado Libre',
     integrationAmazon: 'Amazon',
@@ -80,6 +82,7 @@ const LANDING_STRINGS = {
     integrationAdsSoon: 'Google Ads y Meta Ads',
     integrationsStripCaption: 'Integraciones',
     integrationsViewDetail: 'Ver →',
+    integrationsBack: 'Integraciones',
     integrationsCaption:
       'Conectamos tus canales de venta —Amazon, Shopify y Mercado Libre— y publicidad (Amazon Ads y Mercado Libre Ads) para que tengas ventas, costos y ads en un solo lugar.',
     integrationStatusLive: 'Disponible',
@@ -251,6 +254,8 @@ const LANDING_STRINGS = {
     integrationBlurbMetaAds: 'Campaign measurement and spend',
     integrationsAvailableLabel: 'Available now',
     integrationsComingSoonLabel: 'Coming soon',
+    integrationsInProgressBanner: 'In progress — not available to connect yet',
+    integrationsSoonCta: 'See available integrations',
     integrationShopify: 'Shopify',
     integrationMercadoLibre: 'Mercado Libre',
     integrationAmazon: 'Amazon',
@@ -265,6 +270,7 @@ const LANDING_STRINGS = {
     integrationAdsSoon: 'Google Ads and Meta Ads',
     integrationsStripCaption: 'Integrations',
     integrationsViewDetail: 'View →',
+    integrationsBack: 'Integrations',
     integrationsCaption:
       'We connect your sales channels — Amazon, Shopify, and Mercado Libre — plus advertising (Amazon Ads and Mercado Libre Ads) so sales, costs, and ads live in one place.',
     integrationStatusLive: 'Available',

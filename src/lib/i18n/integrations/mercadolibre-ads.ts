@@ -4,22 +4,22 @@ import type { IntegrationDetailContent } from '@/lib/i18n/integrations/types'
 const ES: IntegrationDetailContent = {
   metaTitle: 'Mercado Libre Ads ROAS y TACoS — Alenna',
   metaDescription:
-    'Conecta Mercado Libre Ads a Alenna: gasto y rendimiento de campañas junto al P&L de tu cuenta MELI.',
+    'Conecta Mercado Libre Ads a Alenna: gasto y rendimiento de campañas junto a otros canales de venta.',
   pageTitle: 'Mercado Libre Ads',
   eyebrow: 'Integración de publicidad',
   title: 'Mercado Libre Ads en tu rentabilidad',
   intro:
-    'Conecta la cuenta de publicidad MELI y ve gasto y rendimiento junto a tus ventas de Mercado Libre — ROAS y TACoS en el mismo panel.',
+    'Conecta la cuenta de publicidad MELI y ve gasto y rendimiento junto a otros canales de venta — ROAS y TACoS en el mismo panel.',
   bullets: [
     'Gasto y métricas de campañas en solo lectura.',
-    'ROAS y TACoS con el revenue del sibling de commerce cuando está linkeado.',
+    'ROAS y TACoS con el revenue de commerce cuando está linkeado.',
     'Misma app MELI, segundo consentimiento: ecommerce y ads se separan en Alenna.',
   ],
   overviewTitle: 'Publicidad MELI, sin operar campañas',
   overviewBody:
-    'Alenna no es agencia: no compramos medios ni gestionamos campañas. Sincronizamos métricas de advertising para cruzarlas con tu P&L. Si solo conectas Ads, ves spend; con ventas MELI linkeadas, TACoS cobra sentido.',
+    'Alenna no es agencia: no compramos medios ni gestionamos campañas. Sincronizamos métricas de advertising para cruzarlas con tu P&L. Si solo conectas Ads, ves spend; con ventas linkeadas, TACoS cobra sentido.',
   kpisTitle: 'Qué puedes ver',
-  kpis: ['Gasto (spend)', 'Rendimiento de campañas', 'ROAS', 'TACoS', 'Comparativa vs otros ads'],
+  kpis: ['Gasto (spend)', 'Rendimiento de campañas', 'ROAS', 'TACoS', 'Comparativa vs otros canales de publicidad'],
   dataTitle: 'Datos que sincronizamos',
   dataItems: [
     'Métricas de campañas y gasto publicitario (sin PII de compradores).',
@@ -34,29 +34,29 @@ const ES: IntegrationDetailContent = {
     'Sincroniza y revisa Publicidad e Inicio con el filtro de canales.',
   ],
   ctaTitle: 'Conecta Mercado Libre Ads',
-  ctaBody: 'Mide el gasto MELI junto a tus ventas y decide con margen, no con vanity metrics.',
+  ctaBody: 'Mide el gasto junto a otros canales de venta y decide con margen, no con vanity metrics.',
   ctaLabel: 'Empezar',
 }
 
 const EN: IntegrationDetailContent = {
   metaTitle: 'Mercado Libre Ads ROAS and TACoS — Alenna',
   metaDescription:
-    'Connect Mercado Libre Ads to Alenna: campaign spend and performance next to your MELI seller P&L.',
+    'Connect Mercado Libre Ads to Alenna: campaign spend and performance next to your other sales channels.',
   pageTitle: 'Mercado Libre Ads',
   eyebrow: 'Advertising integration',
   title: 'Mercado Libre Ads in your profitability',
   intro:
-    'Connect your MELI ads account and see spend and performance next to Mercado Libre sales — ROAS and TACoS in the same panel.',
+    'Connect your MELI ads account and see spend and performance next to your other sales channels — ROAS and TACoS in the same panel.',
   bullets: [
     'Campaign spend and metrics read-only.',
-    'ROAS and TACoS with sibling commerce revenue when linked.',
+    'ROAS and TACoS with commerce revenue when linked.',
     'Same MELI app, second consent: ecommerce and ads stay separate in Alenna.',
   ],
   overviewTitle: 'MELI advertising, without running campaigns',
   overviewBody:
-    'Alenna is not an agency: we do not buy media or manage campaigns. We sync advertising metrics to cross them with your P&L. Ads-only shows spend; with linked MELI sales, TACoS makes sense.',
+    'Alenna is not an agency: we do not buy media or manage campaigns. We sync advertising metrics to cross them with your P&L. Ads-only shows spend; with linked sales, TACoS makes sense.',
   kpisTitle: 'What you can see',
-  kpis: ['Spend', 'Campaign performance', 'ROAS', 'TACoS', 'Compare vs other ads'],
+  kpis: ['Spend', 'Campaign performance', 'ROAS', 'TACoS', 'Compare vs other advertising channels'],
   dataTitle: 'Data we sync',
   dataItems: [
     'Campaign metrics and ad spend (no buyer PII).',
@@ -71,7 +71,7 @@ const EN: IntegrationDetailContent = {
     'Sync and review Ads and Home with the channel filter.',
   ],
   ctaTitle: 'Connect Mercado Libre Ads',
-  ctaBody: 'Measure MELI spend next to sales and decide on margin, not vanity metrics.',
+  ctaBody: 'Measure spend next to your other sales channels and decide on margin, not vanity metrics.',
   ctaLabel: 'Get started',
 }
 

@@ -1,38 +1,52 @@
+import amazonAdsLogo from '@/assets/partners/amazon_ads.svg'
+import amazonLogo from '@/assets/partners/amazon.svg'
+import googleAdsLogo from '@/assets/partners/google_ads.svg'
+import mercadoAdsLogo from '@/assets/partners/mercado_ads.svg'
+import mercadoLibreLogo from '@/assets/partners/mercado_libre.svg'
+import metaAdsLogo from '@/assets/partners/meta_ads.svg'
+import shopifyLogo from '@/assets/partners/shopify.svg'
 import { INTEGRATIONS_PATH } from '@/lib/i18n/integrations-strings'
 import type { LandingStringKey } from '@/lib/i18n/landing-strings'
 
 export type IntegrationGroup = 'ecommerce' | 'ads'
 export type IntegrationStatus = 'live' | 'soon'
 
-export type LiveIntegrationSlug =
+export type IntegrationDetailSlug =
   | 'shopify'
   | 'amazon'
   | 'mercadolibre'
-  | 'amazon-ads'
   | 'mercadolibre-ads'
+  | 'amazon-ads'
+  | 'google-ads'
+  | 'meta-ads'
 
-export const INTEGRATION_SLUGS: readonly LiveIntegrationSlug[] = [
+/** @deprecated use IntegrationDetailSlug */
+export type LiveIntegrationSlug = IntegrationDetailSlug
+
+export const INTEGRATION_SLUGS: readonly IntegrationDetailSlug[] = [
   'shopify',
   'amazon',
   'mercadolibre',
-  'amazon-ads',
   'mercadolibre-ads',
+  'amazon-ads',
+  'google-ads',
+  'meta-ads',
 ] as const
 
 export type CatalogItem = {
   id: string
-  slug: string
+  slug: IntegrationDetailSlug
   nameKey: LandingStringKey
   blurbKey: LandingStringKey
   group: IntegrationGroup
   status: IntegrationStatus
-  /** Canonical marketing path for live items; hub hash for soon-only. */
+  logoSrc: string
   path: string
   /** @deprecated use path — kept for callers that still read href */
   href: string
 }
 
-function detailPath(slug: LiveIntegrationSlug): string {
+function detailPath(slug: IntegrationDetailSlug): string {
   return `${INTEGRATIONS_PATH}/${slug}`
 }
 
@@ -47,6 +61,7 @@ export const INTEGRATION_CATALOG: CatalogItem[] = [
     blurbKey: 'integrationBlurbAmazon',
     group: 'ecommerce',
     status: 'live',
+    logoSrc: amazonLogo,
     path: detailPath('amazon'),
     href: detailPath('amazon'),
   },
@@ -57,6 +72,7 @@ export const INTEGRATION_CATALOG: CatalogItem[] = [
     blurbKey: 'integrationBlurbShopify',
     group: 'ecommerce',
     status: 'live',
+    logoSrc: shopifyLogo,
     path: detailPath('shopify'),
     href: detailPath('shopify'),
   },
@@ -67,6 +83,7 @@ export const INTEGRATION_CATALOG: CatalogItem[] = [
     blurbKey: 'integrationBlurbMercadoLibre',
     group: 'ecommerce',
     status: 'live',
+    logoSrc: mercadoLibreLogo,
     path: detailPath('mercadolibre'),
     href: detailPath('mercadolibre'),
   },
@@ -77,6 +94,7 @@ export const INTEGRATION_CATALOG: CatalogItem[] = [
     blurbKey: 'integrationBlurbMercadoLibreAds',
     group: 'ads',
     status: 'live',
+    logoSrc: mercadoAdsLogo,
     path: detailPath('mercadolibre-ads'),
     href: detailPath('mercadolibre-ads'),
   },
@@ -86,9 +104,10 @@ export const INTEGRATION_CATALOG: CatalogItem[] = [
     nameKey: 'integrationAmazonAds',
     blurbKey: 'integrationBlurbAmazonAds',
     group: 'ads',
-    status: 'live',
-    path: AMAZON_ADS_CANONICAL_PATH,
-    href: AMAZON_ADS_CANONICAL_PATH,
+    status: 'soon',
+    logoSrc: amazonAdsLogo,
+    path: detailPath('amazon-ads'),
+    href: detailPath('amazon-ads'),
   },
   {
     id: 'google-ads',
@@ -97,8 +116,9 @@ export const INTEGRATION_CATALOG: CatalogItem[] = [
     blurbKey: 'integrationBlurbGoogleAds',
     group: 'ads',
     status: 'soon',
-    path: `${INTEGRATIONS_PATH}#google-ads`,
-    href: `${INTEGRATIONS_PATH}#google-ads`,
+    logoSrc: googleAdsLogo,
+    path: detailPath('google-ads'),
+    href: detailPath('google-ads'),
   },
   {
     id: 'meta-ads',
@@ -107,8 +127,9 @@ export const INTEGRATION_CATALOG: CatalogItem[] = [
     blurbKey: 'integrationBlurbMetaAds',
     group: 'ads',
     status: 'soon',
-    path: `${INTEGRATIONS_PATH}#meta-ads`,
-    href: `${INTEGRATIONS_PATH}#meta-ads`,
+    logoSrc: metaAdsLogo,
+    path: detailPath('meta-ads'),
+    href: detailPath('meta-ads'),
   },
 ]
 
@@ -116,8 +137,13 @@ export function catalogByGroup(group: IntegrationGroup): CatalogItem[] {
   return INTEGRATION_CATALOG.filter((item) => item.group === group)
 }
 
-export function isLiveIntegrationSlug(slug: string): slug is LiveIntegrationSlug {
+export function isIntegrationDetailSlug(slug: string): slug is IntegrationDetailSlug {
   return (INTEGRATION_SLUGS as readonly string[]).includes(slug)
+}
+
+/** @deprecated use isIntegrationDetailSlug */
+export function isLiveIntegrationSlug(slug: string): slug is IntegrationDetailSlug {
+  return isIntegrationDetailSlug(slug)
 }
 
 export function getIntegrationBySlug(slug: string): CatalogItem | undefined {
@@ -128,10 +154,10 @@ export function liveIntegrations(): CatalogItem[] {
   return INTEGRATION_CATALOG.filter((item) => item.status === 'live')
 }
 
-export function parseIntegrationsDetailSlug(pathname: string): LiveIntegrationSlug | null {
+export function parseIntegrationsDetailSlug(pathname: string): IntegrationDetailSlug | null {
   const prefix = `${INTEGRATIONS_PATH}/`
   if (!pathname.startsWith(prefix)) return null
   const slug = pathname.slice(prefix.length).replace(/\/+$/, '')
   if (!slug || slug.includes('/')) return null
-  return isLiveIntegrationSlug(slug) ? slug : null
+  return isIntegrationDetailSlug(slug) ? slug : null
 }

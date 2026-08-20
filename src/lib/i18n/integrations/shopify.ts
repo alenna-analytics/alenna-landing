@@ -4,14 +4,14 @@ import type { IntegrationDetailContent } from '@/lib/i18n/integrations/types'
 const ES: IntegrationDetailContent = {
   metaTitle: 'Shopify analytics y rentabilidad — Alenna',
   metaDescription:
-    'Conecta Shopify a Alenna y ve ventas, COGS, margen y P&L junto a Amazon y Mercado Libre. Analítica de tienda propia para ecommerce multicanal.',
+    'Conecta Shopify a Alenna y ve ventas, COGS, margen y P&L junto a otros canales de venta. Analítica de tienda propia para ecommerce multicanal.',
   pageTitle: 'Shopify',
   eyebrow: 'Integración ecommerce',
   title: 'Shopify analytics con rentabilidad real',
   intro:
-    'Conecta tu tienda Shopify y ve pedidos, catálogo e inventario en el mismo panel que tus marketplaces — con COGS, comisiones y margen, no solo ventas brutas.',
+    'Conecta tu tienda Shopify y ve pedidos, catálogo e inventario en el mismo panel que tus otros canales de venta — con COGS, comisiones y margen, no solo ventas brutas.',
   bullets: [
-    'Ventas netas, pedidos y catálogo de tu tienda propia junto a Amazon y Mercado Libre.',
+    'Ventas netas, pedidos y catálogo de tu tienda propia junto a otros canales de venta.',
     'Margen por producto y SKU con costos que tú cargas una vez.',
     'Un P&L consolidado: deja de exportar CSV de Shopify a mano.',
   ],
@@ -47,14 +47,14 @@ const ES: IntegrationDetailContent = {
 const EN: IntegrationDetailContent = {
   metaTitle: 'Shopify analytics and true profitability — Alenna',
   metaDescription:
-    'Connect Shopify to Alenna and see sales, COGS, margin, and P&L next to Amazon and Mercado Libre. Owned-store analytics for multichannel ecommerce.',
+    'Connect Shopify to Alenna and see sales, COGS, margin, and P&L next to your other sales channels. Owned-store analytics for multichannel ecommerce.',
   pageTitle: 'Shopify',
   eyebrow: 'Ecommerce integration',
   title: 'Shopify analytics with real profitability',
   intro:
-    'Connect your Shopify store and see orders, catalog, and inventory in the same panel as your marketplaces — with COGS, fees, and margin, not just gross sales.',
+    'Connect your Shopify store and see orders, catalog, and inventory in the same panel as your other sales channels — with COGS, fees, and margin, not just gross sales.',
   bullets: [
-    'Net sales, orders, and catalog from your owned store next to Amazon and Mercado Libre.',
+    'Net sales, orders, and catalog from your owned store next to your other sales channels.',
     'Margin by product and SKU with costs you load once.',
     'One consolidated P&L — stop exporting Shopify CSVs by hand.',
   ],
