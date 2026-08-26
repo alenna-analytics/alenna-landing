@@ -38,6 +38,7 @@ export function SiteFooter() {
           <div className="site-footer__col">
             <p className="site-footer__heading">{landingT(lang, 'footerResources')}</p>
             <a href={sitePath('/#faq')}>{landingT(lang, 'navFaq')}</a>
+            <a href={sitePath('/integraciones/amazon-ads')}>{landingT(lang, 'footerAmazonAds')}</a>
           </div>
 
           <div className="site-footer__col">

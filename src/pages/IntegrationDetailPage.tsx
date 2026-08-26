@@ -66,7 +66,7 @@ export function IntegrationDetailPage({ slug }: IntegrationDetailPageProps) {
   ]
 
   useEffect(() => {
-    document.title = `${name} | Alenna Analytics`
+    document.title = content.metaTitle
     const description = document.querySelector('meta[name="description"]')
     if (description) {
       description.setAttribute('content', content.metaDescription)
