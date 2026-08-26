@@ -409,7 +409,7 @@ const LANDING_FAQ: Record<Language, LandingFaqItem[]> = {
   es: [
     {
       id: 'first-numbers',
-      question: '¿Qué tan rápido veo mis primeros números?',
+      question: '¿Qué tan rápido se sincronizan mis datos con alenna?',
       answer:
         'Tras conectar y realizar la primera sincronización, podrás ver hasta 3 años* de datos de ventas y productos o hasta 90 días* de datos de publicidad en alenna en cuestión de minutos**.',
       notes: [
@@ -455,7 +455,7 @@ const LANDING_FAQ: Record<Language, LandingFaqItem[]> = {
   en: [
     {
       id: 'first-numbers',
-      question: 'How soon do I see my first numbers?',
+      question: 'How quickly does my data sync with Alenna?',
       answer:
         'After you connect and run the first sync, you can see up to 3 years* of sales and product data or up to 90 days* of advertising data in Alenna within minutes**.',
       notes: [
