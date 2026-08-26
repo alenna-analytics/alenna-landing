@@ -5,7 +5,7 @@ const TERMS_ES: LegalPageContent = {
   metaTitle: 'Términos y Condiciones — Alenna Analytics',
   brandLabel: 'Alenna Analytics',
   title: 'Términos y Condiciones',
-  updated: 'Última actualización: 12 de agosto de 2026',
+  updated: 'Última actualización: 25 de agosto de 2026',
   intro:
     'Estos Términos y Condiciones ("Términos") regulan el acceso y uso de Alenna Analytics ("Alenna", "el Servicio"), disponible en alenna.io y operado por Sergio Garnica González. Al crear una cuenta o usar el Servicio, aceptas estos Términos y nuestra Política de Privacidad en alenna.io/privacidad. Si no estás de acuerdo, no uses el Servicio.',
   sections: [
@@ -31,11 +31,11 @@ const TERMS_ES: LegalPageContent = {
       blocks: [
         {
           kind: 'p',
-          text: 'Alenna es una plataforma de inteligencia comercial para ecommerce que permite conectar canales de venta, sincronizar datos comerciales y visualizar métricas, reportes y alertas (por ejemplo, margen, inventario y rentabilidad por canal).',
+          text: 'Alenna es una plataforma de inteligencia comercial para ecommerce que permite conectar canales de venta y publicidad, sincronizar datos comerciales y visualizar métricas, reportes y alertas (por ejemplo, margen, inventario y rentabilidad por canal).',
         },
         {
           kind: 'p',
-          text: 'Las integraciones actualmente disponibles son Amazon, Shopify, Mercado Libre y Mercado Libre Ads. Amazon Ads, Google Ads y Meta Ads pueden incorporarse y se anunciarán en el Servicio.',
+          text: 'Las integraciones actualmente disponibles son Amazon, Shopify, Mercado Libre, Amazon Ads y Mercado Libre Ads. Google Ads y Meta Ads están en el catálogo y aún no están abiertos a conectar.',
         },
         {
           kind: 'p',
@@ -65,11 +65,11 @@ const TERMS_ES: LegalPageContent = {
       blocks: [
         {
           kind: 'p',
-          text: 'Para usar Alenna con Amazon, Shopify, Mercado Libre o Mercado Libre Ads debes autorizar el acceso mediante OAuth u otros mecanismos que cada plataforma proporcione. Al conectar una integración, declaras que tienes autoridad para vincular esa cuenta y que cumples los términos de la plataforma correspondiente.',
+          text: 'Para usar Alenna con Amazon, Shopify, Mercado Libre, Amazon Ads o Mercado Libre Ads debes autorizar el acceso mediante OAuth u otros mecanismos que cada plataforma proporcione. Al conectar una integración, declaras que tienes autoridad para vincular esa cuenta y que cumples los términos de la plataforma correspondiente.',
         },
         {
           kind: 'p',
-          text: 'Alenna accede y sincroniza datos conforme a los permisos que otorgas. Puedes desconectar una integración en cualquier momento desde tu panel; al hacerlo, eliminamos los tokens de acceso almacenados.',
+          text: 'Alenna accede y sincroniza datos conforme a los permisos que otorgas. Las conexiones son de solo lectura: no creamos publicaciones, no editamos campañas ni compramos medios. Puedes desconectar una integración en cualquier momento desde tu panel; al hacerlo, eliminamos los tokens de acceso almacenados.',
         },
         {
           kind: 'p',
@@ -77,7 +77,7 @@ const TERMS_ES: LegalPageContent = {
         },
         {
           kind: 'p',
-          text: 'No somos responsables por interrupciones, cambios en APIs o políticas de Shopify, Mercado Libre u otros proveedores externos. Si una plataforma revoca el acceso o modifica sus condiciones, algunas funcionalidades pueden dejar de estar disponibles sin que ello genere responsabilidad adicional para Alenna más allá de lo previsto en estos Términos.',
+          text: 'No somos responsables por interrupciones, cambios en APIs o políticas de Amazon, Shopify, Mercado Libre u otros proveedores externos. Si una plataforma revoca el acceso o modifica sus condiciones, algunas funcionalidades pueden dejar de estar disponibles sin que ello genere responsabilidad adicional para Alenna más allá de lo previsto en estos Términos.',
         },
       ],
     },
@@ -122,7 +122,7 @@ const TERMS_ES: LegalPageContent = {
             'Revender, sublicenciar o redistribuir el Servicio o los datos obtenidos a través de él, salvo autorización expresa.',
             'Realizar scraping, ingeniería inversa o extracción masiva fuera de las APIs autorizadas por las plataformas conectadas.',
             'Introducir malware, sobrecargar la infraestructura o interferir con el funcionamiento del Servicio.',
-            'Utilizar el Servicio de forma que incumpla las políticas de Shopify, Mercado Libre u otros terceros integrados.',
+            'Utilizar el Servicio de forma que incumpla las políticas de Amazon, Shopify, Mercado Libre u otros terceros integrados.',
           ],
         },
         {
@@ -246,7 +246,7 @@ const TERMS_EN: LegalPageContent = {
   metaTitle: 'Terms and Conditions — Alenna Analytics',
   brandLabel: 'Alenna Analytics',
   title: 'Terms and Conditions',
-  updated: 'Last updated: August 12, 2026',
+  updated: 'Last updated: August 25, 2026',
   intro:
     'These Terms and Conditions ("Terms") govern access to and use of Alenna Analytics ("Alenna", "the Service"), available at alenna.io and operated by Sergio Garnica González. By creating an account or using the Service, you accept these Terms and our Privacy Policy at alenna.io/privacidad. If you do not agree, do not use the Service.',
   sections: [
@@ -272,11 +272,11 @@ const TERMS_EN: LegalPageContent = {
       blocks: [
         {
           kind: 'p',
-          text: 'Alenna is a commerce intelligence platform for ecommerce that lets you connect sales channels, sync commercial data, and view metrics, reports, and alerts (e.g. margin, inventory, and channel profitability).',
+          text: 'Alenna is a commerce intelligence platform for ecommerce that lets you connect sales and advertising channels, sync commercial data, and view metrics, reports, and alerts (e.g. margin, inventory, and channel profitability).',
         },
         {
           kind: 'p',
-          text: 'Integrations currently available are Amazon, Shopify, Mercado Libre, and Mercado Libre Ads. Amazon Ads, Google Ads, and Meta Ads may be added and will be announced in the Service.',
+          text: 'Integrations currently available are Amazon, Shopify, Mercado Libre, Amazon Ads, and Mercado Libre Ads. Google Ads and Meta Ads are in the catalog and not open to connect yet.',
         },
         {
           kind: 'p',
@@ -306,11 +306,11 @@ const TERMS_EN: LegalPageContent = {
       blocks: [
         {
           kind: 'p',
-          text: 'To use Alenna with Amazon, Shopify, Mercado Libre, or Mercado Libre Ads you must authorize access via OAuth or other mechanisms each platform provides. By connecting an integration, you represent that you have authority to link that account and that you comply with the corresponding platform\'s terms.',
+          text: 'To use Alenna with Amazon, Shopify, Mercado Libre, Amazon Ads, or Mercado Libre Ads you must authorize access via OAuth or other mechanisms each platform provides. By connecting an integration, you represent that you have authority to link that account and that you comply with the corresponding platform\'s terms.',
         },
         {
           kind: 'p',
-          text: 'Alenna accesses and syncs data according to the permissions you grant. You can disconnect an integration at any time from your dashboard; we then delete stored access tokens.',
+          text: 'Alenna accesses and syncs data according to the permissions you grant. Connections are read-only: we do not create listings, edit campaigns, or buy media. You can disconnect an integration at any time from your dashboard; we then delete stored access tokens.',
         },
         {
           kind: 'p',
@@ -318,7 +318,7 @@ const TERMS_EN: LegalPageContent = {
         },
         {
           kind: 'p',
-          text: 'We are not responsible for outages, API changes, or policy changes by Shopify, Mercado Libre, or other external providers. If a platform revokes access or changes its conditions, some features may become unavailable without additional liability for Alenna beyond what these Terms provide.',
+          text: 'We are not responsible for outages, API changes, or policy changes by Amazon, Shopify, Mercado Libre, or other external providers. If a platform revokes access or changes its conditions, some features may become unavailable without additional liability for Alenna beyond what these Terms provide.',
         },
       ],
     },
@@ -363,7 +363,7 @@ const TERMS_EN: LegalPageContent = {
             'Resell, sublicense, or redistribute the Service or data obtained through it without express authorization.',
             'Scrape, reverse engineer, or perform bulk extraction outside APIs authorized by connected platforms.',
             'Introduce malware, overload infrastructure, or interfere with Service operation.',
-            'Use the Service in a way that violates Shopify, Mercado Libre, or other integrated third-party policies.',
+            'Use the Service in a way that violates Amazon, Shopify, Mercado Libre, or other integrated third-party policies.',
           ],
         },
         {

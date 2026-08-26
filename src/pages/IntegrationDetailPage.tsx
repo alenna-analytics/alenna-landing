@@ -108,7 +108,7 @@ export function IntegrationDetailPage({ slug }: IntegrationDetailPageProps) {
             <div className="integration-detail__main">
               <FadeIn as="section" className="integration-detail__section" delay={70}>
                 <h2 className="integration-detail__section-title">
-                  {landingT(lang, 'integrationDetailOverview')}
+                  {content.overviewTitle || landingT(lang, 'integrationDetailOverview')}
                 </h2>
                 <p className="integration-detail__body">{content.intro}</p>
                 {content.overviewBody ? (
