@@ -1,3 +1,4 @@
+import { INTEGRATIONS_PATH } from '@/lib/i18n/integrations-strings'
 import type { Language } from '@/providers/language-provider'
 
 const LANDING_STRINGS = {
@@ -54,8 +55,6 @@ const LANDING_STRINGS = {
     moduleIntegrationsDesc: 'Conecta todo. Amazon, Shopify, Mercado Libre y ads en el mismo panel.',
     integrationsEyebrow: 'Integraciones',
     integrationsCatalogTitle: 'Conectamos con donde ya vendes',
-    integrationsCatalogLede:
-      'Amazon, Shopify, Mercado Libre y sus ads. Una sola fuente de verdad para ventas, costos y publicidad.',
     integrationsCatalogCta: 'Ver integraciones →',
     integrationBlurbAmazon: 'Pedidos, fees e inventario de seller',
     integrationBlurbShopify: 'Tienda propia, catálogo y pedidos',
@@ -66,8 +65,8 @@ const LANDING_STRINGS = {
     integrationBlurbMetaAds: 'Medición de campañas y gasto',
     integrationsAvailableLabel: 'Disponibles ahora',
     integrationsComingSoonLabel: 'Próximamente',
-    integrationsInProgressBanner: 'En progreso — aún no disponible para conectar',
-    integrationsSoonCta: 'Ver integraciones disponibles',
+    integrationsInProgressBanner: 'En progreso',
+    integrationsSoonCta: 'Ver catálogo',
     integrationShopify: 'Shopify',
     integrationMercadoLibre: 'Mercado Libre',
     integrationAmazon: 'Amazon',
@@ -85,13 +84,24 @@ const LANDING_STRINGS = {
     integrationsBack: 'Integraciones',
     integrationsCaption:
       'Conectamos tus canales de venta —Amazon, Shopify y Mercado Libre— y publicidad (Amazon Ads y Mercado Libre Ads) para que tengas ventas, costos y ads en un solo lugar.',
+    integrationsConnectCta: 'Conectar',
     integrationStatusLive: 'Disponible',
+    integrationDetailOverview: 'Descripción',
+    integrationDetailDetails: 'Detalles',
+    integrationDetailStatus: 'Estado',
+    integrationDetailCategory: 'Categoría',
+    integrationDetailAccess: 'Acceso',
+    integrationDetailReadOnly: 'Solo lectura',
+    integrationDetailIncluded: 'Incluido',
+    integrationDetailMetric: 'Métrica',
+    integrationDetailDisclaimer:
+      'Las integraciones se conectan en solo lectura. No operamos campañas ni compramos medios.',
     howEyebrow: 'Cómo funciona',
     howTitle: 'De la gestión de datos a la claridad en las decisiones',
     step1Title: 'Conecta todo',
-    step1Desc: 'Amazon, Shopify o Mercado Libre, en unos clics.',
+    step1Desc: 'Integra alenna con tus canales de ventas y publicidad',
     step2Title: 'Una sola fuente de verdad',
-    step2Desc: 'Pedidos, productos y costos se actualizan solos.',
+    step2Desc: 'Sincroniza tus pedidos, productos y anuncios en un solo lugar',
     step3Title: 'Decide con claridad',
     step3Desc: 'Margen, alertas y rentabilidad por canal, en una pantalla.',
     featuresEyebrow: 'Funcionalidades',
@@ -117,7 +127,7 @@ const LANDING_STRINGS = {
     feature6Desc:
       'KPIs, gráficos y alertas en un panel centralizado para toda tu operación.',
     pricingEyebrow: 'Planes',
-    pricingTitle: 'Basic, Growth o a medida',
+    pricingTitle: 'Basic, Growth o Enterprise',
     pricingTitleMinimal: 'Planes',
     pricingSubtitle:
       'Prueba Basic 15 días gratis. Todos los planes incluyen todos los módulos e integraciones ilimitadas.',
@@ -147,7 +157,7 @@ const LANDING_STRINGS = {
     planGrowthIncludesPrior: 'Todo lo de Basic, y además:',
     planGrowthCta: 'Empezar con Growth',
     planCustomName: 'Enterprise',
-    planCustomTagline: 'Para grandes empresas que operan a escala',
+    planCustomTagline: 'Para operaciones de gran escala.',
     planCustomPrice: 'A medida',
     planCustomPriceCompact: 'A medida',
     planCustomPeriod: 'Límites y precio a medida',
@@ -172,6 +182,7 @@ const LANDING_STRINGS = {
     footerColAds: 'Ads',
     footerAllIntegrations: 'Todas las integraciones',
     footerCompany: 'Empresa',
+    footerResources: 'Recursos',
     footerLegal: 'Legal',
     footerContact: 'Contacto',
     footerPrivacy: 'Privacidad',
@@ -242,8 +253,6 @@ const LANDING_STRINGS = {
     moduleIntegrationsDesc: 'Connect everything. Amazon, Shopify, Mercado Libre, and ads in one panel.',
     integrationsEyebrow: 'Integrations',
     integrationsCatalogTitle: 'We connect where you already sell',
-    integrationsCatalogLede:
-      'Amazon, Shopify, Mercado Libre, and their ads. One source of truth for sales, costs, and advertising.',
     integrationsCatalogCta: 'See integrations →',
     integrationBlurbAmazon: 'Seller orders, fees, and inventory',
     integrationBlurbShopify: 'Owned store, catalog, and orders',
@@ -254,8 +263,8 @@ const LANDING_STRINGS = {
     integrationBlurbMetaAds: 'Campaign measurement and spend',
     integrationsAvailableLabel: 'Available now',
     integrationsComingSoonLabel: 'Coming soon',
-    integrationsInProgressBanner: 'In progress — not available to connect yet',
-    integrationsSoonCta: 'See available integrations',
+    integrationsInProgressBanner: 'In progress',
+    integrationsSoonCta: 'View catalog',
     integrationShopify: 'Shopify',
     integrationMercadoLibre: 'Mercado Libre',
     integrationAmazon: 'Amazon',
@@ -273,13 +282,24 @@ const LANDING_STRINGS = {
     integrationsBack: 'Integrations',
     integrationsCaption:
       'We connect your sales channels — Amazon, Shopify, and Mercado Libre — plus advertising (Amazon Ads and Mercado Libre Ads) so sales, costs, and ads live in one place.',
+    integrationsConnectCta: 'Connect',
     integrationStatusLive: 'Available',
+    integrationDetailOverview: 'Overview',
+    integrationDetailDetails: 'Details',
+    integrationDetailStatus: 'Status',
+    integrationDetailCategory: 'Category',
+    integrationDetailAccess: 'Access',
+    integrationDetailReadOnly: 'Read-only',
+    integrationDetailIncluded: 'Included',
+    integrationDetailMetric: 'Metric',
+    integrationDetailDisclaimer:
+      'Integrations connect read-only. We do not run campaigns or buy media.',
     howEyebrow: 'How it works',
     howTitle: 'From managing data to clarity in every decision',
     step1Title: 'Connect everything',
-    step1Desc: 'Amazon, Shopify, or Mercado Libre, in a few clicks.',
+    step1Desc: 'Connect Alenna with your sales and advertising channels',
     step2Title: 'One source of truth',
-    step2Desc: 'Orders, products, and costs update on their own.',
+    step2Desc: 'Sync your orders, products, and ads in one place',
     step3Title: 'Decide with clarity',
     step3Desc: 'Margin, alerts, and channel profitability, on one screen.',
     featuresEyebrow: 'Features',
@@ -299,7 +319,7 @@ const LANDING_STRINGS = {
     feature6Title: 'Unified view',
     feature6Desc: 'KPIs, charts, and alerts in one centralized dashboard for your entire operation.',
     pricingEyebrow: 'Plans',
-    pricingTitle: 'Basic, Growth, or custom',
+    pricingTitle: 'Basic, Growth, or Enterprise',
     pricingTitleMinimal: 'Pricing',
     pricingSubtitle:
       'Try Basic free for 15 days. Every plan includes all modules and unlimited integrations.',
@@ -329,7 +349,7 @@ const LANDING_STRINGS = {
     planGrowthIncludesPrior: 'Everything in Basic, plus:',
     planGrowthCta: 'Start with Growth',
     planCustomName: 'Enterprise',
-    planCustomTagline: 'For large businesses operating at scale',
+    planCustomTagline: 'For large-scale operations.',
     planCustomPrice: 'Custom',
     planCustomPriceCompact: 'Custom',
     planCustomPeriod: 'Tailored limits and pricing',
@@ -354,6 +374,7 @@ const LANDING_STRINGS = {
     footerColAds: 'Ads',
     footerAllIntegrations: 'All integrations',
     footerCompany: 'Company',
+    footerResources: 'Resources',
     footerLegal: 'Legal',
     footerContact: 'Contact',
     footerPrivacy: 'Privacy',
@@ -377,95 +398,114 @@ export type LandingFaqItem = {
   id: string
   question: string
   answer: string
+  notes?: string[]
+  href?: string
+  linkLabel?: string
 }
 
 const LANDING_FAQ: Record<Language, LandingFaqItem[]> = {
   es: [
     {
-      id: 'what-is',
-      question: '¿Qué es Alenna Analytics?',
+      id: 'first-numbers',
+      question: '¿Qué tan rápido veo mis primeros números?',
       answer:
-        'Es un panel de analítica para ecommerce multicanal. Conectas tus canales de venta en línea y ves pedidos, márgenes, inventario y rentabilidad en un solo lugar, sin unir exportaciones a mano.',
+        'Tras conectar y realizar la primera sincronización, podrás ver hasta 3 años* de datos de ventas y productos o hasta 90 días* de datos de publicidad en alenna en cuestión de minutos**.',
+      notes: [
+        '* Dependiendo de las limitaciones de cada integración.',
+        '** Dependiendo del volumen de datos.',
+      ],
     },
     {
-      id: 'channels',
-      question: '¿Puedo ver varios canales de venta juntos?',
+      id: 'margin',
+      question: '¿Cómo calculan el margen real?',
       answer:
-        'Sí. El objetivo de Alenna es consolidar tu operación: compara marketplaces y tienda propia, y revisa margen y ventas de toda la operación, no de un canal aislado.',
+        'El margen bruto se calcula como ventas netas (ventas brutas menos descuentos y devoluciones) menos COGS. El margen de contribución resta además comisiones de canal, el envío que tú capturas y el gasto de publicidad conectado.',
+    },
+    {
+      id: 'read-only',
+      question: '¿Alenna puede operar o modificar mis tiendas y campañas?',
+      answer:
+        'No. Las conexiones son de solo lectura: no creamos publicaciones, no editamos campañas ni compramos medios. Para más detalles, revisa nuestras integraciones y las limitaciones de cada una.',
+      href: INTEGRATIONS_PATH,
+      linkLabel: 'Ver integraciones',
+    },
+    {
+      id: 'privacy',
+      question: '¿Qué datos ven de mis clientes?',
+      answer:
+        'Pedidos (montos, fechas, estados, líneas de producto y SKU) y catálogo e inventario. Nunca el nombre, correo, teléfono ni la dirección del comprador. Ves la rentabilidad de la operación, no una base de clientes.',
+    },
+    {
+      id: 'sync-frequency',
+      question: '¿Con qué frecuencia se actualizan los datos?',
+      answer:
+        'Pedidos y datos de publicidad se sincronizan cada 6 horas. El catálogo e inventario de productos, una vez al día (06:15 UTC). Otros datos, como las comisiones de Amazon, se sincronizan diariamente (07:30 UTC).',
     },
     {
       id: 'integrations',
       question: '¿Qué integraciones están disponibles?',
       answer:
-        'Hoy conectas Amazon, Shopify y Mercado Libre, más Amazon Ads y Mercado Libre Ads. El detalle de cada conexión está en Integraciones.',
-    },
-    {
-      id: 'privacy',
-      question: '¿Alenna accede a datos de mis clientes?',
-      answer:
-        'No. La app se centra en analítica de tienda: pedidos, productos e inventario. No accede a nombres, correos, teléfonos ni direcciones de clientes.',
-    },
-    {
-      id: 'margin',
-      question: '¿Cómo veo si un producto es rentable?',
-      answer:
-        'Consultas margen y beneficio por producto y a nivel de SKU, con costos y comisiones por canal. Así detectas SKUs que generan pérdidas y no solo ingresos.',
-    },
-    {
-      id: 'inventory',
-      question: '¿Hay alertas de inventario?',
-      answer:
-        'Sí. Recibes avisos antes de que el stock bajo frene las ventas o dañe los márgenes, sobre todo en productos de mayor rotación.',
+        'Hoy puedes conectar Amazon, Shopify, Mercado Libre, Amazon Ads y Mercado Libre Ads. Google Ads y Meta Ads están en el catálogo, todavía no abiertos.',
+      href: INTEGRATIONS_PATH,
+      linkLabel: 'Ver integraciones',
     },
     {
       id: 'pricing',
-      question: '¿Hay prueba gratis y qué incluyen los planes?',
+      question: '¿Cuánto cuesta alenna y qué pasa si dejo de pagar?',
       answer:
-        'Basic incluye 15 días de prueba gratis. Basic cuesta 30 USD al mes y Growth 60 USD al mes. Basic incluye 3 roles predefinidos; Growth incluye 5 roles (4 configurables y 1 propietario). Todos los planes incluyen todos los módulos, reportes multicanal y sync de pedidos y catálogo. Enterprise es a medida.',
+        'Basic: $30 USD/mes, con 15 días de prueba; Growth: $60 USD/mes. La suscripción se renueva sola y se gestiona en Stripe o en contacto@alenna.io, sin reembolso del periodo ya iniciado.\n\nSi dejas de pagar, tu acceso a alenna se restringe hasta que renueves: no te preocupes, tu configuración la mantenemos para cuando regreses. Si deseas borrar la cuenta, lo solicitas en Configuración. Hay 90 días de gracia: puedes cancelar la solicitud y seguir usando alenna. Pasada esa fecha se eliminan tus datos. Para adelantar el borrado, escribe a privacidad@alenna.io (máximo 30 días hábiles).',
     },
   ],
   en: [
     {
-      id: 'what-is',
-      question: 'What is Alenna Analytics?',
+      id: 'first-numbers',
+      question: 'How soon do I see my first numbers?',
       answer:
-        'It is an analytics dashboard for multi-channel ecommerce. You connect your online sales channels and see orders, margins, inventory, and profitability in one place — without stitching manual exports.',
+        'After you connect and run the first sync, you can see up to 3 years* of sales and product data or up to 90 days* of advertising data in Alenna within minutes**.',
+      notes: [
+        '* Depending on each integration’s limits.',
+        '** Depending on data volume.',
+      ],
     },
     {
-      id: 'channels',
-      question: 'Can I see multiple sales channels together?',
+      id: 'margin',
+      question: 'How do you calculate real margin?',
       answer:
-        'Yes. Alenna is built to consolidate your operation: compare marketplaces and your own store, and review margin and sales across the whole business, not one channel in isolation.',
+        'Gross margin is net sales (gross sales minus discounts and returns) minus COGS. Contribution margin also subtracts channel commissions, shipping you enter, and connected advertising spend.',
+    },
+    {
+      id: 'read-only',
+      question: 'Can Alenna operate or change my stores and campaigns?',
+      answer:
+        'No. Connections are read-only: we do not create listings, edit campaigns, or buy media. For more detail, see our integrations and each one’s limits.',
+      href: INTEGRATIONS_PATH,
+      linkLabel: 'See integrations',
+    },
+    {
+      id: 'privacy',
+      question: 'What customer data do you see?',
+      answer:
+        'Orders (amounts, dates, statuses, product lines, and SKUs) and catalog and inventory. Never the buyer’s name, email, phone, or address. You see operating profitability, not a customer database.',
+    },
+    {
+      id: 'sync-frequency',
+      question: 'How often does data update?',
+      answer:
+        'Orders and advertising data sync every 6 hours. Product catalog and inventory once a day (06:15 UTC). Other data, such as Amazon commissions, sync daily (07:30 UTC).',
     },
     {
       id: 'integrations',
       question: 'Which integrations are available?',
       answer:
-        'We connect where you already sell: Amazon, Shopify, and Mercado Libre, plus Amazon Ads and Mercado Libre Ads. Full detail for each connection is on the Integrations page.',
-    },
-    {
-      id: 'privacy',
-      question: 'Does Alenna access my customer data?',
-      answer:
-        'No. The app focuses on store analytics: orders, products, and inventory. It does not access customer names, emails, phone numbers, or addresses.',
-    },
-    {
-      id: 'margin',
-      question: 'How do I see if a product is profitable?',
-      answer:
-        'You can review margin and profit by product and at SKU level, after costs and channel fees. That helps you spot SKUs that lose money, not just revenue.',
-    },
-    {
-      id: 'inventory',
-      question: 'Are there inventory alerts?',
-      answer:
-        'Yes. You get notified before low stock slows sales or hurts margins, especially on your fastest-moving products.',
+        'Today you can connect Amazon, Shopify, Mercado Libre, Amazon Ads, and Mercado Libre Ads. Google Ads and Meta Ads are in the catalog, not open yet.',
+      href: INTEGRATIONS_PATH,
+      linkLabel: 'See integrations',
     },
     {
       id: 'pricing',
-      question: 'Is there a free trial, and what do plans include?',
+      question: 'How much does Alenna cost, and what happens if I stop paying?',
       answer:
-        'Basic includes a 15-day free trial. Basic is $30 USD per month and Growth is $60 USD per month. Basic includes 3 predefined roles; Growth includes 5 roles (4 configurable and 1 owner). Every plan includes all modules, multi-channel reports, and order and catalog sync. Enterprise is custom.',
+        'Basic: $30 USD/month, with a 15-day trial; Growth: $60 USD/month. The subscription renews on its own and is managed in Stripe or at contacto@alenna.io, with no refund for a period already started.\n\nIf you stop paying, access to Alenna is restricted until you renew: don’t worry, we keep your setup for when you come back. If you want to delete the account, request it in Settings. There is a 90-day grace period: you can cancel the request and keep using Alenna. After that date your data is deleted. To speed up deletion, email privacidad@alenna.io (up to 30 business days).',
     },
   ],
 }

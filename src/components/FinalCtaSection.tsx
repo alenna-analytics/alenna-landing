@@ -14,7 +14,7 @@ export function FinalCtaSection() {
           <p className="signup__badge">{landingT(lang, 'planBasicBadge')}</p>
           <h2 className="signup__title">{landingT(lang, 'finalCtaTitle')}</h2>
           <p className="signup__lede">{landingT(lang, 'finalCtaSubtext')}</p>
-          <Button href={appUrl()} variant="primary" className="signup__btn">
+          <Button href={appUrl()} variant="primary">
             {landingT(lang, 'finalCtaButton')}
           </Button>
         </FadeIn>

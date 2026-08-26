@@ -4,75 +4,59 @@ import type { IntegrationDetailContent } from '@/lib/i18n/integrations/types'
 const ES: IntegrationDetailContent = {
   metaTitle: 'Google Ads — próximamente en Alenna',
   metaDescription:
-    'Google Ads llegará a Alenna: mide gasto y rendimiento de campañas junto a otros canales de venta. En progreso.',
+    'Google Ads llegará a Alenna para traer gasto y rendimiento de campañas al P&L de publicidad. Aún no está abierto a conectar.',
   pageTitle: 'Google Ads',
   eyebrow: 'Integración de publicidad',
-  title: 'Google Ads en tu rentabilidad',
+  title: 'Google Ads',
   intro:
-    'Estamos construyendo la conexión con Google Ads para traer gasto y rendimiento de campañas junto a otros canales de venta — con el mismo enfoque de margen, no vanity metrics.',
+    'Vamos a conectar Google Ads para traer gasto y rendimiento de campañas al mismo P&L de publicidad. El conector ya está en código; aún no está abierto a conectar. Sin fecha pública.',
   bullets: [
-    'Gasto y métricas de campañas en solo lectura.',
-    'Cruce con tu P&L y otros canales de publicidad cuando esté listo.',
-    'Solo lectura: medimos campañas; no las operamos ni compramos medios.',
+    'Campaña × día en solo lectura (Search, Shopping, Performance Max y el resto de tipos que ya mapeamos).',
+    'El gasto irá al P&L junto a MELI Ads y Amazon Ads.',
+    'Sin TACoS de Google: no hay canal de ventas hermano.',
   ],
-  overviewTitle: 'Publicidad de Google, en progreso',
-  overviewBody:
-    'La integración aún no está disponible para conectar. El objetivo es sincronizar métricas de Google Ads en solo lectura y cruzarlas con tu rentabilidad en Alenna, igual que el resto de canales de publicidad.',
-  kpisTitle: 'Qué podrás ver',
-  kpis: ['Gasto (spend)', 'Rendimiento de campañas', 'ROAS', 'CPA / clics e impresiones', 'Comparativa vs otros canales de publicidad'],
-  dataTitle: 'Datos que planeamos sincronizar',
-  dataItems: [
-    'Métricas de campañas y gasto publicitario (sin PII de compradores).',
-    'Uso exclusivo para reportes de rentabilidad en app.alenna.io.',
-    'Conexión OAuth de solo lectura cuando la integración esté lista.',
-    'No operaremos ni editaremos campañas.',
-  ],
-  howTitle: 'Cómo conectar (cuando esté listo)',
-  howItems: [
-    'En Integraciones → Publicidad elige Google Ads.',
-    'Autoriza el consentimiento OAuth de lectura.',
-    'Sincroniza y revisa Publicidad e Inicio con el filtro de canales.',
-  ],
-  ctaTitle: 'Google Ads está en progreso',
+  socialProof:
+    'Igual que ya hacemos con Mercado Libre Ads y Amazon Ads: un módulo Publicidad, no vanity metrics.',
+  overviewTitle: '',
+  overviewBody: '',
+  kpisTitle: '',
+  kpis: [],
+  dataTitle: '',
+  dataItems: [],
+  howTitle: '',
+  howItems: [],
+  ctaTitle: '',
   ctaBody: 'Mientras tanto puedes conectar los canales de venta y publicidad ya disponibles.',
-  ctaLabel: 'Ver integraciones disponibles',
+  ctaLabel: '',
 }
 
 const EN: IntegrationDetailContent = {
   metaTitle: 'Google Ads — coming soon to Alenna',
   metaDescription:
-    'Google Ads is coming to Alenna: measure campaign spend and performance next to your other sales channels. In progress.',
+    'Google Ads is coming to Alenna to bring campaign spend and performance into the ads P&L. Not open to connect yet.',
   pageTitle: 'Google Ads',
   eyebrow: 'Advertising integration',
-  title: 'Google Ads in your profitability',
+  title: 'Google Ads',
   intro:
-    'We are building the Google Ads connection to bring campaign spend and performance next to your other sales channels — with the same margin focus, not vanity metrics.',
+    'We will connect Google Ads to bring campaign spend and performance into the same advertising P&L. The connector is already in code; it is not open to connect yet. No public date.',
   bullets: [
-    'Campaign spend and metrics read-only.',
-    'Crossed with your P&L and other advertising channels when ready.',
-    'Read-only: we measure campaigns; we do not run them or buy media.',
+    'Campaign × day read-only (Search, Shopping, Performance Max, and the other types we already map).',
+    'Spend will enter the P&L next to MELI Ads and Amazon Ads.',
+    'No Google TACoS: there is no sibling sales channel.',
   ],
-  overviewTitle: 'Google advertising, in progress',
-  overviewBody:
-    'This integration is not available to connect yet. The goal is to sync Google Ads metrics read-only and cross them with profitability in Alenna, like the rest of our advertising channels.',
-  kpisTitle: 'What you will see',
-  kpis: ['Spend', 'Campaign performance', 'ROAS', 'CPA / clicks and impressions', 'Compare vs other advertising channels'],
-  dataTitle: 'Data we plan to sync',
-  dataItems: [
-    'Campaign metrics and ad spend (no buyer PII).',
-    'Used only for profitability reports in app.alenna.io.',
-    'Read-only OAuth when the integration ships.',
-    'We will not operate or edit campaigns.',
-  ],
-  howTitle: 'How to connect (when ready)',
-  howItems: [
-    'In Integrations → Ads choose Google Ads.',
-    'Authorize read-only OAuth consent.',
-    'Sync and review Ads and Home with the channel filter.',
-  ],
-  ctaTitle: 'Google Ads is in progress',
+  socialProof:
+    'Same as we already do with Mercado Libre Ads and Amazon Ads: one Ads module, not vanity metrics.',
+  overviewTitle: '',
+  overviewBody: '',
+  kpisTitle: '',
+  kpis: [],
+  dataTitle: '',
+  dataItems: [],
+  howTitle: '',
+  howItems: [],
+  ctaTitle: '',
   ctaBody: 'In the meantime you can connect the sales and advertising channels already available.',
-  ctaLabel: 'See available integrations',
+  ctaLabel: '',
 }
 
 export function googleAdsDetailContent(lang: Language): IntegrationDetailContent {

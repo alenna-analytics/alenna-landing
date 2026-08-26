@@ -1,9 +1,11 @@
 import type { ReactNode } from 'react'
 
-type ButtonVariant = 'primary' | 'secondary' | 'soft' | 'ghost' | 'dark' | 'outline'
+type ButtonVariant = 'primary' | 'secondary' | 'soft' | 'outline'
+type ButtonSize = 'tiny' | 'default'
 
 type ButtonProps = {
   variant?: ButtonVariant
+  size?: ButtonSize
   href?: string
   className?: string
   children: ReactNode
@@ -12,12 +14,15 @@ type ButtonProps = {
 
 export function Button({
   variant = 'primary',
+  size = 'default',
   href,
   className = '',
   children,
   onClick,
 }: ButtonProps) {
-  const classes = ['btn', `btn--${variant}`, className].filter(Boolean).join(' ')
+  const classes = ['btn', `btn--${variant}`, size !== 'default' ? `btn--${size}` : '', className]
+    .filter(Boolean)
+    .join(' ')
 
   if (href) {
     return (
