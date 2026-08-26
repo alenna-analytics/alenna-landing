@@ -23,7 +23,7 @@ const PRIVACY_ES: PrivacyContent = {
   metaTitle: 'Política de Privacidad — Alenna Analytics',
   brandLabel: 'Alenna Analytics',
   title: 'Política de Privacidad',
-  updated: 'Última actualización: 12 de agosto de 2026',
+  updated: 'Última actualización: 25 de agosto de 2026',
   intro:
     'Alenna Analytics ("Alenna", "nosotros") es una plataforma de inteligencia comercial para ecommerce, disponible en alenna.io y operada por Sergio Garnica González. Esta Política de Privacidad describe qué datos recopilamos, cuáles no almacenamos, cómo los tratamos, con quién los compartimos y cuáles son tus derechos. Al crear una cuenta o usar nuestros servicios, aceptas las prácticas descritas en este documento.',
   sections: [
@@ -66,14 +66,14 @@ const PRIVACY_ES: PrivacyContent = {
         { kind: 'h3', text: '2.2 Datos comerciales de tus canales conectados' },
         {
           kind: 'p',
-          text: 'Al conectar Amazon, Shopify, Mercado Libre o Mercado Libre Ads, sincronizamos únicamente datos comerciales y de catálogo (y, en ads, métricas de campañas) necesarios para reportes, conforme a los permisos que tú autorizas:',
+          text: 'Al conectar Amazon, Shopify, Mercado Libre, Amazon Ads o Mercado Libre Ads, sincronizamos únicamente datos comerciales, de catálogo y de publicidad necesarios para reportes, conforme a los permisos que tú autorizas:',
         },
         {
           kind: 'ul',
           items: [
             'Pedidos: identificadores, fechas, estados, montos, comisiones, impuestos, descuentos, envío (como monto), líneas de producto (SKU, cantidad, precios).',
             'Productos y catálogo: títulos, SKUs, variantes, precios, imágenes de producto, existencias.',
-            'Publicidad (Mercado Libre Ads): gasto y métricas de campañas, sin PII de compradores. A medida que se incorporen Amazon Ads, Google Ads y Meta Ads, el tratamiento será el mismo.',
+            'Publicidad (Amazon Ads y Mercado Libre Ads): identificadores y estado de campaña, gasto, impresiones, clics, ventas y conversiones atribuidas, por campaña y por día. No almacenamos datos personales de compradores. Google Ads y Meta Ads están en el catálogo y aún no están abiertos a conectar; cuando lo estén, el tratamiento será el mismo.',
             'Métricas y agregados derivados (por ejemplo, ventas por día, margen, alertas de inventario).',
             'Metadatos de integración: dominio de tienda, identificadores de cuenta en la plataforma, estado de sincronización y tokens de acceso cifrados.',
           ],
@@ -108,7 +108,7 @@ const PRIVACY_ES: PrivacyContent = {
         },
         {
           kind: 'p',
-          text: 'Durante una sincronización, las APIs de Amazon, Shopify o Mercado Libre pueden devolver temporalmente información adicional en memoria. Esa información se descarta antes de guardar datos en nuestra base de datos; solo persistimos los campos comerciales descritos en la Sección 2.2.',
+          text: 'Durante una sincronización, las APIs de Amazon, Amazon Ads, Shopify, Mercado Libre o Mercado Libre Ads pueden devolver temporalmente información adicional en memoria. Esa información se descarta antes de guardar datos en nuestra base de datos; solo persistimos los campos comerciales descritos en la Sección 2.2.',
         },
       ],
     },
@@ -172,7 +172,7 @@ const PRIVACY_ES: PrivacyContent = {
         { kind: 'h3', text: '6.2 Plataformas que tú conectas' },
         {
           kind: 'p',
-          text: 'Cuando conectas Amazon, Shopify, Mercado Libre o Mercado Libre Ads, Alenna lee datos conforme a los permisos OAuth que otorgas. Puedes desconectar la integración en cualquier momento desde tu panel; al hacerlo, eliminamos los tokens de acceso almacenados.',
+          text: 'Cuando conectas Amazon, Shopify, Mercado Libre, Amazon Ads o Mercado Libre Ads, Alenna lee datos conforme a los permisos OAuth que otorgas. Puedes desconectar la integración en cualquier momento desde tu panel; al hacerlo, eliminamos los tokens de acceso almacenados.',
         },
         { kind: 'h3', text: '6.3 Requerimientos legales' },
         {
@@ -201,7 +201,7 @@ const PRIVACY_ES: PrivacyContent = {
           kind: 'ul',
           items: [
             'Datos de cuenta (perfil, email, configuración del espacio de trabajo): mientras tu cuenta esté activa.',
-            'Datos comerciales sincronizados (pedidos, catálogo, métricas): mientras tu cuenta esté activa, para que puedas consultar el historial completo de tu operación en la plataforma. Solo se eliminan si cancelas tu cuenta o nos lo solicitas expresamente.',
+            'Datos comerciales sincronizados (pedidos, catálogo, publicidad y métricas): mientras tu cuenta esté activa, para que puedas consultar el historial completo de tu operación en la plataforma. Solo se eliminan si cancelas tu cuenta o nos lo solicitas expresamente.',
             'Tokens de integración (OAuth): mientras la conexión esté activa; se eliminan al desconectar la integración.',
             'Registros técnicos y de seguridad: hasta 12 meses, o el plazo que imponga el proveedor de infraestructura.',
             'Identificadores y registros de facturación en Alenna (p. ej. IDs de cliente/suscripción Stripe y estado del plan): el plazo que exija la legislación fiscal aplicable (hasta 5 años en México, cuando corresponda). Stripe puede conservar datos de pago adicionales según su propia política.',
@@ -221,7 +221,7 @@ const PRIVACY_ES: PrivacyContent = {
         },
         {
           kind: 'p',
-          text: 'Desconectar una integración (Amazon, Shopify, Mercado Libre o Mercado Libre Ads) no elimina por sí sola el historial de pedidos ya importado; elimina los tokens de acceso. Puedes solicitar la eliminación de datos históricos en el mismo correo de privacidad.',
+          text: 'Desconectar una integración (Amazon, Shopify, Mercado Libre, Amazon Ads o Mercado Libre Ads) no elimina por sí sola el historial de pedidos o de publicidad ya importado; elimina los tokens de acceso. Puedes solicitar la eliminación de datos históricos en el mismo correo de privacidad.',
         },
       ],
     },
@@ -332,7 +332,7 @@ const PRIVACY_EN: PrivacyContent = {
   metaTitle: 'Privacy Policy — Alenna Analytics',
   brandLabel: 'Alenna Analytics',
   title: 'Privacy Policy',
-  updated: 'Last updated: August 12, 2026',
+  updated: 'Last updated: August 25, 2026',
   intro:
     'Alenna Analytics ("Alenna", "we") is a commerce intelligence platform for ecommerce, available at alenna.io and operated by Sergio Garnica González. This Privacy Policy describes what data we collect, what we do not store, how we process it, who we share it with, and your rights. By creating an account or using our services, you accept the practices described in this document.',
   sections: [
@@ -375,14 +375,14 @@ const PRIVACY_EN: PrivacyContent = {
         { kind: 'h3', text: '2.2 Commercial data from your connected channels' },
         {
           kind: 'p',
-          text: 'When you connect Amazon, Shopify, Mercado Libre, or Mercado Libre Ads, we sync only commercial and catalog data (and, for ads, campaign metrics) needed for reports, according to the permissions you authorize:',
+          text: 'When you connect Amazon, Shopify, Mercado Libre, Amazon Ads, or Mercado Libre Ads, we sync only commercial, catalog, and advertising data needed for reports, according to the permissions you authorize:',
         },
         {
           kind: 'ul',
           items: [
             'Orders: identifiers, dates, statuses, amounts, fees, taxes, discounts, shipping (as an amount), line items (SKU, quantity, prices).',
             'Products and catalog: titles, SKUs, variants, prices, product images, stock levels.',
-            'Advertising (Mercado Libre Ads): campaign spend and performance metrics, without buyer PII. As Amazon Ads, Google Ads, and Meta Ads are added, they will be treated the same way.',
+            'Advertising (Amazon Ads and Mercado Libre Ads): campaign identifiers and status, spend, impressions, clicks, attributed sales and conversions, by campaign and by day. We do not store buyer personal data. Google Ads and Meta Ads are in the catalog and not open to connect yet; when they are, they will be treated the same way.',
             'Derived metrics and aggregates (e.g. daily sales, margin, inventory alerts).',
             'Integration metadata: shop domain, platform account identifiers, sync status, and encrypted access tokens.',
           ],
@@ -417,7 +417,7 @@ const PRIVACY_EN: PrivacyContent = {
         },
         {
           kind: 'p',
-          text: 'During a sync, Amazon, Shopify, or Mercado Libre APIs may temporarily return additional information in memory. That information is discarded before saving to our database; we only persist the commercial fields described in Section 2.2.',
+          text: 'During a sync, Amazon, Amazon Ads, Shopify, Mercado Libre, or Mercado Libre Ads APIs may temporarily return additional information in memory. That information is discarded before saving to our database; we only persist the commercial fields described in Section 2.2.',
         },
       ],
     },
@@ -481,7 +481,7 @@ const PRIVACY_EN: PrivacyContent = {
         { kind: 'h3', text: '6.2 Platforms you connect' },
         {
           kind: 'p',
-          text: 'When you connect Amazon, Shopify, Mercado Libre, or Mercado Libre Ads, Alenna reads data according to the OAuth permissions you grant. You can disconnect at any time from your dashboard; we then delete stored access tokens.',
+          text: 'When you connect Amazon, Shopify, Mercado Libre, Amazon Ads, or Mercado Libre Ads, Alenna reads data according to the OAuth permissions you grant. You can disconnect at any time from your dashboard; we then delete stored access tokens.',
         },
         { kind: 'h3', text: '6.3 Legal requirements' },
         {
@@ -510,7 +510,7 @@ const PRIVACY_EN: PrivacyContent = {
           kind: 'ul',
           items: [
             'Account data (profile, email, workspace settings): while your account is active.',
-            'Synchronized commercial data (orders, catalog, metrics): while your account is active, so you can access your full operational history on the platform. Deleted only if you close your account or explicitly request deletion.',
+            'Synchronized commercial data (orders, catalog, advertising, and metrics): while your account is active, so you can access your full operational history on the platform. Deleted only if you close your account or explicitly request deletion.',
             'Integration tokens (OAuth): while the connection is active; deleted when you disconnect.',
             'Technical and security logs: up to 12 months, or as required by the infrastructure provider.',
             'Billing identifiers and records in Alenna (e.g. Stripe customer/subscription IDs and plan status): as required by applicable tax law (up to 5 years in Mexico, when applicable). Stripe may retain additional payment data under its own policy.',
@@ -530,7 +530,7 @@ const PRIVACY_EN: PrivacyContent = {
         },
         {
           kind: 'p',
-          text: 'Disconnecting an integration (Amazon, Shopify, Mercado Libre, or Mercado Libre Ads) does not by itself delete previously imported order history; it deletes access tokens. You can request deletion of historical data at the same privacy email.',
+          text: 'Disconnecting an integration (Amazon, Shopify, Mercado Libre, Amazon Ads, or Mercado Libre Ads) does not by itself delete previously imported order or advertising history; it deletes access tokens. You can request deletion of historical data at the same privacy email.',
         },
       ],
     },

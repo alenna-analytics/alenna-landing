@@ -4,20 +4,20 @@ import type { IntegrationDetailContent } from '@/lib/i18n/integrations/types'
 const ES: IntegrationDetailContent = {
   metaTitle: 'Meta Ads — próximamente en Alenna',
   metaDescription:
-    'Meta Ads (Facebook e Instagram) llegará a Alenna para medir gasto de campañas junto al resto de publicidad. Hoy no hay conector.',
+    'Meta Ads (Facebook e Instagram) llegará a Alenna para ver el gasto de campañas junto al resto de tu publicidad. Hoy no hay conexión.',
   pageTitle: 'Meta Ads',
-  eyebrow: 'Integración de publicidad',
+  eyebrow: 'Publicidad',
   title: 'Meta Ads',
   intro:
-    'Meta Ads (Facebook e Instagram) llegará para medir gasto de campañas junto al resto de publicidad. Hoy no hay conector ni sync.',
+    'Pronto podrás medir Facebook e Instagram junto al resto de tu publicidad y ver el gasto de campañas en el mismo panel que tus ventas.',
   bullets: [
-    'Gasto y rendimiento en el mismo panel de Publicidad.',
-    'Solo lectura; no operaremos campañas.',
+    'Compara Meta Ads con Amazon Ads y Mercado Libre Ads.',
+    'Ve el gasto junto a las ventas, no solo en el administrador de anuncios.',
+    'Solo lectura: no editaremos campañas ni compraremos medios.',
   ],
-  socialProof:
-    'La misma vista de rentabilidad que ya tienes con Mercado Libre Ads y Amazon Ads.',
-  overviewTitle: '',
-  overviewBody: '',
+  overviewTitle: 'Facebook e Instagram, en el mismo panel de publicidad',
+  overviewBody:
+    'Aún no hay conexión ni fecha pública. Cuando esté listo, Meta Ads entrará al mismo módulo de Publicidad que el resto de tus campañas.',
   kpisTitle: '',
   kpis: [],
   dataTitle: '',
@@ -32,20 +32,20 @@ const ES: IntegrationDetailContent = {
 const EN: IntegrationDetailContent = {
   metaTitle: 'Meta Ads — coming soon to Alenna',
   metaDescription:
-    'Meta Ads (Facebook and Instagram) is coming to Alenna to measure campaign spend next to your other ads. There is no connector today.',
+    'Meta Ads (Facebook and Instagram) is coming to Alenna so you can see campaign spend next to your other advertising. There is no connection today.',
   pageTitle: 'Meta Ads',
-  eyebrow: 'Advertising integration',
+  eyebrow: 'Advertising',
   title: 'Meta Ads',
   intro:
-    'Meta Ads (Facebook and Instagram) will measure campaign spend next to your other advertising. There is no connector or sync today.',
+    'Soon you will measure Facebook and Instagram next to the rest of your advertising and see campaign spend in the same dashboard as your sales.',
   bullets: [
-    'Spend and performance in the same Ads panel.',
-    'Read-only; we will not operate campaigns.',
+    'Compare Meta Ads with Amazon Ads and Mercado Libre Ads.',
+    'See spend next to sales, not in Ads Manager on its own.',
+    'Read-only: we will not edit campaigns or buy media.',
   ],
-  socialProof:
-    'The same profitability view you already have with Mercado Libre Ads and Amazon Ads.',
-  overviewTitle: '',
-  overviewBody: '',
+  overviewTitle: 'Facebook and Instagram, in the same advertising dashboard',
+  overviewBody:
+    'There is no connection yet, and no public date. When it is ready, Meta Ads will enter the same Ads module as the rest of your campaigns.',
   kpisTitle: '',
   kpis: [],
   dataTitle: '',

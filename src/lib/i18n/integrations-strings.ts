@@ -9,13 +9,13 @@ export type IntegrationsHubContent = {
 const INTEGRATIONS_ES: IntegrationsHubContent = {
   metaTitle: 'Integraciones — Alenna Analytics',
   title: 'Integraciones',
-  lede: 'Conecta los canales donde ya vendes. Cada tarjeta abre el detalle de permisos, datos y cómo sincronizar.',
+  lede: 'Un mismo panel para ventas y publicidad. Elige un canal para ver qué datos entran a Alenna y cómo conectar.',
 }
 
 const INTEGRATIONS_EN: IntegrationsHubContent = {
   metaTitle: 'Integrations — Alenna Analytics',
   title: 'Integrations',
-  lede: 'Connect the channels where you already sell. Each card opens permissions, data sync, and how to connect.',
+  lede: 'One dashboard for sales and advertising. Open a channel to see what data comes into Alenna and how to connect.',
 }
 
 const INTEGRATIONS_CONTENT: Record<Language, IntegrationsHubContent> = {
