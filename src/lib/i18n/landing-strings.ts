@@ -114,7 +114,7 @@ const LANDING_STRINGS = {
       'Conoce la utilidad real de cada SKU, descontando costos y comisiones por canal.',
     feature2Title: 'Alertas de inventario',
     feature2Desc:
-      'Recibe avisos antes de quedarte sin stock en tus productos de mayor rotación.',
+      'Recibe avisos antes de quedarte sin inventario en tus productos de mayor rotación.',
     feature3Title: 'Reportes de rentabilidad',
     feature3Desc:
       'EBITDA, contribución marginal y utilidad bruta sin hojas de cálculo dispersas.',

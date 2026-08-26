@@ -22,7 +22,7 @@ const ES: IntegrationDetailContent = {
   kpis: [
     'Ventas netas y pedidos',
     'Margen bruto y de contribución (con costo de producto)',
-    'Inventario y alertas de stock',
+    'Inventario y alertas',
     'Comparación con otros canales',
   ],
   dataTitle: 'Qué sincronizamos',
