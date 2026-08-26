@@ -2,6 +2,7 @@ import { Button } from '@/components/ui/Button'
 import { FadeIn } from '@/components/ui/FadeIn'
 import dashboardImage from '@/assets/dashboard.png'
 import { landingT } from '@/lib/i18n/landing-strings'
+import { PRICING_PATH } from '@/lib/i18n/pricing-strings'
 import { appUrl, sitePath } from '@/lib/utils'
 import { useLanguage } from '@/providers/language-provider'
 
@@ -27,7 +28,7 @@ export function HeroSection() {
             <Button href={appUrl()} variant="primary">
               {landingT(lang, 'heroCtaPrimary')}
             </Button>
-            <Button href={sitePath('/#pricing')} variant="soft">
+            <Button href={sitePath(PRICING_PATH)} variant="soft">
               {landingT(lang, 'heroCtaSecondary')}
             </Button>
           </div>

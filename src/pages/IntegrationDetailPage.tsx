@@ -93,9 +93,6 @@ export function IntegrationDetailPage({ slug }: IntegrationDetailPageProps) {
               <h1 className="integration-detail__title">{name}</h1>
               {isSoon ? <span className="integration-detail__status">{statusLabel}</span> : null}
             </div>
-            <Button href={primaryHref} variant="primary" size="tiny">
-              {primaryLabel}
-            </Button>
           </FadeIn>
 
           <FadeIn delay={50}>
@@ -192,6 +189,12 @@ export function IntegrationDetailPage({ slug }: IntegrationDetailPageProps) {
               </FadeIn>
             </aside>
           </div>
+
+          <FadeIn className="integration-detail__cta" delay={140}>
+            <Button href={primaryHref} variant="primary">
+              {primaryLabel}
+            </Button>
+          </FadeIn>
         </div>
       </main>
       <SiteFooter />

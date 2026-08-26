@@ -70,16 +70,18 @@ const PLANS: PlanCard[] = [
   },
 ]
 
-export function PricingSection() {
+export function PricingSection({ showIntro = true }: { showIntro?: boolean }) {
   const { lang } = useLanguage()
 
   return (
     <section className="plans section" id="pricing">
-      <div className="container plans__layout">
-        <FadeIn className="plans__intro">
-          <h2 className="section-heading section-heading--center">{landingT(lang, 'pricingTitleMinimal')}</h2>
-          <p className="section-lede">{landingT(lang, 'pricingSubtitle')}</p>
-        </FadeIn>
+      <div className={['container plans__layout', showIntro ? '' : 'plans__layout--solo'].filter(Boolean).join(' ')}>
+        {showIntro ? (
+          <FadeIn className="plans__intro">
+            <h2 className="section-heading section-heading--center">{landingT(lang, 'pricingTitleMinimal')}</h2>
+            <p className="section-lede">{landingT(lang, 'pricingSubtitle')}</p>
+          </FadeIn>
+        ) : null}
 
         <div className="plans__cards">
           {PLANS.map((plan, index) => (

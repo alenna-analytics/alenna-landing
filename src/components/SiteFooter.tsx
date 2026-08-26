@@ -1,6 +1,7 @@
 import { LangToggle } from '@/components/LangToggle'
 import { INTEGRATIONS_PATH } from '@/lib/i18n/integrations-strings'
 import { landingT } from '@/lib/i18n/landing-strings'
+import { PRICING_PATH } from '@/lib/i18n/pricing-strings'
 import { PRIVACY_PATH } from '@/lib/i18n/privacy-strings'
 import { TERMS_PATH } from '@/lib/i18n/terms-strings'
 import { publicAsset, sitePath } from '@/lib/utils'
@@ -31,7 +32,7 @@ export function SiteFooter() {
           <div className="site-footer__col">
             <p className="site-footer__heading">{landingT(lang, 'footerProduct')}</p>
             <a href={sitePath(INTEGRATIONS_PATH)}>{landingT(lang, 'footerIntegrations')}</a>
-            <a href={sitePath('/#pricing')}>{landingT(lang, 'navPlans')}</a>
+            <a href={sitePath(PRICING_PATH)}>{landingT(lang, 'navPlans')}</a>
             <a href={sitePath('/#flow')}>{landingT(lang, 'navHowItWorks')}</a>
           </div>
 
