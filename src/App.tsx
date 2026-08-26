@@ -4,6 +4,7 @@ import { EnterprisePage } from '@/pages/EnterprisePage'
 import { IntegrationDetailPage } from '@/pages/IntegrationDetailPage'
 import { IntegrationsPage } from '@/pages/IntegrationsPage'
 import { LandingPage } from '@/pages/LandingPage'
+import { PricingPage } from '@/pages/PricingPage'
 import { PrivacyPolicyPage } from '@/pages/PrivacyPolicyPage'
 import { TermsPage } from '@/pages/TermsPage'
 import {
@@ -13,6 +14,7 @@ import {
 } from '@/lib/integrations-catalog'
 import { ENTERPRISE_PATH } from '@/lib/i18n/enterprise-strings'
 import { INTEGRATIONS_PATH } from '@/lib/i18n/integrations-strings'
+import { PRICING_PATH } from '@/lib/i18n/pricing-strings'
 import { PRIVACY_PATH } from '@/lib/i18n/privacy-strings'
 import { TERMS_PATH } from '@/lib/i18n/terms-strings'
 import { currentAppPath, sitePath } from '@/lib/utils'
@@ -26,6 +28,10 @@ function RedirectTo({ to }: { to: string }) {
 
 export default function App() {
   const path = currentAppPath()
+
+  if (path === PRICING_PATH) {
+    return <PricingPage />
+  }
 
   if (path === PRIVACY_PATH) {
     return <PrivacyPolicyPage />

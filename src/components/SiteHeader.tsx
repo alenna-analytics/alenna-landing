@@ -1,12 +1,12 @@
-import { LangToggle } from '@/components/LangToggle'
 import { Button } from '@/components/ui/Button'
 import { useScrollNav } from '@/hooks/useScrollNav'
 import { INTEGRATIONS_PATH } from '@/lib/i18n/integrations-strings'
+import { PRICING_PATH } from '@/lib/i18n/pricing-strings'
 import type { LandingStringKey } from '@/lib/i18n/landing-strings'
 import { landingT } from '@/lib/i18n/landing-strings'
 import { appUrl, publicAsset, sitePath } from '@/lib/utils'
 import { useLanguage } from '@/providers/language-provider'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 type NavItem = {
   labelKey: LandingStringKey
@@ -20,15 +20,28 @@ export function SiteHeader() {
   const loginUrl = appUrl()
   const closeMobile = () => setMobileOpen(false)
 
+  useEffect(() => {
+    if (!mobileOpen) return
+    const previous = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    return () => {
+      document.body.style.overflow = previous
+    }
+  }, [mobileOpen])
+
   const navItems: NavItem[] = [
     { labelKey: 'navProduct', href: sitePath('/#product') },
     { labelKey: 'navHowItWorks', href: sitePath('/#flow') },
     { labelKey: 'navIntegrations', href: sitePath(INTEGRATIONS_PATH) },
-    { labelKey: 'navPlans', href: sitePath('/#pricing') },
+    { labelKey: 'navPlans', href: sitePath(PRICING_PATH) },
   ]
 
   return (
-    <header className={['site-nav', scrolled ? 'is-scrolled' : ''].filter(Boolean).join(' ')}>
+    <header
+      className={['site-nav', scrolled ? 'is-scrolled' : '', mobileOpen ? 'is-menu-open' : '']
+        .filter(Boolean)
+        .join(' ')}
+    >
       <div className="site-nav__shell">
         <div className="site-nav__inner">
           <a href={sitePath('/')} className="site-nav__logo" aria-label={landingT(lang, 'brandName')}>
@@ -49,7 +62,6 @@ export function SiteHeader() {
           </nav>
 
           <div className="site-nav__actions">
-            <LangToggle />
             <Button href={loginUrl} variant="outline" size="tiny" className="site-nav__login">
               {landingT(lang, 'navLogin')}
             </Button>
@@ -59,7 +71,7 @@ export function SiteHeader() {
             <button
               type="button"
               className={['site-nav__menu', mobileOpen ? 'is-open' : ''].filter(Boolean).join(' ')}
-              aria-label="Menú"
+              aria-label={mobileOpen ? 'Cerrar' : 'Menú'}
               aria-expanded={mobileOpen}
               onClick={() => setMobileOpen((open) => !open)}
             >
@@ -71,17 +83,21 @@ export function SiteHeader() {
       </div>
 
       <nav className={['site-nav__drawer', mobileOpen ? 'is-open' : ''].filter(Boolean).join(' ')} aria-label="Móvil">
-        {navItems.map((item) => (
-          <a key={item.labelKey} href={item.href} onClick={closeMobile}>
-            {landingT(lang, item.labelKey)}
-          </a>
-        ))}
-        <Button href={loginUrl} variant="outline" size="tiny" onClick={closeMobile}>
-          {landingT(lang, 'navLogin')}
-        </Button>
-        <Button href={sitePath('/#pricing')} variant="primary" size="tiny" onClick={closeMobile}>
-          {landingT(lang, 'navCta')}
-        </Button>
+        <div className="site-nav__drawer-links">
+          {navItems.map((item) => (
+            <a key={item.labelKey} href={item.href} onClick={closeMobile}>
+              {landingT(lang, item.labelKey)}
+            </a>
+          ))}
+        </div>
+        <div className="site-nav__drawer-actions">
+          <Button href={loginUrl} variant="outline" className="site-nav__drawer-btn" onClick={closeMobile}>
+            {landingT(lang, 'navLogin')}
+          </Button>
+          <Button href={sitePath('/#pricing')} variant="primary" className="site-nav__drawer-btn" onClick={closeMobile}>
+            {landingT(lang, 'navCta')}
+          </Button>
+        </div>
       </nav>
     </header>
   )

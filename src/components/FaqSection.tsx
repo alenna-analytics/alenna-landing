@@ -1,26 +1,38 @@
 import { FadeIn } from '@/components/ui/FadeIn'
-import { landingFaq, landingT } from '@/lib/i18n/landing-strings'
+import { landingFaq, landingT, type LandingFaqItem } from '@/lib/i18n/landing-strings'
 import { sitePath } from '@/lib/utils'
 import { useLanguage } from '@/providers/language-provider'
 import { useId, useState } from 'react'
 
-export function FaqSection() {
+type FaqSectionProps = {
+  id?: string
+  items?: LandingFaqItem[]
+  eyebrow?: string
+  title?: string
+  subtitle?: string
+}
+
+export function FaqSection({ id = 'faq', items, eyebrow, title, subtitle }: FaqSectionProps) {
   const { lang } = useLanguage()
-  const items = landingFaq(lang)
+  const resolvedItems = items ?? landingFaq(lang)
   const baseId = useId()
-  const [openId, setOpenId] = useState<string | null>(items[0]?.id ?? null)
+  const [openId, setOpenId] = useState<string | null>(resolvedItems[0]?.id ?? null)
 
   return (
-    <section className="faq section" id="faq">
+    <section className="faq section" id={id}>
       <div className="container faq__layout">
         <FadeIn className="faq__intro">
-          <p className="eyebrow">{landingT(lang, 'faqEyebrow')}</p>
-          <h2 className="section-heading">{landingT(lang, 'faqTitle')}</h2>
-          <p className="section-lede">{landingT(lang, 'faqSubtitle')}</p>
+          {eyebrow !== undefined || items === undefined ? (
+            <p className="eyebrow">{eyebrow ?? landingT(lang, 'faqEyebrow')}</p>
+          ) : null}
+          <h2 className="section-heading">{title ?? landingT(lang, 'faqTitle')}</h2>
+          {subtitle !== undefined || items === undefined ? (
+            <p className="section-lede">{subtitle ?? landingT(lang, 'faqSubtitle')}</p>
+          ) : null}
         </FadeIn>
 
         <div className="faq__list">
-          {items.map((item, index) => {
+          {resolvedItems.map((item, index) => {
             const isOpen = openId === item.id
             const panelId = `${baseId}-${item.id}`
             const buttonId = `${panelId}-button`

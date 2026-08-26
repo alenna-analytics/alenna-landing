@@ -21,12 +21,13 @@ const LANDING_STRINGS = {
     heroHeadlineLine1: 'Todo tu negocio',
     heroHeadlineAccent: 'consolidado en un solo lugar.',
     brandSlogan: 'Todo tu negocio consolidado en un solo lugar',
-    heroSupporting: 'De la gestión de datos a la claridad en las decisiones.',
+    heroSupporting:
+      'Analítica de ecommerce y publicidad: ventas, pedidos, productos y anuncios juntos, en un mismo lugar.',
     heroCtaPrimary: 'Empezar',
     heroCtaSecondary: 'Ver precios',
     heroStatTrial: '15 días de prueba en Basic',
     heroStatModules: 'Todos los módulos incluidos',
-    heroStatSync: 'Sync automático de pedidos y catálogo',
+    heroStatSync: 'Sync automático de pedidos, catálogo y publicidad',
     modulesEyebrow: 'Qué hace Alenna',
     modulesTitle: 'Toda tu data. Una sola decisión.',
     modulesSubtitle:
@@ -54,7 +55,7 @@ const LANDING_STRINGS = {
     moduleIntegrations: 'Integraciones',
     moduleIntegrationsDesc: 'Conecta todo. Amazon, Shopify, Mercado Libre y publicidad en el mismo panel.',
     integrationsEyebrow: 'Integraciones',
-    integrationsCatalogTitle: 'Conectamos con donde ya vendes',
+    integrationsCatalogTitle: 'Donde ya vendes y donde anuncias',
     integrationsCatalogCta: 'Ver integraciones →',
     integrationBlurbAmazon: 'Pedidos, comisiones e inventario en tu panel',
     integrationBlurbShopify: 'Ventas, catálogo y margen de tu tienda',
@@ -219,12 +220,13 @@ const LANDING_STRINGS = {
     heroHeadlineLine1: 'Your entire business',
     heroHeadlineAccent: 'consolidated in one place.',
     brandSlogan: 'Your entire business consolidated in one place',
-    heroSupporting: 'From managing data to clarity in every decision.',
+    heroSupporting:
+      'Ecommerce and advertising analytics: sales, orders, products, and ads together in one place.',
     heroCtaPrimary: 'Get started',
     heroCtaSecondary: 'See pricing',
     heroStatTrial: '15-day trial on Basic',
     heroStatModules: 'All modules included',
-    heroStatSync: 'Automatic order and catalog sync',
+    heroStatSync: 'Automatic order, catalog, and advertising sync',
     modulesEyebrow: 'What Alenna does',
     modulesTitle: 'All your data. One decision.',
     modulesSubtitle:
@@ -252,7 +254,7 @@ const LANDING_STRINGS = {
     moduleIntegrations: 'Integrations',
     moduleIntegrationsDesc: 'Connect everything. Amazon, Shopify, Mercado Libre, and advertising in one panel.',
     integrationsEyebrow: 'Integrations',
-    integrationsCatalogTitle: 'We connect where you already sell',
+    integrationsCatalogTitle: 'Where you already sell and advertise',
     integrationsCatalogCta: 'See integrations →',
     integrationBlurbAmazon: 'Orders, commissions, and inventory in your dashboard',
     integrationBlurbShopify: 'Sales, catalog, and margin for your store',
@@ -407,7 +409,7 @@ const LANDING_FAQ: Record<Language, LandingFaqItem[]> = {
   es: [
     {
       id: 'first-numbers',
-      question: '¿Qué tan rápido veo mis primeros números?',
+      question: '¿Qué tan rápido se sincronizan mis datos con alenna?',
       answer:
         'Tras conectar y realizar la primera sincronización, podrás ver hasta 3 años* de datos de ventas y productos o hasta 90 días* de datos de publicidad en alenna en cuestión de minutos**.',
       notes: [
@@ -453,7 +455,7 @@ const LANDING_FAQ: Record<Language, LandingFaqItem[]> = {
   en: [
     {
       id: 'first-numbers',
-      question: 'How soon do I see my first numbers?',
+      question: 'How quickly does my data sync with Alenna?',
       answer:
         'After you connect and run the first sync, you can see up to 3 years* of sales and product data or up to 90 days* of advertising data in Alenna within minutes**.',
       notes: [

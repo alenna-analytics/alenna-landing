@@ -9,11 +9,11 @@ const ES: IntegrationDetailContent = {
   eyebrow: 'Publicidad',
   title: 'Amazon Ads',
   intro:
-    'Mide tus campañas de Amazon Ads junto a las ventas y al resto de tu publicidad. Ve gasto, ventas atribuidas y rentabilidad por campaña, en el mismo panel que Amazon Seller, Shopify y Mercado Libre.',
+    'Alenna ofrece analítica de publicidad a anunciantes de ecommerce. Conecta Amazon Ads en solo lectura y mide gasto, ventas atribuidas y ROAS junto a tus ventas de Amazon, Shopify y Mercado Libre.',
   bullets: [
     'Compara campañas y decide dónde invertir más y dónde recortar.',
     'Si también conectas Amazon Seller, calculamos TACoS. Si no, ves el rendimiento de las campañas sin mezclar ventas.',
-    'Conexión de solo lectura: no editamos campañas ni compramos medios.',
+    'No editamos campañas ni compramos medios: somos medición para anunciantes, no una agencia.',
   ],
   overviewTitle: 'Rendimiento de campañas, con el contexto de tus ventas',
   overviewBody:
@@ -56,11 +56,11 @@ const EN: IntegrationDetailContent = {
   eyebrow: 'Advertising',
   title: 'Amazon Ads',
   intro:
-    'Measure Amazon Ads campaigns next to your sales and the rest of your advertising. See spend, attributed sales, and profitability by campaign, in the same dashboard as Amazon Seller, Shopify, and Mercado Libre.',
+    'Alenna provides advertising analytics to ecommerce advertisers. Connect Amazon Ads read-only and measure spend, attributed sales, and ROAS next to your Amazon, Shopify, and Mercado Libre sales.',
   bullets: [
     'Compare campaigns and decide where to invest more and where to cut.',
     'If you also connect Amazon Seller, we calculate TACoS. If not, you still see campaign performance without mixing in sales.',
-    'Read-only connection: we do not edit campaigns or buy media.',
+    'We do not edit campaigns or buy media: measurement for advertisers, not an agency.',
   ],
   overviewTitle: 'Campaign performance, with your sales in context',
   overviewBody:
