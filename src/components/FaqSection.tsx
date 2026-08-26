@@ -1,5 +1,6 @@
 import { FadeIn } from '@/components/ui/FadeIn'
 import { landingFaq, landingT } from '@/lib/i18n/landing-strings'
+import { sitePath } from '@/lib/utils'
 import { useLanguage } from '@/providers/language-provider'
 import { useId, useState } from 'react'
 
@@ -23,6 +24,7 @@ export function FaqSection() {
             const isOpen = openId === item.id
             const panelId = `${baseId}-${item.id}`
             const buttonId = `${panelId}-button`
+            const paragraphs = item.answer.split('\n\n')
 
             return (
               <FadeIn key={item.id} as="article" className="faq__item" delay={index * 40}>
@@ -47,7 +49,19 @@ export function FaqSection() {
                   className={['faq__panel', isOpen ? 'is-open' : ''].filter(Boolean).join(' ')}
                 >
                   <div className="faq__answer">
-                    <p>{item.answer}</p>
+                    {paragraphs.map((paragraph) => (
+                      <p key={paragraph}>{paragraph}</p>
+                    ))}
+                    {item.notes?.map((note) => (
+                      <p key={note} className="faq__note">
+                        {note}
+                      </p>
+                    ))}
+                    {item.href && item.linkLabel ? (
+                      <a href={sitePath(item.href)} className="faq__link">
+                        {item.linkLabel}
+                      </a>
+                    ) : null}
                   </div>
                 </div>
               </FadeIn>

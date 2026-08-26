@@ -50,10 +50,10 @@ export function SiteHeader() {
 
           <div className="site-nav__actions">
             <LangToggle />
-            <a href={loginUrl} className="site-nav__login">
+            <Button href={loginUrl} variant="outline" size="tiny" className="site-nav__login">
               {landingT(lang, 'navLogin')}
-            </a>
-            <Button href={sitePath('/#pricing')} variant="primary" className="site-nav__cta">
+            </Button>
+            <Button href={sitePath('/#pricing')} variant="primary" size="tiny" className="site-nav__cta">
               {landingT(lang, 'navCta')}
             </Button>
             <button
@@ -76,10 +76,10 @@ export function SiteHeader() {
             {landingT(lang, item.labelKey)}
           </a>
         ))}
-        <a href={loginUrl} onClick={closeMobile}>
+        <Button href={loginUrl} variant="outline" size="tiny" onClick={closeMobile}>
           {landingT(lang, 'navLogin')}
-        </a>
-        <Button href={sitePath('/#pricing')} variant="primary" onClick={closeMobile}>
+        </Button>
+        <Button href={sitePath('/#pricing')} variant="primary" size="tiny" onClick={closeMobile}>
           {landingT(lang, 'navCta')}
         </Button>
       </nav>

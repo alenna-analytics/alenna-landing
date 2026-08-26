@@ -6,6 +6,7 @@ export type IntegrationDetailContent = {
   title: string
   intro: string
   bullets: string[]
+  socialProof?: string
   overviewTitle: string
   overviewBody: string
   kpisTitle: string

@@ -93,9 +93,9 @@ const PLAN_RECOMMENDATIONS_EN: PlanRecommendationContent = {
 const ENTERPRISE_ES: EnterpriseContent = {
   metaTitle: 'Plan Enterprise — Alenna Analytics',
   brandLabel: 'Alenna Analytics',
-  title: 'Plan a medida',
+  title: 'Contactar ventas Enterprise',
   intro:
-    'Cuéntanos sobre tu operación y te contactaremos con un plan adaptado a tu volumen y equipo.',
+    'Este formulario es solo para consultas del plan Enterprise, dirigidas al equipo comercial. No atendemos temas de soporte aquí; para eso escribe a contacto@alenna.io.',
   contactEmailLabel: 'Correo de contacto',
   companyLabel: 'Nombre de empresa',
   contactNameLabel: 'Nombre',
@@ -120,8 +120,9 @@ const ENTERPRISE_ES: EnterpriseContent = {
 const ENTERPRISE_EN: EnterpriseContent = {
   metaTitle: 'Enterprise Plan — Alenna Analytics',
   brandLabel: 'Alenna Analytics',
-  title: 'Custom plan',
-  intro: 'Tell us about your operation and we will follow up with a plan tailored to your volume and team.',
+  title: 'Contact Enterprise Sales',
+  intro:
+    'This form is for Enterprise plan inquiries directed to the sales team only. We do not address support-related concerns here; for assistance, email contacto@alenna.io.',
   contactEmailLabel: 'Contact email',
   companyLabel: 'Company name',
   contactNameLabel: 'Name',

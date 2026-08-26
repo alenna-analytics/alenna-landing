@@ -1,4 +1,4 @@
-type PartnerLogoSize = 'sm' | 'md' | 'lg' | 'xl' | 'card'
+type PartnerLogoSize = 'sm' | 'md' | 'lg' | 'xl' | 'card' | 'header'
 
 type PartnerLogoProps = {
   src: string
@@ -13,6 +13,7 @@ const SIZE_CLASS: Record<PartnerLogoSize, string> = {
   lg: 'partner-logo--lg',
   xl: 'partner-logo--xl',
   card: 'partner-logo--card',
+  header: 'partner-logo--header',
 }
 
 export function PartnerLogo({ src, alt, size = 'md', className }: PartnerLogoProps) {

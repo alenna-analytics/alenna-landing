@@ -15,7 +15,6 @@ export function IntegrationsSection() {
         <FadeIn className="integrations-band__head">
           <p className="eyebrow">{landingT(lang, 'integrationsEyebrow')}</p>
           <h2 className="section-heading">{landingT(lang, 'integrationsCatalogTitle')}</h2>
-          <p className="section-lede">{landingT(lang, 'integrationsCatalogLede')}</p>
         </FadeIn>
 
         <ul className="integrations-band__cards">

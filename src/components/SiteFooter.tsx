@@ -1,9 +1,8 @@
 import { LangToggle } from '@/components/LangToggle'
-import { catalogByGroup } from '@/lib/integrations-catalog'
 import { INTEGRATIONS_PATH } from '@/lib/i18n/integrations-strings'
+import { landingT } from '@/lib/i18n/landing-strings'
 import { PRIVACY_PATH } from '@/lib/i18n/privacy-strings'
 import { TERMS_PATH } from '@/lib/i18n/terms-strings'
-import { landingT } from '@/lib/i18n/landing-strings'
 import { publicAsset, sitePath } from '@/lib/utils'
 import { useLanguage, type Language } from '@/providers/language-provider'
 
@@ -12,8 +11,6 @@ const CONTACT_EMAIL = 'contacto@alenna.io'
 export function SiteFooter() {
   const { lang } = useLanguage()
   const year = new Date().getFullYear()
-  const ecommerce = catalogByGroup('ecommerce')
-  const ads = catalogByGroup('ads')
 
   return (
     <footer className="site-footer">
@@ -33,33 +30,14 @@ export function SiteFooter() {
         <nav className="site-footer__columns" aria-label="Footer">
           <div className="site-footer__col">
             <p className="site-footer__heading">{landingT(lang, 'footerProduct')}</p>
-            <a href={sitePath('/#product')}>{landingT(lang, 'navFeatures')}</a>
-            <a href={sitePath('/#flow')}>{landingT(lang, 'howEyebrow')}</a>
+            <a href={sitePath(INTEGRATIONS_PATH)}>{landingT(lang, 'footerIntegrations')}</a>
             <a href={sitePath('/#pricing')}>{landingT(lang, 'navPlans')}</a>
+            <a href={sitePath('/#flow')}>{landingT(lang, 'navHowItWorks')}</a>
+          </div>
+
+          <div className="site-footer__col">
+            <p className="site-footer__heading">{landingT(lang, 'footerResources')}</p>
             <a href={sitePath('/#faq')}>{landingT(lang, 'navFaq')}</a>
-          </div>
-
-          <div className="site-footer__col">
-            <p className="site-footer__heading">{landingT(lang, 'footerColEcommerce')}</p>
-            {ecommerce.map((item) => (
-              <a key={item.id} href={sitePath(item.path)}>
-                {landingT(lang, item.nameKey)}
-              </a>
-            ))}
-            <a href={sitePath(INTEGRATIONS_PATH)}>{landingT(lang, 'footerAllIntegrations')}</a>
-          </div>
-
-          <div className="site-footer__col">
-            <p className="site-footer__heading">{landingT(lang, 'footerColAds')}</p>
-            {ads.map((item) => (
-              <a
-                key={item.id}
-                href={sitePath(item.path)}
-                className={item.status === 'soon' ? 'is-soon' : undefined}
-              >
-                {landingT(lang, item.nameKey)}
-              </a>
-            ))}
           </div>
 
           <div className="site-footer__col">
