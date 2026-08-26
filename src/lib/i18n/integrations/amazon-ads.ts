@@ -18,9 +18,6 @@ const ES: IntegrationDetailContent = {
   overviewTitle: 'Rendimiento de campañas, con el contexto de tus ventas',
   overviewBody:
     'Sincronizamos Sponsored Products, Sponsored Brands y Sponsored Display. Amazon atribuye las ventas a clics de los últimos 14 días. El gasto entra al mismo módulo de Publicidad que Mercado Libre Ads, para que compares canales sin exportar reportes.',
-  overviewTitle: 'Rendimiento de campañas, con el contexto de tus ventas',
-  overviewBody:
-    'Sincronizamos Sponsored Products, Sponsored Brands y Sponsored Display. Amazon atribuye las ventas a clics de los últimos 14 días. El gasto entra al mismo módulo de Publicidad que Mercado Libre Ads, para que compares canales sin exportar reportes.',
   kpisTitle: 'Qué puedes ver',
   kpis: [
     'Gasto',
