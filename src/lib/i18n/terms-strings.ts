@@ -35,7 +35,7 @@ const TERMS_ES: LegalPageContent = {
         },
         {
           kind: 'p',
-          text: 'Las integraciones actualmente disponibles son Amazon, Shopify, Mercado Libre, Amazon Ads y Mercado Libre Ads. Google Ads y Meta Ads están en el catálogo y aún no están abiertos a conectar.',
+          text: 'Las integraciones actualmente disponibles son Amazon, Shopify, Mercado Libre, Amazon Ads, Mercado Libre Ads y Google Ads. Meta Ads está en el catálogo y aún no está abierto a conectar.',
         },
         {
           kind: 'p',
@@ -276,7 +276,7 @@ const TERMS_EN: LegalPageContent = {
         },
         {
           kind: 'p',
-          text: 'Integrations currently available are Amazon, Shopify, Mercado Libre, Amazon Ads, and Mercado Libre Ads. Google Ads and Meta Ads are in the catalog and not open to connect yet.',
+          text: 'Integrations currently available are Amazon, Shopify, Mercado Libre, Amazon Ads, Mercado Libre Ads, and Google Ads. Meta Ads is in the catalog and not open to connect yet.',
         },
         {
           kind: 'p',
