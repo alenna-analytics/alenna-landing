@@ -66,14 +66,14 @@ const PRIVACY_ES: PrivacyContent = {
         { kind: 'h3', text: '2.2 Datos comerciales de tus canales conectados' },
         {
           kind: 'p',
-          text: 'Al conectar Amazon, Shopify, Mercado Libre, Amazon Ads o Mercado Libre Ads, sincronizamos únicamente datos comerciales, de catálogo y de publicidad necesarios para reportes, conforme a los permisos que tú autorizas:',
+          text: 'Al conectar Amazon, Shopify, Mercado Libre, Amazon Ads, Mercado Libre Ads o Google Ads, sincronizamos únicamente datos comerciales, de catálogo y de publicidad necesarios para reportes, conforme a los permisos que tú autorizas:',
         },
         {
           kind: 'ul',
           items: [
             'Pedidos: identificadores, fechas, estados, montos, comisiones, impuestos, descuentos, envío (como monto), líneas de producto (SKU, cantidad, precios).',
             'Productos y catálogo: títulos, SKUs, variantes, precios, imágenes de producto, existencias.',
-            'Publicidad (Amazon Ads y Mercado Libre Ads): identificadores y estado de campaña, gasto, impresiones, clics, ventas y conversiones atribuidas, por campaña y por día. No almacenamos datos personales de compradores. Google Ads y Meta Ads están en el catálogo y aún no están abiertos a conectar; cuando lo estén, el tratamiento será el mismo.',
+            'Publicidad (Amazon Ads, Mercado Libre Ads y Google Ads): identificadores y estado de campaña, gasto, impresiones, clics, ventas y conversiones atribuidas, por campaña y por día. No almacenamos datos personales de compradores. Meta Ads está en el catálogo y aún no está abierto a conectar; cuando lo esté, el tratamiento será el mismo.',
             'Métricas y agregados derivados (por ejemplo, ventas por día, margen, alertas de inventario).',
             'Metadatos de integración: dominio de tienda, identificadores de cuenta en la plataforma, estado de sincronización y tokens de acceso cifrados.',
           ],
@@ -172,7 +172,7 @@ const PRIVACY_ES: PrivacyContent = {
         { kind: 'h3', text: '6.2 Plataformas que tú conectas' },
         {
           kind: 'p',
-          text: 'Cuando conectas Amazon, Shopify, Mercado Libre, Amazon Ads o Mercado Libre Ads, Alenna lee datos conforme a los permisos OAuth que otorgas. Puedes desconectar la integración en cualquier momento desde tu panel; al hacerlo, eliminamos los tokens de acceso almacenados.',
+          text: 'Cuando conectas Amazon, Shopify, Mercado Libre, Amazon Ads, Mercado Libre Ads o Google Ads, Alenna lee datos conforme a los permisos OAuth que otorgas. Puedes desconectar la integración en cualquier momento desde tu panel; al hacerlo, eliminamos los tokens de acceso almacenados.',
         },
         { kind: 'h3', text: '6.3 Requerimientos legales' },
         {
@@ -221,7 +221,7 @@ const PRIVACY_ES: PrivacyContent = {
         },
         {
           kind: 'p',
-          text: 'Desconectar una integración (Amazon, Shopify, Mercado Libre, Amazon Ads o Mercado Libre Ads) no elimina por sí sola el historial de pedidos o de publicidad ya importado; elimina los tokens de acceso. Puedes solicitar la eliminación de datos históricos en el mismo correo de privacidad.',
+          text: 'Desconectar una integración (Amazon, Shopify, Mercado Libre, Amazon Ads, Mercado Libre Ads o Google Ads) no elimina por sí sola el historial de pedidos o de publicidad ya importado; elimina los tokens de acceso. Puedes solicitar la eliminación de datos históricos en el mismo correo de privacidad.',
         },
       ],
     },
@@ -375,14 +375,14 @@ const PRIVACY_EN: PrivacyContent = {
         { kind: 'h3', text: '2.2 Commercial data from your connected channels' },
         {
           kind: 'p',
-          text: 'When you connect Amazon, Shopify, Mercado Libre, Amazon Ads, or Mercado Libre Ads, we sync only commercial, catalog, and advertising data needed for reports, according to the permissions you authorize:',
+          text: 'When you connect Amazon, Shopify, Mercado Libre, Amazon Ads, Mercado Libre Ads, or Google Ads, we sync only commercial, catalog, and advertising data needed for reports, according to the permissions you authorize:',
         },
         {
           kind: 'ul',
           items: [
             'Orders: identifiers, dates, statuses, amounts, fees, taxes, discounts, shipping (as an amount), line items (SKU, quantity, prices).',
             'Products and catalog: titles, SKUs, variants, prices, product images, stock levels.',
-            'Advertising (Amazon Ads and Mercado Libre Ads): campaign identifiers and status, spend, impressions, clicks, attributed sales and conversions, by campaign and by day. We do not store buyer personal data. Google Ads and Meta Ads are in the catalog and not open to connect yet; when they are, they will be treated the same way.',
+            'Advertising (Amazon Ads, Mercado Libre Ads, and Google Ads): campaign identifiers and status, spend, impressions, clicks, attributed sales and conversions, by campaign and by day. We do not store buyer personal data. Meta Ads is in the catalog and not open to connect yet; when it is, it will be treated the same way.',
             'Derived metrics and aggregates (e.g. daily sales, margin, inventory alerts).',
             'Integration metadata: shop domain, platform account identifiers, sync status, and encrypted access tokens.',
           ],
@@ -481,7 +481,7 @@ const PRIVACY_EN: PrivacyContent = {
         { kind: 'h3', text: '6.2 Platforms you connect' },
         {
           kind: 'p',
-          text: 'When you connect Amazon, Shopify, Mercado Libre, Amazon Ads, or Mercado Libre Ads, Alenna reads data according to the OAuth permissions you grant. You can disconnect at any time from your dashboard; we then delete stored access tokens.',
+          text: 'When you connect Amazon, Shopify, Mercado Libre, Amazon Ads, Mercado Libre Ads, or Google Ads, Alenna reads data according to the OAuth permissions you grant. You can disconnect at any time from your dashboard; we then delete stored access tokens.',
         },
         { kind: 'h3', text: '6.3 Legal requirements' },
         {
@@ -530,7 +530,7 @@ const PRIVACY_EN: PrivacyContent = {
         },
         {
           kind: 'p',
-          text: 'Disconnecting an integration (Amazon, Shopify, Mercado Libre, Amazon Ads, or Mercado Libre Ads) does not by itself delete previously imported order or advertising history; it deletes access tokens. You can request deletion of historical data at the same privacy email.',
+          text: 'Disconnecting an integration (Amazon, Shopify, Mercado Libre, Amazon Ads, Mercado Libre Ads, or Google Ads) does not by itself delete previously imported order or advertising history; it deletes access tokens. You can request deletion of historical data at the same privacy email.',
         },
       ],
     },
