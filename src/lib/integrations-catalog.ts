@@ -79,10 +79,10 @@ export const INTEGRATION_CATALOG: CatalogItem[] = [
   {
     id: 'google-ads',
     slug: 'google-ads',
-    nameKey: 'integrationGoogleAdsSoon',
+    nameKey: 'integrationGoogleAds',
     blurbKey: 'integrationBlurbGoogleAds',
     group: 'ads',
-    status: 'soon',
+    status: 'live',
     logoSrc: googleAdsLogo,
     path: detailPath('google-ads'),
     href: detailPath('google-ads'),
